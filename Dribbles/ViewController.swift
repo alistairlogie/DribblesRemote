@@ -67,8 +67,7 @@ class ViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "StudentDetail") as? StudentDetailViewController {
-//                vc.studentNameLabel?.text = "Bob"
-//                print(vc.studentNameLabel.text)
+
                 vc.studentName = students[indexPath.row].name
                 navigationController?.pushViewController(vc, animated: true)
             
