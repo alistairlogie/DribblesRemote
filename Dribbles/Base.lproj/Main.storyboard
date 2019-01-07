@@ -1365,7 +1365,6 @@
                                             <outlet property="tableTestWord" destination="08S-uk-UGb" id="ObX-ZO-MC4"/>
                                             <outletCollection property="collectionOfButtons" destination="mA3-jh-04G" collectionClass="NSMutableArray" id="YsR-KX-aAt"/>
                                             <outletCollection property="collectionOfButtons" destination="wjg-hw-hIQ" collectionClass="NSMutableArray" id="i2J-ER-21f"/>
-                                            <outletCollection property="collectionOfButtons" destination="wjg-hw-hIQ" collectionClass="NSMutableArray" id="C1N-VE-hOv"/>
                                             <outletCollection property="collectionOfButtons" destination="EN7-p6-x95" collectionClass="NSMutableArray" id="n5Q-x6-gS1"/>
                                             <outletCollection property="collectionOfButtons" destination="dfo-je-DjU" collectionClass="NSMutableArray" id="8bg-ve-BoK"/>
                                             <outletCollection property="collectionOfButtons" destination="HKA-d2-wam" collectionClass="NSMutableArray" id="rKj-z5-p6J"/>
