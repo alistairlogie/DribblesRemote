@@ -6,7 +6,7 @@
 //  Copyright © 2018 Alistair Logie. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct TestElement {
     var testWord = String()

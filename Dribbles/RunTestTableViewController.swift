@@ -24,10 +24,10 @@ class RunTestTableViewController: UIViewController, UITableViewDataSource, UITab
     var testLine = String()
     var testElement = TestElement()
     var testElements = [TestElement]()
-    var phonemeButtons = [UIButton]()
+//    var phonemeButtons = [UIButton]()
 //    var buttons = [UIButton]()
-    var currentButton = UIButton()
-    var currentButtons = [UIButton]()
+//    var currentButton = UIButton()
+//    var currentButtons = [UIButton]()
     //var tappedPhonemeButtons = [UIButton]()
     
     
@@ -68,7 +68,7 @@ class RunTestTableViewController: UIViewController, UITableViewDataSource, UITab
 //
 //        }
 //
-       
+        runTestTable.reloadData()
     }
     
     func saveContext() {
@@ -137,35 +137,37 @@ class RunTestTableViewController: UIViewController, UITableViewDataSource, UITab
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! RunTestTableViewCell
         
-        print("There are \(testElements[indexPath.row].testPhonemes.count) buttons")
+        let row = Int(indexPath.row)
+        cell.configureCell(testElement: testElements[indexPath.row], rowNumber: row)
+        //print("There are \(testElements[indexPath.row].testPhonemes.count) buttons")
         
         
-        cell.tableTestWord.text = testElements[indexPath.row].testWord
+        //cell.tableTestWord.text = testElements[indexPath.row].testWord
         
-        if testElements[indexPath.row].testPhonemes.count > 0 {
-
-            for i in  0 ..< testElements[indexPath.row].testPhonemes.count {
-                print("Number of phonemes is \(testElements[indexPath.row].testPhonemes.count)")
-                print("got in here")
-                let phoneme = testElements[indexPath.row].testPhonemes[i]
-                print("Phoneme number \(i) is \(phoneme)")
-                currentButton.setTitle(phoneme, for: .highlighted)
-                if let currentButtonTitle = currentButton.currentTitle {
-                    print(currentButtonTitle)
-                }
-                let rowNum = (indexPath.row + 1) * 1000
-                let tag = rowNum + i + 1
-                currentButton.tag = tag
-//                currentButton.addTarget(self, action: #selector(phonemeButtonSelected(_:)), for: .touchUpInside)
-                
-                currentButtons.append(currentButton)
-                
-            
-            }
-        }
-        cell.tableTestScore.text = "\(testElements[indexPath.row].testPhonemes.count)/\(testElements[indexPath.row].testPhonemes.count)"
+//        if testElements[indexPath.row].testPhonemes.count > 0 {
+//
+//            for i in  0 ..< testElements[indexPath.row].testPhonemes.count {
+//                print("Number of phonemes is \(testElements[indexPath.row].testPhonemes.count)")
+//                print("got in here")
+//                let phoneme = testElements[indexPath.row].testPhonemes[i]
+//                print("Phoneme number \(i) is \(phoneme)")
+//                currentButton.setTitle(phoneme, for: .highlighted)
+//                if let currentButtonTitle = currentButton.currentTitle {
+//                    print(currentButtonTitle)
+//                }
+//                let rowNum = (indexPath.row + 1) * 1000
+//                let tag = rowNum + i + 1
+//                currentButton.tag = tag
+////                currentButton.addTarget(self, action: #selector(phonemeButtonSelected(_:)), for: .touchUpInside)
+//
+//                currentButtons.append(currentButton)
+//
+//
+//            }
+//        }
+//        cell.tableTestScore.text = "\(testElements[indexPath.row].testPhonemes.count)/\(testElements[indexPath.row].testPhonemes.count)"
         
-        cell.collectionOfButtons = currentButtons
+//        cell.collectionOfButtons = currentButtons
         
 //        if cell.collectionOfButtons == "" {
 //            print("Found a blank phoneme")
@@ -177,23 +179,22 @@ class RunTestTableViewController: UIViewController, UITableViewDataSource, UITab
 //        }
         print(cell.tableTestWord)
         print(cell.tableTestScore)
-        print(cell.collectionOfButtons?[0].currentTitle)
-        print(cell.collectionOfButtons?[1].currentTitle)
-        print(cell.collectionOfButtons?[2].currentTitle)
+        print(cell.collectionOfButtons)
+        
         
         return cell
     }
 
     
-    @IBAction func phonemeButtonTapped(_ sender: UIButton) {
-        print("button tapped")
-        print("button tag \(sender.tag)")
-        
-    }
-    
-    @objc func phonemeButtonSelected(_ sender: UIButton) {
-        print("Button tage \(sender.tag)")
-    }
+//    @IBAction func phonemeButtonTapped(_ sender: UIButton) {
+//        print("button tapped")
+//        print("button tag \(sender.tag)")
+//        
+//    }
+//    
+//    @objc func phonemeButtonSelected(_ sender: UIButton) {
+//        print("Button tage \(sender.tag)")
+//    }
 
 
 }
