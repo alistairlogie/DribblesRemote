@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65253C0621E5125300F0EFB3 /* RunTestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65253C0521E5125300F0EFB3 /* RunTestTableViewCell.swift */; };
 		653D86EC21C432750077324E /* DBKidsList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 653D86EB21C432750077324E /* DBKidsList.txt */; };
 		653D86F021C44D450077324E /* StudentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653D86EF21C44D450077324E /* StudentDetailViewController.swift */; };
 		654C176821D03E7500982BD5 /* RunTestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654C176721D03E7500982BD5 /* RunTestTableViewController.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		65253C0521E5125300F0EFB3 /* RunTestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunTestTableViewCell.swift; sourceTree = "<group>"; };
 		653D86EB21C432750077324E /* DBKidsList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DBKidsList.txt; sourceTree = "<group>"; };
 		653D86EF21C44D450077324E /* StudentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetailViewController.swift; sourceTree = "<group>"; };
 		654C176721D03E7500982BD5 /* RunTestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunTestTableViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				65D42F5721C9E73A008EC6E8 /* PersistenceService.swift */,
 				653D86EF21C44D450077324E /* StudentDetailViewController.swift */,
 				65FC4F8C21C2FB31002A7096 /* Main.storyboard */,
+				65253C0521E5125300F0EFB3 /* RunTestTableViewCell.swift */,
 				654C176721D03E7500982BD5 /* RunTestTableViewController.swift */,
 				65A65D6421C5D075003AE9A5 /* RunTestViewController.swift */,
 				65627AF221CD9ACF0056C1B6 /* testElement.swift */,
@@ -187,6 +190,7 @@
 				65FF6FD521C46EEA0013197F /* Student+CoreDataProperties.swift in Sources */,
 				654C176821D03E7500982BD5 /* RunTestTableViewController.swift in Sources */,
 				65FF6FD721C4721E0013197F /* AddStudentViewController.swift in Sources */,
+				65253C0621E5125300F0EFB3 /* RunTestTableViewCell.swift in Sources */,
 				65A65D6521C5D075003AE9A5 /* RunTestViewController.swift in Sources */,
 				65D42F5821C9E73A008EC6E8 /* PersistenceService.swift in Sources */,
 				653D86F021C44D450077324E /* StudentDetailViewController.swift in Sources */,

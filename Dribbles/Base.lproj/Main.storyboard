@@ -1268,7 +1268,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="OpF-mp-S14" customClass="runTestTableViewCell" customModule="Dribbles" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="OpF-mp-S14" customClass="RunTestTableViewCell" customModule="Dribbles" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OpF-mp-S14" id="yP5-Nw-DHM">
@@ -1296,9 +1296,6 @@
                                                     <state key="normal" title="f">
                                                         <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
-                                                    <connections>
-                                                        <action selector="phonemeButtonTapped:" destination="eNS-Nf-Rbe" eventType="touchUpInside" id="iF9-BF-7y6"/>
-                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjg-hw-hIQ">
                                                     <rect key="frame" x="225" y="1" width="60" height="41"/>
@@ -1307,9 +1304,6 @@
                                                     <state key="normal" title="oa">
                                                         <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
-                                                    <connections>
-                                                        <action selector="phonemeButtonTapped:" destination="eNS-Nf-Rbe" eventType="touchUpInside" id="jL5-pU-XOt"/>
-                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EN7-p6-x95">
                                                     <rect key="frame" x="305" y="1" width="60" height="41"/>
@@ -1318,9 +1312,6 @@
                                                     <state key="normal" title="n">
                                                         <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
-                                                    <connections>
-                                                        <action selector="phonemeButtonTapped:" destination="eNS-Nf-Rbe" eventType="touchUpInside" id="gmD-hz-pBK"/>
-                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfo-je-DjU">
                                                     <rect key="frame" x="385" y="1" width="60" height="41"/>
@@ -1329,9 +1320,6 @@
                                                     <state key="normal" title="ee">
                                                         <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
-                                                    <connections>
-                                                        <action selector="phonemeButtonTapped:" destination="eNS-Nf-Rbe" eventType="touchUpInside" id="QaV-4k-TdH"/>
-                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKA-d2-wam">
                                                     <rect key="frame" x="465" y="1" width="60" height="41"/>
@@ -1340,9 +1328,6 @@
                                                     <state key="normal" title="m">
                                                         <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
-                                                    <connections>
-                                                        <action selector="phonemeButtonTapped:" destination="eNS-Nf-Rbe" eventType="touchUpInside" id="6WT-WH-6Tc"/>
-                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2b-TM-GYv">
                                                     <rect key="frame" x="545" y="1" width="60" height="41"/>
@@ -1351,9 +1336,6 @@
                                                     <state key="normal" title="-">
                                                         <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
-                                                    <connections>
-                                                        <action selector="phonemeButtonTapped:" destination="eNS-Nf-Rbe" eventType="touchUpInside" id="dgk-k9-SQn"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1361,14 +1343,13 @@
                                             <accessibilityTraits key="traits" notEnabled="YES"/>
                                         </accessibility>
                                         <connections>
-                                            <outlet property="tableTestScore" destination="ecP-x6-9Yw" id="sqR-e3-k2H"/>
-                                            <outlet property="tableTestWord" destination="08S-uk-UGb" id="ObX-ZO-MC4"/>
-                                            <outletCollection property="collectionOfButtons" destination="mA3-jh-04G" collectionClass="NSMutableArray" id="YsR-KX-aAt"/>
-                                            <outletCollection property="collectionOfButtons" destination="wjg-hw-hIQ" collectionClass="NSMutableArray" id="i2J-ER-21f"/>
-                                            <outletCollection property="collectionOfButtons" destination="EN7-p6-x95" collectionClass="NSMutableArray" id="n5Q-x6-gS1"/>
-                                            <outletCollection property="collectionOfButtons" destination="dfo-je-DjU" collectionClass="NSMutableArray" id="8bg-ve-BoK"/>
-                                            <outletCollection property="collectionOfButtons" destination="HKA-d2-wam" collectionClass="NSMutableArray" id="rKj-z5-p6J"/>
-                                            <outletCollection property="collectionOfButtons" destination="X2b-TM-GYv" collectionClass="NSMutableArray" id="aZu-Sm-OQb"/>
+                                            <outlet property="tableTestScore" destination="ecP-x6-9Yw" id="VEw-hm-q6Q"/>
+                                            <outlet property="tableTestWord" destination="08S-uk-UGb" id="pKF-ty-TrH"/>
+                                            <outletCollection property="collectionOfButtons" destination="mA3-jh-04G" collectionClass="NSMutableArray" id="LPw-lg-kVT"/>
+                                            <outletCollection property="collectionOfButtons" destination="wjg-hw-hIQ" collectionClass="NSMutableArray" id="03p-QC-wJs"/>
+                                            <outletCollection property="collectionOfButtons" destination="EN7-p6-x95" collectionClass="NSMutableArray" id="hRO-vh-krZ"/>
+                                            <outletCollection property="collectionOfButtons" destination="dfo-je-DjU" collectionClass="NSMutableArray" id="bX1-De-Fj4"/>
+                                            <outletCollection property="collectionOfButtons" destination="HKA-d2-wam" collectionClass="NSMutableArray" id="Tiq-26-5kI"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

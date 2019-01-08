@@ -9,15 +9,7 @@
 import UIKit
 import CoreData
 
-class runTestTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var tableTestWord: UILabel!
-    @IBOutlet weak var tableTestScore: UILabel!
-    @IBOutlet var collectionOfButtons: Array<UIButton>?
-    
-    
-    
-}
+
 
 
 class RunTestTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -143,7 +135,7 @@ class RunTestTableViewController: UIViewController, UITableViewDataSource, UITab
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! runTestTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! RunTestTableViewCell
         
         print("There are \(testElements[indexPath.row].testPhonemes.count) buttons")
         
