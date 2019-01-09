@@ -12,7 +12,7 @@ import CoreData
 
 
 
-class RunTestTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class RunTestTableViewController: UIViewController {
 
     
     var selectedTest = String()
@@ -41,8 +41,7 @@ class RunTestTableViewController: UIViewController, UITableViewDataSource, UITab
         super.viewDidLoad()
        
         
-        runTestTable.delegate = self
-        runTestTable.dataSource = self
+        
         self.title = selectedTest
         print(currentStudent)
         print(selectedTest)
@@ -124,7 +123,10 @@ class RunTestTableViewController: UIViewController, UITableViewDataSource, UITab
             return nil
         }
     }
-    
+ 
+}
+
+extension RunTestTableViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -144,39 +146,39 @@ class RunTestTableViewController: UIViewController, UITableViewDataSource, UITab
         
         //cell.tableTestWord.text = testElements[indexPath.row].testWord
         
-//        if testElements[indexPath.row].testPhonemes.count > 0 {
-//
-//            for i in  0 ..< testElements[indexPath.row].testPhonemes.count {
-//                print("Number of phonemes is \(testElements[indexPath.row].testPhonemes.count)")
-//                print("got in here")
-//                let phoneme = testElements[indexPath.row].testPhonemes[i]
-//                print("Phoneme number \(i) is \(phoneme)")
-//                currentButton.setTitle(phoneme, for: .highlighted)
-//                if let currentButtonTitle = currentButton.currentTitle {
-//                    print(currentButtonTitle)
-//                }
-//                let rowNum = (indexPath.row + 1) * 1000
-//                let tag = rowNum + i + 1
-//                currentButton.tag = tag
-////                currentButton.addTarget(self, action: #selector(phonemeButtonSelected(_:)), for: .touchUpInside)
-//
-//                currentButtons.append(currentButton)
-//
-//
-//            }
-//        }
-//        cell.tableTestScore.text = "\(testElements[indexPath.row].testPhonemes.count)/\(testElements[indexPath.row].testPhonemes.count)"
+        //        if testElements[indexPath.row].testPhonemes.count > 0 {
+        //
+        //            for i in  0 ..< testElements[indexPath.row].testPhonemes.count {
+        //                print("Number of phonemes is \(testElements[indexPath.row].testPhonemes.count)")
+        //                print("got in here")
+        //                let phoneme = testElements[indexPath.row].testPhonemes[i]
+        //                print("Phoneme number \(i) is \(phoneme)")
+        //                currentButton.setTitle(phoneme, for: .highlighted)
+        //                if let currentButtonTitle = currentButton.currentTitle {
+        //                    print(currentButtonTitle)
+        //                }
+        //                let rowNum = (indexPath.row + 1) * 1000
+        //                let tag = rowNum + i + 1
+        //                currentButton.tag = tag
+        ////                currentButton.addTarget(self, action: #selector(phonemeButtonSelected(_:)), for: .touchUpInside)
+        //
+        //                currentButtons.append(currentButton)
+        //
+        //
+        //            }
+        //        }
+        //        cell.tableTestScore.text = "\(testElements[indexPath.row].testPhonemes.count)/\(testElements[indexPath.row].testPhonemes.count)"
         
-//        cell.collectionOfButtons = currentButtons
+        //        cell.collectionOfButtons = currentButtons
         
-//        if cell.collectionOfButtons == "" {
-//            print("Found a blank phoneme")
-//            buttons[i].isUserInteractionEnabled = false
-//        } else {
-//            print("doing this bit")
-//            cell.collectionOfButtons?[i].isUserInteractionEnabled = true
-//            cell.collectionOfButtons?[i].backgroundColor = UIColor.green
-//        }
+        //        if cell.collectionOfButtons == "" {
+        //            print("Found a blank phoneme")
+        //            buttons[i].isUserInteractionEnabled = false
+        //        } else {
+        //            print("doing this bit")
+        //            cell.collectionOfButtons?[i].isUserInteractionEnabled = true
+        //            cell.collectionOfButtons?[i].backgroundColor = UIColor.green
+        //        }
         print(cell.tableTestWord)
         print(cell.tableTestScore)
         print(cell.collectionOfButtons)
@@ -186,15 +188,9 @@ class RunTestTableViewController: UIViewController, UITableViewDataSource, UITab
     }
 
     
-//    @IBAction func phonemeButtonTapped(_ sender: UIButton) {
-//        print("button tapped")
-//        print("button tag \(sender.tag)")
-//        
-//    }
-//    
-//    @objc func phonemeButtonSelected(_ sender: UIButton) {
-//        print("Button tage \(sender.tag)")
-//    }
+}
 
-
+extension RunTestTableViewController: UITableViewDelegate {
+    
+    
 }

@@ -1353,6 +1353,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="eNS-Nf-Rbe" id="Fch-9P-9Ch"/>
+                                    <outlet property="delegate" destination="eNS-Nf-Rbe" id="fbz-pQ-8wg"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
