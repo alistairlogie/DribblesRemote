@@ -322,38 +322,6 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Dribbles/RunTestTableViewCell.swift"
-            timestampString = "574623309.374033"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "configureCell(testElement:rowNumber:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Dribbles/RunTestTableViewCell.swift"
-            timestampString = "574623309.374281"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
-            landmarkName = "configureCell(testElement:rowNumber:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Dribbles/RunTestTableViewCell.swift"
             timestampString = "574623309.374521"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
