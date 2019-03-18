@@ -41,7 +41,7 @@ class RunTestTableViewController: UIViewController {
         super.viewDidLoad()
        
         
-        
+        self.runTestTable.rowHeight = 61
         self.title = selectedTest
         print(currentStudent)
         print(selectedTest)
@@ -181,7 +181,7 @@ extension RunTestTableViewController: UITableViewDataSource {
         //        }
         print(cell.tableTestWord)
         print(cell.tableTestScore)
-        print(cell.collectionOfButtons)
+//        print(cell.collectionOfButtons)
         
         
         return cell

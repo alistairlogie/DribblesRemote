@@ -13,39 +13,107 @@ class RunTestTableViewCell: UITableViewCell {
     
     @IBOutlet weak var tableTestWord: UILabel!
     @IBOutlet weak var tableTestScore: UILabel!
-    @IBOutlet var collectionOfButtons: Array<UIButton>!
     
-    var phonemeButtons: [UIButton]?
-    var phonemeButton: UIButton?
-    var maxNumberOfButtons = 6
+    @IBOutlet var phonemeButtons: [UIButton]!
+    
+    
+    var phonemeButtonCount = 6
+    
+    enum PhonemeStatus {
+        case correct, incorrect, blank
+    }
+    
+    var phonemeStatuses: [PhonemeStatus] = [.blank, .blank, .blank, .blank, .blank, .blank]
+    
+    
+    
+    var maxScore = 0
+    var score = 0 {
+        didSet {
+            tableTestScore.text = "\(score)/\(maxScore)"
+        }
+
+    }
+    
     
     func configureCell(testElement: TestElement, rowNumber: Int) {
-        collectionOfButtons.removeAll(keepingCapacity: true)
+        
         tableTestWord.text = testElement.testWord
+        maxScore = testElement.testPhonemes.count
+        score = maxScore
+        tableTestScore.text = "\(score)/\(maxScore)"
         
         if testElement.testPhonemes.count > 0 {
-            
-            for i in  0 ..< testElement.testPhonemes.count {
-                
+            var newStatus: PhonemeStatus
+            for i in  0 ..< phonemeButtonCount - 1 {
+                var phoneme = ""
  //               phonemeButton = UIButton()
-                let phoneme = testElement.testPhonemes[i]
-                
-                //let newButton = UIButton(type: )
-                collectionOfButtons.append(UIButton())
-                if phoneme != "" {
-                    collectionOfButtons[i].setTitle(phoneme, for: .normal)
+                if i >= testElement.testPhonemes.count {
+                    phoneme = ""
+                } else {
+                    phoneme = testElement.testPhonemes[i]
                 }
+//                print("Phoneme is \(phoneme)")
+//                phonemeButtons[i].setTitle(phoneme, for: .normal)
+                //let newButton = UIButton(type: )
+                
+                newStatus = configureButton(button: phonemeButtons[i], title: phoneme, phonemeStatus: phonemeStatuses[i])
+                print(phonemeStatuses[i])
+              
+//                switch i {
+//                case 0:
+////                    phoneme1.setTitle(phoneme, for: .normal)
+////                    phoneme1.backgroundColor = .green
+////                    if phoneme == "" {
+////                        phoneme1.isUserInteractionEnabled = false
+////                    }
+//                    configureButton(button: phoneme1, title: phoneme)
+//                case 1:
+////                    phoneme2.setTitle(phoneme, for: .normal)
+////                    if phoneme == "" {
+////                        phoneme2.isUserInteractionEnabled = false
+////                    }
+//                    configureButton(button: phoneme2, title: phoneme)
+//                case 2:
+////                    phoneme3.setTitle(phoneme, for: .normal)
+////                    if phoneme == "" {
+////                        phoneme3.isUserInteractionEnabled = false
+////                    }
+//                    configureButton(button: phoneme3, title: phoneme)
+//                case 3:
+////                    phoneme4.setTitle(phoneme, for: .normal)
+////                    if phoneme == "" {
+////                        phoneme4.isUserInteractionEnabled = false
+////                    }
+//                    configureButton(button: phoneme4, title: phoneme)
+//                case 4:
+////                    phoneme5.setTitle(phoneme, for: .normal)
+////                    if phoneme == "" {
+////                        phoneme5.isUserInteractionEnabled = false
+////                    }
+//                    configureButton(button: phoneme5, title: phoneme)
+//                case 5:
+////                    phoneme6.setTitle(phoneme, for: .normal)
+////                    if phoneme == "" {
+////                        phoneme6.isUserInteractionEnabled = false
+////                    }
+//                    configureButton(button: phoneme6, title: phoneme)
+//                default:
+//                    return
+//                }
+//
+                
 //                collectionOfButtons[i].setTitle(phoneme, for: .normal)
-                collectionOfButtons[i].tag = (rowNumber * 1000) + i
-                collectionOfButtons[i].backgroundColor = UIColor.lightGray
+               
+//                collectionOfButtons[i].backgroundColor = UIColor.lightGray
 //                collectionOfButtons[i].addTarget(self, action: #selector(phonemeButtonTapped(btn:)), for: .touchUpInside)
                 print("Number of phonemes is \(testElement.testPhonemes.count)")
-                print("Number of buttons is \(collectionOfButtons.count)")
+//                print("Number of buttons is \(collectionOfButtons.count)")
 //                print("got in here")
                 
-                print("Phoneme number \(i) is \(phoneme)")
-                print("Button title is \(collectionOfButtons![i].currentTitle ?? "Didn't work")")
-                self.contentView.addSubview(collectionOfButtons[i])
+//                print("Phoneme number \(i) is \(phoneme)")
+//                print("Button title is \(collectionOfButtons![i].currentTitle ?? "Didn't work")")
+//                self.contentView.addSubview(collectionOfButtons[i])
 //                self.addSubview(collectionOfButtons[i])
                 
 //                collectionOfButtons.append(phonemeButton)
@@ -77,6 +145,7 @@ class RunTestTableViewCell: UITableViewCell {
 //            }
             
         }
+            
     }
     
 //    @objc func phonemeButtonTapped(btn: UIButton) {
@@ -84,24 +153,39 @@ class RunTestTableViewCell: UITableViewCell {
 //
 //    }
     
-    @IBAction func phonemeButtonTapped(_ sender: UIButton) {
-        print("Phoneme button tapped")
-        switch sender.backgroundColor {
-        case UIColor.lightGray:
-            sender.backgroundColor = UIColor.green
-        case UIColor.green:
-            sender.backgroundColor = UIColor.red
-        case UIColor.red:
-            sender.backgroundColor = UIColor.lightGray
-        case UIColor.green:
-            sender.backgroundColor = UIColor.green
-        case UIColor.orange:
-            sender.backgroundColor = UIColor.lightGray
-        default:
-            sender.backgroundColor = UIColor.orange
+    @IBAction func phonemeButtonTapped(_ sender: Any) {
+        if self.backgroundView == .red {
+            self.backgroundColor = UIColor(red: 0, green: 120, blue: 0, alpha: 0.2)
+            score = score + 1
+            //            phonemeStatus = true
+        } else {
+            self.backgroundColor = .red
+            score = score - 1
+            //            phonemeStatus = false
         }
-        
-        print(sender.tag)
+    
         
     }
+    
+    
+    func configureButton(button: UIButton, title: String, phonemeStatus: PhonemeStatus) -> PhonemeStatus {
+        button.setTitle(title, for: .normal)
+        var buttonStatus = phonemeStatus
+        button.layer.cornerRadius = 10
+        if title == "" {
+            button.isUserInteractionEnabled = false
+            button.backgroundColor = .white
+            buttonStatus = .blank
+        } else {
+            button.backgroundColor = UIColor(red: 0, green: 255, blue: 0, alpha: 0.2)
+            buttonStatus = .correct
+            
+        }
+        return buttonStatus
+    }
+    
+    
+    
+    
+    
 }

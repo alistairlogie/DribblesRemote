@@ -16,7 +16,6 @@
 		65A65D5F21C5C4DF003AE9A5 /* DribblesTestList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65A65D5E21C5C4DF003AE9A5 /* DribblesTestList.txt */; };
 		65A65D6221C5CB1B003AE9A5 /* TestEvent+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A65D6021C5CB1B003AE9A5 /* TestEvent+CoreDataClass.swift */; };
 		65A65D6321C5CB1B003AE9A5 /* TestEvent+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A65D6121C5CB1B003AE9A5 /* TestEvent+CoreDataProperties.swift */; };
-		65A65D6521C5D075003AE9A5 /* RunTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A65D6421C5D075003AE9A5 /* RunTestViewController.swift */; };
 		65D42F5821C9E73A008EC6E8 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D42F5721C9E73A008EC6E8 /* PersistenceService.swift */; };
 		65FC4F8921C2FB31002A7096 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FC4F8821C2FB31002A7096 /* AppDelegate.swift */; };
 		65FC4F8B21C2FB31002A7096 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FC4F8A21C2FB31002A7096 /* ViewController.swift */; };
@@ -40,7 +39,6 @@
 		65A65D5E21C5C4DF003AE9A5 /* DribblesTestList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DribblesTestList.txt; sourceTree = "<group>"; };
 		65A65D6021C5CB1B003AE9A5 /* TestEvent+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestEvent+CoreDataClass.swift"; sourceTree = "<group>"; };
 		65A65D6121C5CB1B003AE9A5 /* TestEvent+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestEvent+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		65A65D6421C5D075003AE9A5 /* RunTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunTestViewController.swift; sourceTree = "<group>"; };
 		65D42F5721C9E73A008EC6E8 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		65FC4F8521C2FB31002A7096 /* Dribbles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dribbles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65FC4F8821C2FB31002A7096 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 				65FC4F8C21C2FB31002A7096 /* Main.storyboard */,
 				65253C0521E5125300F0EFB3 /* RunTestTableViewCell.swift */,
 				654C176721D03E7500982BD5 /* RunTestTableViewController.swift */,
-				65A65D6421C5D075003AE9A5 /* RunTestViewController.swift */,
 				65627AF221CD9ACF0056C1B6 /* testElement.swift */,
 				65FC4F9221C2FB33002A7096 /* Assets.xcassets */,
 				65FC4F9421C2FB33002A7096 /* LaunchScreen.storyboard */,
@@ -191,7 +188,6 @@
 				654C176821D03E7500982BD5 /* RunTestTableViewController.swift in Sources */,
 				65FF6FD721C4721E0013197F /* AddStudentViewController.swift in Sources */,
 				65253C0621E5125300F0EFB3 /* RunTestTableViewCell.swift in Sources */,
-				65A65D6521C5D075003AE9A5 /* RunTestViewController.swift in Sources */,
 				65D42F5821C9E73A008EC6E8 /* PersistenceService.swift in Sources */,
 				653D86F021C44D450077324E /* StudentDetailViewController.swift in Sources */,
 				65A65D6321C5CB1B003AE9A5 /* TestEvent+CoreDataProperties.swift in Sources */,
