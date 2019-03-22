@@ -12,7 +12,13 @@ import CoreData
 
 
 
-class RunTestTableViewController: UIViewController {
+class RunTestTableViewController: UIViewController, RunTestTableViewCellDelegate  {
+    
+    
+    
+    enum PhonemeStatus {
+        case correct, incorrect, blank
+    }
 
     
     var selectedTest = String()
@@ -24,6 +30,12 @@ class RunTestTableViewController: UIViewController {
     var testLine = String()
     var testElement = TestElement()
     var testElements = [TestElement]()
+    var selectedButtonRow = 0
+    
+//    var cells = [RunTestTableViewCell]()
+    
+    
+    
 //    var phonemeButtons = [UIButton]()
 //    var buttons = [UIButton]()
 //    var currentButton = UIButton()
@@ -39,8 +51,7 @@ class RunTestTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        
+    
         self.runTestTable.rowHeight = 61
         self.title = selectedTest
         print(currentStudent)
@@ -50,7 +61,7 @@ class RunTestTableViewController: UIViewController {
             if let testFileData = try? String(contentsOfFile: testFileListPath) {
                 testLines = testFileData.components(separatedBy: "\n")
                 //                    print("\(testLines.count) found.")
-                for (index, testLine) in testLines.enumerated() {
+                for (_, testLine) in testLines.enumerated() {
                     if let newElement = decomposeTestLines(wholeTestLine: testLine) {
                        testElements.append(newElement)
                     }
@@ -59,14 +70,6 @@ class RunTestTableViewController: UIViewController {
         } else {
             testLines = ["no tests found"]
         }
-        
-//        for subview in runTestTable.subviews where subview.tag == 1001 {
-//            let btn = subview as! UIButton
-//            phonemeButtons.append(btn)
-//            btn.addTarget(self, action: #selector(phonemeTapped), for: .touchUpInside)
-//
-//        }
-//
         runTestTable.reloadData()
     }
     
@@ -124,7 +127,16 @@ class RunTestTableViewController: UIViewController {
         }
     }
  
+    func buttonTapped(cell: RunTestTableViewCell, buttonIndex: Int, button: UIButton) {
+        if let indexPath = runTestTable.indexPath(for: cell) {
+            selectedButtonRow = indexPath.row
+            
+            cell.updateButton(row: selectedButtonRow, buttonIndex: buttonIndex, button: button)
+        }
+    }
 }
+
+
 
 extension RunTestTableViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -136,56 +148,17 @@ extension RunTestTableViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = cells[indexPath.row]
         
+       
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! RunTestTableViewCell
-        
+        cell.delegate = self
         let row = Int(indexPath.row)
         cell.configureCell(testElement: testElements[indexPath.row], rowNumber: row)
-        //print("There are \(testElements[indexPath.row].testPhonemes.count) buttons")
-        
-        
-        //cell.tableTestWord.text = testElements[indexPath.row].testWord
-        
-        //        if testElements[indexPath.row].testPhonemes.count > 0 {
-        //
-        //            for i in  0 ..< testElements[indexPath.row].testPhonemes.count {
-        //                print("Number of phonemes is \(testElements[indexPath.row].testPhonemes.count)")
-        //                print("got in here")
-        //                let phoneme = testElements[indexPath.row].testPhonemes[i]
-        //                print("Phoneme number \(i) is \(phoneme)")
-        //                currentButton.setTitle(phoneme, for: .highlighted)
-        //                if let currentButtonTitle = currentButton.currentTitle {
-        //                    print(currentButtonTitle)
-        //                }
-        //                let rowNum = (indexPath.row + 1) * 1000
-        //                let tag = rowNum + i + 1
-        //                currentButton.tag = tag
-        ////                currentButton.addTarget(self, action: #selector(phonemeButtonSelected(_:)), for: .touchUpInside)
-        //
-        //                currentButtons.append(currentButton)
-        //
-        //
-        //            }
-        //        }
-        //        cell.tableTestScore.text = "\(testElements[indexPath.row].testPhonemes.count)/\(testElements[indexPath.row].testPhonemes.count)"
-        
-        //        cell.collectionOfButtons = currentButtons
-        
-        //        if cell.collectionOfButtons == "" {
-        //            print("Found a blank phoneme")
-        //            buttons[i].isUserInteractionEnabled = false
-        //        } else {
-        //            print("doing this bit")
-        //            cell.collectionOfButtons?[i].isUserInteractionEnabled = true
-        //            cell.collectionOfButtons?[i].backgroundColor = UIColor.green
-        //        }
-        print(cell.tableTestWord)
-        print(cell.tableTestScore)
-//        print(cell.collectionOfButtons)
-        
-        
         return cell
+
     }
+    
 
     
 }
