@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uqr-Wm-Qpc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uqr-Wm-Qpc">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -277,9 +277,6 @@
                                                             <state key="normal" title="Ph1">
                                                                 <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
-                                                            <connections>
-                                                                <action selector="phonemeButtonTapped:" destination="OpF-mp-S14" eventType="touchUpInside" id="veq-YX-jXY"/>
-                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" tag="101" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjg-hw-hIQ">
                                                             <rect key="frame" x="93.5" y="0.0" width="84.5" height="55"/>
@@ -288,9 +285,6 @@
                                                             <state key="normal" title="Ph2">
                                                                 <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
-                                                            <connections>
-                                                                <action selector="phonemeButtonTapped:" destination="OpF-mp-S14" eventType="touchUpInside" id="XRV-9y-cuP"/>
-                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" tag="102" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EN7-p6-x95">
                                                             <rect key="frame" x="187" y="0.0" width="84.5" height="55"/>
@@ -299,9 +293,6 @@
                                                             <state key="normal" title="Ph3">
                                                                 <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
-                                                            <connections>
-                                                                <action selector="phonemeButtonTapped:" destination="OpF-mp-S14" eventType="touchUpInside" id="JKR-vt-CbW"/>
-                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" tag="103" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfo-je-DjU">
                                                             <rect key="frame" x="280.5" y="0.0" width="84.5" height="55"/>
@@ -310,9 +301,6 @@
                                                             <state key="normal" title="Ph4">
                                                                 <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
-                                                            <connections>
-                                                                <action selector="phonemeButtonTapped:" destination="OpF-mp-S14" eventType="touchUpInside" id="TW3-YP-0p7"/>
-                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" tag="104" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKA-d2-wam">
                                                             <rect key="frame" x="374" y="0.0" width="84.5" height="55"/>
@@ -321,9 +309,6 @@
                                                             <state key="normal" title="Ph5">
                                                                 <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
-                                                            <connections>
-                                                                <action selector="phonemeButtonTapped:" destination="OpF-mp-S14" eventType="touchUpInside" id="3zJ-r4-a3H"/>
-                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" tag="105" contentMode="scaleToFill" semanticContentAttribute="playback" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2b-TM-GYv">
                                                             <rect key="frame" x="467.5" y="0.0" width="84.5" height="55"/>
@@ -332,9 +317,6 @@
                                                             <state key="normal" title="Ph6">
                                                                 <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
-                                                            <connections>
-                                                                <action selector="phonemeButtonTapped:" destination="OpF-mp-S14" eventType="touchUpInside" id="wXn-w7-1qb"/>
-                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -361,14 +343,14 @@
                                             <constraint firstItem="08S-uk-UGb" firstAttribute="centerY" secondItem="OpF-mp-S14" secondAttribute="centerY" id="QOP-To-aYb"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="tableTestScore" destination="ecP-x6-9Yw" id="VEw-hm-q6Q"/>
-                                            <outlet property="tableTestWord" destination="08S-uk-UGb" id="ytS-5O-9SN"/>
-                                            <outletCollection property="phonemeButtons" destination="mA3-jh-04G" collectionClass="NSMutableArray" id="qn9-aF-MGg"/>
-                                            <outletCollection property="phonemeButtons" destination="wjg-hw-hIQ" collectionClass="NSMutableArray" id="KdB-vF-t9m"/>
-                                            <outletCollection property="phonemeButtons" destination="EN7-p6-x95" collectionClass="NSMutableArray" id="mpJ-Rm-fnq"/>
-                                            <outletCollection property="phonemeButtons" destination="dfo-je-DjU" collectionClass="NSMutableArray" id="8f8-Fm-4nI"/>
-                                            <outletCollection property="phonemeButtons" destination="HKA-d2-wam" collectionClass="NSMutableArray" id="uen-8k-F4e"/>
-                                            <outletCollection property="phonemeButtons" destination="X2b-TM-GYv" collectionClass="NSMutableArray" id="r7w-Vs-JIH"/>
+                                            <outlet property="tableTestScore" destination="ecP-x6-9Yw" id="mnB-r4-iux"/>
+                                            <outlet property="tableTestWord" destination="08S-uk-UGb" id="0wc-3W-GHH"/>
+                                            <outletCollection property="phonemeButtons" destination="mA3-jh-04G" collectionClass="NSMutableArray" id="xIx-X8-1kL"/>
+                                            <outletCollection property="phonemeButtons" destination="wjg-hw-hIQ" collectionClass="NSMutableArray" id="G8u-nz-ccc"/>
+                                            <outletCollection property="phonemeButtons" destination="EN7-p6-x95" collectionClass="NSMutableArray" id="m0k-X1-hWM"/>
+                                            <outletCollection property="phonemeButtons" destination="dfo-je-DjU" collectionClass="NSMutableArray" id="1WM-5C-vdl"/>
+                                            <outletCollection property="phonemeButtons" destination="HKA-d2-wam" collectionClass="NSMutableArray" id="7kU-vv-g40"/>
+                                            <outletCollection property="phonemeButtons" destination="X2b-TM-GYv" collectionClass="NSMutableArray" id="FLf-y0-5EG"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -394,7 +376,7 @@
                     </view>
                     <connections>
                         <outlet property="runTestTable" destination="pxr-7R-Dbe" id="cRk-Cp-7eH"/>
-                        <outlet property="score" destination="SUy-QU-VYX" id="zzw-EK-2dP"/>
+                        <outlet property="totalTestScore" destination="SUy-QU-VYX" id="zPr-PC-lVv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y8g-2C-ysc" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -16,6 +16,7 @@
 		65A65D5F21C5C4DF003AE9A5 /* DribblesTestList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65A65D5E21C5C4DF003AE9A5 /* DribblesTestList.txt */; };
 		65A65D6221C5CB1B003AE9A5 /* TestEvent+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A65D6021C5CB1B003AE9A5 /* TestEvent+CoreDataClass.swift */; };
 		65A65D6321C5CB1B003AE9A5 /* TestEvent+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A65D6121C5CB1B003AE9A5 /* TestEvent+CoreDataProperties.swift */; };
+		65B4FF10224A7EE600968553 /* TestRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B4FF0F224A7EE600968553 /* TestRow.swift */; };
 		65D42F5821C9E73A008EC6E8 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D42F5721C9E73A008EC6E8 /* PersistenceService.swift */; };
 		65FC4F8921C2FB31002A7096 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FC4F8821C2FB31002A7096 /* AppDelegate.swift */; };
 		65FC4F8B21C2FB31002A7096 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FC4F8A21C2FB31002A7096 /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 		65A65D5E21C5C4DF003AE9A5 /* DribblesTestList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DribblesTestList.txt; sourceTree = "<group>"; };
 		65A65D6021C5CB1B003AE9A5 /* TestEvent+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestEvent+CoreDataClass.swift"; sourceTree = "<group>"; };
 		65A65D6121C5CB1B003AE9A5 /* TestEvent+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestEvent+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		65B4FF0F224A7EE600968553 /* TestRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRow.swift; sourceTree = "<group>"; };
 		65D42F5721C9E73A008EC6E8 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		65FC4F8521C2FB31002A7096 /* Dribbles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dribbles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65FC4F8821C2FB31002A7096 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				653D86EB21C432750077324E /* DBKidsList.txt */,
 				65A65D5E21C5C4DF003AE9A5 /* DribblesTestList.txt */,
 				65627AF421CDAA8A0056C1B6 /* Benchmark 1 - Phoneme Segmentation Fluency.txt */,
+				65B4FF0F224A7EE600968553 /* TestRow.swift */,
 			);
 			path = Dribbles;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65B4FF10224A7EE600968553 /* TestRow.swift in Sources */,
 				65FF6FD521C46EEA0013197F /* Student+CoreDataProperties.swift in Sources */,
 				654C176821D03E7500982BD5 /* RunTestTableViewController.swift in Sources */,
 				65FF6FD721C4721E0013197F /* AddStudentViewController.swift in Sources */,
