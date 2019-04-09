@@ -277,6 +277,9 @@
                                                             <state key="normal" title="Ph1">
                                                                 <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="phonemeButtonTapped:" destination="OpF-mp-S14" eventType="touchUpInside" id="D1M-39-fII"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" tag="101" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjg-hw-hIQ">
                                                             <rect key="frame" x="93.5" y="0.0" width="84.5" height="55"/>
@@ -285,6 +288,9 @@
                                                             <state key="normal" title="Ph2">
                                                                 <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="phonemeButtonTapped:" destination="OpF-mp-S14" eventType="touchUpInside" id="Hov-9z-nsJ"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" tag="102" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EN7-p6-x95">
                                                             <rect key="frame" x="187" y="0.0" width="84.5" height="55"/>
@@ -293,6 +299,9 @@
                                                             <state key="normal" title="Ph3">
                                                                 <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="phonemeButtonTapped:" destination="OpF-mp-S14" eventType="touchUpInside" id="DFj-3E-yte"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" tag="103" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfo-je-DjU">
                                                             <rect key="frame" x="280.5" y="0.0" width="84.5" height="55"/>
@@ -301,6 +310,9 @@
                                                             <state key="normal" title="Ph4">
                                                                 <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="phonemeButtonTapped:" destination="OpF-mp-S14" eventType="touchUpInside" id="blg-wB-szN"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" tag="104" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKA-d2-wam">
                                                             <rect key="frame" x="374" y="0.0" width="84.5" height="55"/>
@@ -309,6 +321,9 @@
                                                             <state key="normal" title="Ph5">
                                                                 <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="phonemeButtonTapped:" destination="OpF-mp-S14" eventType="touchUpInside" id="XJp-h2-ldc"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" tag="105" contentMode="scaleToFill" semanticContentAttribute="playback" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2b-TM-GYv">
                                                             <rect key="frame" x="467.5" y="0.0" width="84.5" height="55"/>
@@ -317,6 +332,9 @@
                                                             <state key="normal" title="Ph6">
                                                                 <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="phonemeButtonTapped:" destination="OpF-mp-S14" eventType="touchUpInside" id="fa8-zk-Z4g"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>

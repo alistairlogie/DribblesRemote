@@ -44,6 +44,7 @@ class RunTestTableViewController: UIViewController {
     var selectedButton = UIButton()
     var masterButtonIndex = 0
     var cellDataStore = [[PhonemeStatus]]()
+    var tableCellStore = [TableCellData]()
     
     var maxScore = 0
     var score = 0 {
@@ -64,17 +65,8 @@ class RunTestTableViewController: UIViewController {
     
     
     @IBOutlet weak var runTestTable: UITableView!
-    
-    
-    @IBOutlet weak var tableTestWord: UILabel!
-    @IBOutlet weak var tableTestScore: UILabel!
-    @IBOutlet weak var totalTestScore: UITextField!
-    
-    
-    @IBOutlet var phonemeButtons: [UIButton]!
-    
-    //var phonemeButtons = [UIButton]()
-    
+ 
+    @IBOutlet weak var totalTestScore: UITextField!    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -154,33 +146,33 @@ class RunTestTableViewController: UIViewController {
         }
     }
  
-    func updateButton(row: Int, buttonIndex: Int, button: UIButton) {
-        //        buttonIndex = (sender.tag - 100)
-        //        var buttonIndex = 0
-        //        buttonIndex = (sender.tag - 100)
-        //        print("Update button statuses \(phonemeStatuses)")
-        if phonemeStatuses[buttonIndex] == .incorrect {
-            phonemeStatuses[buttonIndex] = .correct
-            button.backgroundColor = UIColor(red: 0, green: 255, blue: 0, alpha: 0.2)
-            score = score + 1
-        } else {
-            phonemeStatuses[buttonIndex] = .incorrect
-            button.backgroundColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.2)
-            score = score - 1
-        }
-        if !cellDataStore.indices.contains(row) {
-            cellDataStore.append(phonemeStatuses)
-            print("UD: Adding \(row) as a new row)")
-        } else {
-            
-            print("2nd display of phonemes \(phonemeStatuses)")
-            cellDataStore[row] = phonemeStatuses
-            print("UD: Updating \(row)")
-        }
-        //        print("third write of row \(row)")
-        //        print("Here is the updated row information for row \(row) \(cellDataStore[row])")
-    }
-//    func buttonTapped(cell: RunTestTableViewCell, buttonIndex: Int, button: UIButton) {
+//    func updateButton(row: Int, buttonIndex: Int, button: UIButton) {
+//        //        buttonIndex = (sender.tag - 100)
+//        //        var buttonIndex = 0
+//        //        buttonIndex = (sender.tag - 100)
+//        //        print("Update button statuses \(phonemeStatuses)")
+//        if phonemeStatuses[buttonIndex] == .incorrect {
+//            phonemeStatuses[buttonIndex] = .correct
+//            button.backgroundColor = UIColor(red: 0, green: 255, blue: 0, alpha: 0.2)
+//            score = score + 1
+//        } else {
+//            phonemeStatuses[buttonIndex] = .incorrect
+//            button.backgroundColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.2)
+//            score = score - 1
+//        }
+//        if !cellDataStore.indices.contains(row) {
+//            cellDataStore.append(phonemeStatuses)
+//            print("UD: Adding \(row) as a new row)")
+//        } else {
+//
+//            print("2nd display of phonemes \(phonemeStatuses)")
+//            cellDataStore[row] = phonemeStatuses
+//            print("UD: Updating \(row)")
+//        }
+//        //        print("third write of row \(row)")
+//        //        print("Here is the updated row information for row \(row) \(cellDataStore[row])")
+//    }
+////    func buttonTapped(cell: RunTestTableViewCell, buttonIndex: Int, button: UIButton) {
 //        if let indexPath = runTestTable.indexPath(for: cell) {
 //            selectedButtonRow = indexPath.row
 //
@@ -190,46 +182,46 @@ class RunTestTableViewController: UIViewController {
     
     
     
-    func configureButton(button: UIButton, title: String, status: PhonemeStatus, row: Int, index: Int) {
-        //        print("I think I'm on row \(row)")
-        button.setTitle(title, for: .normal)
-        //        var buttonStatus = phonemeStatus
-        button.layer.cornerRadius = 10
-        if title == "" {
-            button.isUserInteractionEnabled = false
-            button.backgroundColor = .white
-            phonemeStatuses[index] = .blank
-        } else {
-            if status == .incorrect {
-                button.backgroundColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.2)
-                score = score - 1
-            } else {
-                button.backgroundColor = UIColor(red: 0, green: 255, blue: 0, alpha: 0.2)
-                phonemeStatuses[index] = .correct
-            }
-        }
-        if !cellDataStore.indices.contains(row) {
-            cellDataStore.append(phonemeStatuses)
-            print("CB: Adding \(row) as a new row)")
-        } else {
-            cellDataStore[row] = phonemeStatuses
-            print("CB: Updating \(row)")
-        }
-        //        print("Writing from  \(row)")
-        //       print("Current Dictionary row \(row) \(cellDataStore[row])")
-        //        print("There are \(cellDataStore.count) records in the dictionary")
-        
-        
-    }
-    
-    @IBAction func phonemeButtonTapped(_ sender: UIButton) {
-        let buttonIndex = (sender.tag - 100)
-        masterButtonIndex = buttonIndex
-        selectedButton = sender
-//        self.delegate?.buttonTapped(cell: self, buttonIndex: masterButtonIndex, button: selectedButton)
-        updateButton(row: selectedButtonRow, buttonIndex: buttonIndex, button: sender)
-    }
-    
+//    func configureButton(button: UIButton, title: String, status: PhonemeStatus, row: Int, index: Int) {
+//        //        print("I think I'm on row \(row)")
+//        button.setTitle(title, for: .normal)
+//        //        var buttonStatus = phonemeStatus
+//        button.layer.cornerRadius = 10
+//        if title == "" {
+//            button.isUserInteractionEnabled = false
+//            button.backgroundColor = .white
+//            phonemeStatuses[index] = .blank
+//        } else {
+//            if status == .incorrect {
+//                button.backgroundColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.2)
+//                score = score - 1
+//            } else {
+//                button.backgroundColor = UIColor(red: 0, green: 255, blue: 0, alpha: 0.2)
+//                phonemeStatuses[index] = .correct
+//            }
+//        }
+//        if !cellDataStore.indices.contains(row) {
+//            cellDataStore.append(phonemeStatuses)
+//            print("CB: Adding \(row) as a new row)")
+//        } else {
+//            cellDataStore[row] = phonemeStatuses
+//            print("CB: Updating \(row)")
+//        }
+//        //        print("Writing from  \(row)")
+//        //       print("Current Dictionary row \(row) \(cellDataStore[row])")
+//        //        print("There are \(cellDataStore.count) records in the dictionary")
+//        
+//        
+//    }
+//    
+//    @IBAction func phonemeButtonTapped(_ sender: UIButton) {
+//        let buttonIndex = (sender.tag - 100)
+//        masterButtonIndex = buttonIndex
+//        selectedButton = sender
+////        self.delegate?.buttonTapped(cell: self, buttonIndex: masterButtonIndex, button: selectedButton)
+//        updateButton(row: selectedButtonRow, buttonIndex: buttonIndex, button: sender)
+//    }
+//    
 }
 
 
@@ -250,7 +242,11 @@ extension RunTestTableViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! RunTestTableViewCell
         cell.delegate = self
         let row = Int(indexPath.row)
-        cell.configureCell(testElement: testElements[indexPath.row], rowNumber: row)
+        if !cellDataStore.indices.contains(row) {
+            cell.configureCell(testElement: testElements[indexPath.row], rowNumber: row)
+        } else {
+            
+        }
         return cell
 
     }
