@@ -147,6 +147,7 @@
 				TargetAttributes = {
 					65FC4F8421C2FB31002A7096 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -359,7 +360,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sadbadger.com.Dribbles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -377,7 +378,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sadbadger.com.Dribbles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;

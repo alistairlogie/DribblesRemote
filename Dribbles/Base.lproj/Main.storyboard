@@ -270,18 +270,18 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="2Fj-Ef-d2b">
                                                     <rect key="frame" x="130" y="2.5" width="552" height="55"/>
                                                     <subviews>
-                                                        <button opaque="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mA3-jh-04G">
+                                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mA3-jh-04G">
                                                             <rect key="frame" x="0.0" y="0.0" width="84.5" height="55"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                                            <state key="normal" title="Ph1">
+                                                            <state key="normal" title="1">
                                                                 <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
                                                             <connections>
                                                                 <action selector="phonemeButtonTapped:" destination="OpF-mp-S14" eventType="touchUpInside" id="D1M-39-fII"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" tag="101" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjg-hw-hIQ">
+                                                        <button opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjg-hw-hIQ">
                                                             <rect key="frame" x="93.5" y="0.0" width="84.5" height="55"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="36"/>
@@ -292,7 +292,7 @@
                                                                 <action selector="phonemeButtonTapped:" destination="OpF-mp-S14" eventType="touchUpInside" id="Hov-9z-nsJ"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" tag="102" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EN7-p6-x95">
+                                                        <button opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EN7-p6-x95">
                                                             <rect key="frame" x="187" y="0.0" width="84.5" height="55"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="36"/>
@@ -303,7 +303,7 @@
                                                                 <action selector="phonemeButtonTapped:" destination="OpF-mp-S14" eventType="touchUpInside" id="DFj-3E-yte"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" tag="103" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfo-je-DjU">
+                                                        <button opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfo-je-DjU">
                                                             <rect key="frame" x="280.5" y="0.0" width="84.5" height="55"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="36"/>
@@ -314,7 +314,7 @@
                                                                 <action selector="phonemeButtonTapped:" destination="OpF-mp-S14" eventType="touchUpInside" id="blg-wB-szN"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" tag="104" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKA-d2-wam">
+                                                        <button opaque="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKA-d2-wam">
                                                             <rect key="frame" x="374" y="0.0" width="84.5" height="55"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="36"/>
@@ -325,7 +325,7 @@
                                                                 <action selector="phonemeButtonTapped:" destination="OpF-mp-S14" eventType="touchUpInside" id="XJp-h2-ldc"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" tag="105" contentMode="scaleToFill" semanticContentAttribute="playback" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2b-TM-GYv">
+                                                        <button opaque="NO" tag="5" contentMode="scaleToFill" semanticContentAttribute="playback" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2b-TM-GYv">
                                                             <rect key="frame" x="467.5" y="0.0" width="84.5" height="55"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="36"/>
@@ -363,18 +363,13 @@
                                         <connections>
                                             <outlet property="tableTestScore" destination="ecP-x6-9Yw" id="mnB-r4-iux"/>
                                             <outlet property="tableTestWord" destination="08S-uk-UGb" id="0wc-3W-GHH"/>
-                                            <outletCollection property="phonemeButtons" destination="mA3-jh-04G" collectionClass="NSMutableArray" id="xIx-X8-1kL"/>
-                                            <outletCollection property="phonemeButtons" destination="wjg-hw-hIQ" collectionClass="NSMutableArray" id="G8u-nz-ccc"/>
-                                            <outletCollection property="phonemeButtons" destination="EN7-p6-x95" collectionClass="NSMutableArray" id="m0k-X1-hWM"/>
-                                            <outletCollection property="phonemeButtons" destination="dfo-je-DjU" collectionClass="NSMutableArray" id="1WM-5C-vdl"/>
-                                            <outletCollection property="phonemeButtons" destination="HKA-d2-wam" collectionClass="NSMutableArray" id="7kU-vv-g40"/>
-                                            <outletCollection property="phonemeButtons" destination="X2b-TM-GYv" collectionClass="NSMutableArray" id="FLf-y0-5EG"/>
+                                            <outletCollection property="phonemeButtons" destination="mA3-jh-04G" collectionClass="NSMutableArray" id="qwS-LU-FhQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="eNS-Nf-Rbe" id="Fch-9P-9Ch"/>
-                                    <outlet property="delegate" destination="eNS-Nf-Rbe" id="fbz-pQ-8wg"/>
+                                    <outlet property="delegate" destination="eNS-Nf-Rbe" id="yfi-Yc-IUz"/>
                                 </connections>
                             </tableView>
                         </subviews>
