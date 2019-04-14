@@ -15,7 +15,6 @@ protocol CellToTableDelegate: class {
 //
 class RunTestTableViewCell: UITableViewCell {
     
-    
     @IBOutlet weak var tableTestWord: UILabel!
     @IBOutlet weak var tableTestScore: UILabel!
     @IBOutlet var phonemeButtons: [UIButton]!
@@ -32,10 +31,15 @@ class RunTestTableViewCell: UITableViewCell {
             tableTestScore.text = "\(score)/\(maxScore)"
         }
     }
-//
-//
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.delegate = nil
+    }
+
     func configureCell(tableCellData: TableCellData, rowNumber: Int) {
-//
+
+        print("phoneme buttons count \(phonemeButtons.count)")
         cellRow = rowNumber
         tableTestWord.text = tableCellData.word
         maxScore = tableCellData.maxScore
@@ -48,46 +52,39 @@ class RunTestTableViewCell: UITableViewCell {
         }
         
         for i in 0 ..< phonemeButtonCount {
-            
-            let newButton = configureButton(title: phonemeTitles[i], status: tableCellData.buttonStates[i], index: i)
 
-            if phonemeButtons.count == phonemeButtonCount {
-                
-            } else {
-                print("newButton title is \(newButton.titleLabel!)")
-                phonemeButtons.append(newButton)
+            phonemeButtons[i].setTitle(phonemeTitles[i], for: .normal)
+            phonemeButtons[i].layer.cornerRadius = 10
+            phonemeButtons[i].tag = i
+            phonemeButtons[i].backgroundColor = .white
+            switch tableCellData.buttonStates[i] {
+            case .blank:
+                phonemeButtons[i].backgroundColor = .white
+            case .incorrect:
+                phonemeButtons[i].backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.2)
+            case .correct:
+                phonemeButtons[i].backgroundColor = UIColor(red: 0, green: 1, blue: 0, alpha: 0.2)
+            case .endOfTest:
+                phonemeButtons[i].backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.5)
+            }
+            
+            switch tableCellData.enabledStatuses[i] {
+            case .enabled:
+                phonemeButtons[i].isUserInteractionEnabled = true
+            case .disabled:
+                phonemeButtons[i].isUserInteractionEnabled = false
             }
 
-            print("After appending a button, i is \(i) and count is \(phonemeButtons.count)")
+            if phonemeButtons.count == phonemeButtonCount {
+            } else {
+                self.addSubview(phonemeButtons[i])
+                print("phoneme buttons count \(phonemeButtons.count)")
+            }
         }
     }
-
-    func configureButton(title: String, status: TableCellData.ButtonStatus, index: Int)-> UIButton {
-
-        let button = UIButton()
-        button.setTitle(title, for: .normal)
-        
-        button.layer.cornerRadius = 10
-        button.tag = index
-        switch status {
-        case .blank:
-            button.isUserInteractionEnabled = false
-            button.backgroundColor = .lightGray
-        case .incorrect:
-            button.isUserInteractionEnabled = true
-            button.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.2)
-        case .correct:
-            button.isUserInteractionEnabled = true
-            button.backgroundColor = UIColor(red: 0, green: 1, blue: 0, alpha: 0.2)
-        }
-        print("button title is \(button.titleLabel!)")
-        return button
-    }
-    
     
     @IBAction func phonemeButtonTapped(_ sender: UIButton) {
         buttonIndex = (sender.tag)
         delegate?.buttonInCellTapped(cell: self, tag: buttonIndex, row: cellRow)
-        print("button tapped")
     }
 }

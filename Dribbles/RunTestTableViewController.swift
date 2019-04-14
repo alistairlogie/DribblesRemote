@@ -11,10 +11,6 @@ import CoreData
 
 class RunTestTableViewController: UIViewController, CellToTableDelegate {
     
-    enum PhonemeStatus {
-        case correct, incorrect, blank
-    }
-    
     var selectedTest = String()
     var currentStudent = String()
     var container: NSPersistentContainer!
@@ -24,11 +20,17 @@ class RunTestTableViewController: UIViewController, CellToTableDelegate {
     var testLine = String()
     var testElement = TestElement()
     var testElements = [TestElement]()
-    var selectedButtonRow = 0
     var phonemeButtonCount = 6
-    var masterRowNumber = Int()
-    var phonemeStatuses = [PhonemeStatus]()
     var tableCellStore = [TableCellData]()
+    var cumulativeMaxScore = 0
+    var cumulativeScore = 0 {
+        didSet {
+            totalTestScore.text = "\(cumulativeScore)/\(cumulativeMaxScore)"
+        }
+    }
+    var endOfTestSet = false
+    var currentTag = 0
+    var currentRow = 0
 
     @IBOutlet weak var runTestTable: UITableView!
  
@@ -53,10 +55,6 @@ class RunTestTableViewController: UIViewController, CellToTableDelegate {
         } else {
             testLines = ["no tests found"]
         }
-        runTestTable.reloadData()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
         runTestTable.reloadData()
     }
     
@@ -124,30 +122,96 @@ class RunTestTableViewController: UIViewController, CellToTableDelegate {
                 if i >= testElement.testPhonemes.count {
                         if !newTableCell.buttonStates.indices.contains(i) {
                             newTableCell.buttonStates.append(.blank)
+                            newTableCell.enabledStatuses.append(.disabled)
                         }
                     } else {                    
                         if !newTableCell.buttonStates.indices.contains(i) {
                             newTableCell.buttonStates.append(.correct)
+                            newTableCell.enabledStatuses.append(.enabled)
                         }
                     }
                     
                 }
 
             }
+        cumulativeMaxScore += newTableCell.maxScore
+        cumulativeScore += newTableCell.score
         tableCellStore.append(newTableCell)
     }
     
     func buttonInCellTapped(cell: RunTestTableViewCell, tag: Int, row: Int) {
         print("A button was tapped at tag \(tag) and row \(row)")
-        if tableCellStore[row].buttonStates[tag] == .correct {
+        switch tableCellStore[row].buttonStates[tag] {
+        case .correct:
             tableCellStore[row].buttonStates[tag] = .incorrect
-        } else {
-            if tableCellStore[row].buttonStates[tag] == .incorrect {
-                tableCellStore[row].buttonStates[tag] = .correct
-            }
+            tableCellStore[row].score -= 1
+            cumulativeScore -= 1
+        case .incorrect:
+            tableCellStore[row].buttonStates[tag] = .endOfTest
+            endOfTest(tag: tag , row: row)
+//            cumulativeScore += 1
+        case .endOfTest:
+            tableCellStore[row].buttonStates[tag] = .correct
+            tableCellStore[row].score += 1
+            cumulativeScore += 1
+            reverseEndOfTest(tag: tag, row: row)
+        default:
+            return
         }
         runTestTable.reloadData()
     }
+    
+    func endOfTest(tag: Int, row: Int) {
+        for phonemeIndex in tag + 1 ..< tableCellStore[row].testPhonemes.count {
+            if tableCellStore[row].buttonStates[phonemeIndex] == .correct {
+                tableCellStore[row].buttonStates[phonemeIndex] = .incorrect
+                tableCellStore[row].enabledStatuses[phonemeIndex] = .disabled
+                tableCellStore[row].score -= 1
+                cumulativeScore -= 1
+            } else {
+                tableCellStore[row].enabledStatuses[phonemeIndex] = .disabled
+            }
+        }
+        for rowIndex in row + 1 ..< tableCellStore.count {
+            for phonemeIndex in 0 ..< tableCellStore[rowIndex].testPhonemes.count {
+                if tableCellStore[rowIndex].buttonStates[phonemeIndex] == .correct {
+                    tableCellStore[rowIndex].buttonStates[phonemeIndex] = .incorrect
+                    tableCellStore[rowIndex].enabledStatuses[phonemeIndex] = .disabled
+                    tableCellStore[rowIndex].score -= 1
+                    cumulativeScore -= 1
+                } else {
+                    
+                    tableCellStore[rowIndex].enabledStatuses[phonemeIndex] = .enabled
+                }
+            }
+        }
+    }
+    
+    func reverseEndOfTest(tag: Int, row: Int) {
+        for phonemeIndex in tag + 1 ..< tableCellStore[row].testPhonemes.count {
+                tableCellStore[row].buttonStates[phonemeIndex] = .correct
+                tableCellStore[row].enabledStatuses[phonemeIndex] = .enabled
+                tableCellStore[row].score += 1
+                cumulativeScore += 1
+        }
+    
+    for rowIndex in row + 1 ..< tableCellStore.count {
+            for phonemeIndex in 0 ..< tableCellStore[rowIndex].testPhonemes.count {
+                if tableCellStore[rowIndex].buttonStates[phonemeIndex] == .correct {
+                    tableCellStore[rowIndex].buttonStates[phonemeIndex] = .incorrect
+                    tableCellStore[rowIndex].enabledStatuses[phonemeIndex] = .disabled
+                    tableCellStore[rowIndex].score -= 1
+                    cumulativeScore -= 1
+                } else {
+                    tableCellStore[rowIndex].buttonStates[phonemeIndex] = .correct
+                    tableCellStore[rowIndex].enabledStatuses[phonemeIndex] = .enabled
+                    tableCellStore[rowIndex].score += 1
+                    cumulativeScore += 1
+                }
+            }
+        }
+    }
+    
 }
 
 
@@ -162,13 +226,12 @@ extension RunTestTableViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! RunTestTableViewCell
         cell.delegate = self
         let row = Int(indexPath.row)
             print("Calling configureCell with \(tableCellStore[indexPath.row])")
-            cell.configureCell(tableCellData: tableCellStore[indexPath.row], rowNumber: row)
-            
+        
+        cell.configureCell(tableCellData: tableCellStore[indexPath.row], rowNumber: row)
         return cell
     }
 }

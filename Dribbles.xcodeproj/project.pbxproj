@@ -13,6 +13,7 @@
 		654C176821D03E7500982BD5 /* RunTestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654C176721D03E7500982BD5 /* RunTestTableViewController.swift */; };
 		65627AF321CD9ACF0056C1B6 /* testElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65627AF221CD9ACF0056C1B6 /* testElement.swift */; };
 		65627AF521CDAA8A0056C1B6 /* Benchmark 1 - Phoneme Segmentation Fluency.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65627AF421CDAA8A0056C1B6 /* Benchmark 1 - Phoneme Segmentation Fluency.txt */; };
+		656FCE222262C207009783F8 /* Benchmark 2 - Phoneme Segmentation Fluency.txt in Resources */ = {isa = PBXBuildFile; fileRef = 656FCE212262C207009783F8 /* Benchmark 2 - Phoneme Segmentation Fluency.txt */; };
 		657520A1225C19D30063021D /* TableCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657520A0225C19D30063021D /* TableCellData.swift */; };
 		65A65D5F21C5C4DF003AE9A5 /* DribblesTestList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65A65D5E21C5C4DF003AE9A5 /* DribblesTestList.txt */; };
 		65A65D6221C5CB1B003AE9A5 /* TestEvent+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A65D6021C5CB1B003AE9A5 /* TestEvent+CoreDataClass.swift */; };
@@ -38,6 +39,7 @@
 		654C176721D03E7500982BD5 /* RunTestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunTestTableViewController.swift; sourceTree = "<group>"; };
 		65627AF221CD9ACF0056C1B6 /* testElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testElement.swift; sourceTree = "<group>"; };
 		65627AF421CDAA8A0056C1B6 /* Benchmark 1 - Phoneme Segmentation Fluency.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Benchmark 1 - Phoneme Segmentation Fluency.txt"; sourceTree = "<group>"; };
+		656FCE212262C207009783F8 /* Benchmark 2 - Phoneme Segmentation Fluency.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Benchmark 2 - Phoneme Segmentation Fluency.txt"; sourceTree = "<group>"; };
 		657520A0225C19D30063021D /* TableCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellData.swift; sourceTree = "<group>"; };
 		65A65D5E21C5C4DF003AE9A5 /* DribblesTestList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DribblesTestList.txt; sourceTree = "<group>"; };
 		65A65D6021C5CB1B003AE9A5 /* TestEvent+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestEvent+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				65FC4F9D21C2FB60002A7096 /* blah.txt */,
 				653D86EB21C432750077324E /* DBKidsList.txt */,
 				65A65D5E21C5C4DF003AE9A5 /* DribblesTestList.txt */,
+				656FCE212262C207009783F8 /* Benchmark 2 - Phoneme Segmentation Fluency.txt */,
 				65627AF421CDAA8A0056C1B6 /* Benchmark 1 - Phoneme Segmentation Fluency.txt */,
 				65B4FF0F224A7EE600968553 /* TestRow.swift */,
 			);
@@ -180,6 +183,7 @@
 				65FC4F9321C2FB33002A7096 /* Assets.xcassets in Resources */,
 				65A65D5F21C5C4DF003AE9A5 /* DribblesTestList.txt in Resources */,
 				653D86EC21C432750077324E /* DBKidsList.txt in Resources */,
+				656FCE222262C207009783F8 /* Benchmark 2 - Phoneme Segmentation Fluency.txt in Resources */,
 				65FC4F8E21C2FB31002A7096 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

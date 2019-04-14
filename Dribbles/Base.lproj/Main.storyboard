@@ -231,116 +231,104 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkQ-US-0vN">
-                                <rect key="frame" x="0.0" y="40" width="768" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkQ-US-0vN">
+                                <rect key="frame" x="0.0" y="40" width="768" height="0.0"/>
                                 <viewLayoutGuide key="safeArea" id="fBv-Vc-eDf"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SUy-QU-VYX">
-                                <rect key="frame" x="668" y="974" width="80" height="30"/>
+                                <rect key="frame" x="628" y="964" width="120" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="qGa-eB-qjZ"/>
+                                    <constraint firstAttribute="width" constant="120" id="qGa-eB-qjZ"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pxr-7R-Dbe">
-                                <rect key="frame" x="0.0" y="101" width="768" height="853"/>
+                                <rect key="frame" x="0.0" y="65" width="768" height="879"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="OpF-mp-S14" customClass="RunTestTableViewCell" customModule="Dribbles" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="768" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OpF-mp-S14" id="yP5-Nw-DHM">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OpF-mp-S14" id="yP5-Nw-DHM">
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="850" text="Phoneme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="08S-uk-UGb">
-                                                    <rect key="frame" x="20" y="8.5" width="100" height="43"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="100" id="K0n-WL-6Ac"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="2Fj-Ef-d2b">
-                                                    <rect key="frame" x="130" y="2.5" width="552" height="55"/>
+                                                    <rect key="frame" x="130" y="6" width="561" height="48"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mA3-jh-04G">
-                                                            <rect key="frame" x="0.0" y="0.0" width="84.5" height="55"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mA3-jh-04G">
+                                                            <rect key="frame" x="0.0" y="0.0" width="86" height="48"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                                            <state key="normal" title="1">
-                                                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </state>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                            <state key="normal" title="-"/>
                                                             <connections>
                                                                 <action selector="phonemeButtonTapped:" destination="OpF-mp-S14" eventType="touchUpInside" id="D1M-39-fII"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjg-hw-hIQ">
-                                                            <rect key="frame" x="93.5" y="0.0" width="84.5" height="55"/>
+                                                        <button opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjg-hw-hIQ">
+                                                            <rect key="frame" x="95" y="0.0" width="86" height="48"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                                            <state key="normal" title="Ph2">
-                                                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </state>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                            <state key="normal" title="-"/>
                                                             <connections>
                                                                 <action selector="phonemeButtonTapped:" destination="OpF-mp-S14" eventType="touchUpInside" id="Hov-9z-nsJ"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EN7-p6-x95">
-                                                            <rect key="frame" x="187" y="0.0" width="84.5" height="55"/>
+                                                        <button opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EN7-p6-x95">
+                                                            <rect key="frame" x="190" y="0.0" width="86" height="48"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                                            <state key="normal" title="Ph3">
-                                                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </state>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                            <state key="normal" title="-"/>
                                                             <connections>
                                                                 <action selector="phonemeButtonTapped:" destination="OpF-mp-S14" eventType="touchUpInside" id="DFj-3E-yte"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfo-je-DjU">
-                                                            <rect key="frame" x="280.5" y="0.0" width="84.5" height="55"/>
+                                                        <button opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfo-je-DjU">
+                                                            <rect key="frame" x="285" y="0.0" width="86" height="48"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                                            <state key="normal" title="Ph4">
-                                                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </state>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                            <state key="normal" title="-"/>
                                                             <connections>
                                                                 <action selector="phonemeButtonTapped:" destination="OpF-mp-S14" eventType="touchUpInside" id="blg-wB-szN"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKA-d2-wam">
-                                                            <rect key="frame" x="374" y="0.0" width="84.5" height="55"/>
+                                                        <button opaque="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKA-d2-wam">
+                                                            <rect key="frame" x="380" y="0.0" width="86" height="48"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                                            <state key="normal" title="Ph5">
-                                                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </state>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                            <state key="normal" title="-"/>
                                                             <connections>
                                                                 <action selector="phonemeButtonTapped:" destination="OpF-mp-S14" eventType="touchUpInside" id="XJp-h2-ldc"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" tag="5" contentMode="scaleToFill" semanticContentAttribute="playback" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2b-TM-GYv">
-                                                            <rect key="frame" x="467.5" y="0.0" width="84.5" height="55"/>
+                                                        <button opaque="NO" tag="5" contentMode="scaleToFill" semanticContentAttribute="playback" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2b-TM-GYv">
+                                                            <rect key="frame" x="475" y="0.0" width="86" height="48"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                                            <state key="normal" title="Ph6">
-                                                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </state>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                            <state key="normal" title="-"/>
                                                             <connections>
                                                                 <action selector="phonemeButtonTapped:" destination="OpF-mp-S14" eventType="touchUpInside" id="fa8-zk-Z4g"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="800" text="6/6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecP-x6-9Yw">
-                                                    <rect key="frame" x="692" y="8.5" width="56" height="43"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                                <label opaque="NO" contentMode="left" horizontalCompressionResistancePriority="850" text="Phoneme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="08S-uk-UGb">
+                                                    <rect key="frame" x="20" y="12" width="100" height="36"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="K0n-WL-6Ac"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" contentMode="left" horizontalCompressionResistancePriority="800" text="6/6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecP-x6-9Yw">
+                                                    <rect key="frame" x="701" y="12" width="47" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -364,6 +352,11 @@
                                             <outlet property="tableTestScore" destination="ecP-x6-9Yw" id="mnB-r4-iux"/>
                                             <outlet property="tableTestWord" destination="08S-uk-UGb" id="0wc-3W-GHH"/>
                                             <outletCollection property="phonemeButtons" destination="mA3-jh-04G" collectionClass="NSMutableArray" id="qwS-LU-FhQ"/>
+                                            <outletCollection property="phonemeButtons" destination="wjg-hw-hIQ" collectionClass="NSMutableArray" id="hU1-8C-obs"/>
+                                            <outletCollection property="phonemeButtons" destination="EN7-p6-x95" collectionClass="NSMutableArray" id="VtC-83-qQg"/>
+                                            <outletCollection property="phonemeButtons" destination="dfo-je-DjU" collectionClass="NSMutableArray" id="C3Y-Fd-Lss"/>
+                                            <outletCollection property="phonemeButtons" destination="HKA-d2-wam" collectionClass="NSMutableArray" id="hxD-yX-wkN"/>
+                                            <outletCollection property="phonemeButtons" destination="X2b-TM-GYv" collectionClass="NSMutableArray" id="9L0-mn-dga"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

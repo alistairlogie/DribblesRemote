@@ -11,11 +11,16 @@ import UIKit
 class TableCellData {
     
     enum ButtonStatus {
-        case correct, incorrect, blank
+        case correct, incorrect, blank, endOfTest
+    }
+    enum ButtonEnabled {
+        case enabled, disabled
     }
     var word = ""
+    var enabledStatuses: [ButtonEnabled] = []
     var buttonStates: [ButtonStatus] = []
     var testPhonemes: [String] = []
     var score: Int = 0
     var maxScore: Int = 0
+    
 }
