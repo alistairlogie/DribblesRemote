@@ -11,6 +11,17 @@ import CoreData
 
 class RunTestTableViewController: UIViewController, CellToTableDelegate {
     
+    var timer = Timer()
+    var timeRemaining = 11 {
+        didSet {
+            if timeRemaining == 1 {
+                countdownTimer.text = "\(timeRemaining) second"
+            } else {
+                countdownTimer.text = "\(timeRemaining) seconds"
+            }
+        }
+    }
+    
     var selectedTest = String()
     var currentStudent = String()
     var container: NSPersistentContainer!
@@ -33,7 +44,9 @@ class RunTestTableViewController: UIViewController, CellToTableDelegate {
     var currentRow = 0
 
     @IBOutlet weak var runTestTable: UITableView!
- 
+    
+    @IBOutlet weak var countdownTimer: UILabel!
+    
     @IBOutlet weak var totalTestScore: UITextField!    
     
     override func viewDidLoad() {
@@ -56,6 +69,10 @@ class RunTestTableViewController: UIViewController, CellToTableDelegate {
             testLines = ["no tests found"]
         }
         runTestTable.reloadData()
+        
+        let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerRunning), userInfo: nil, repeats: true)
+        RunLoop.current.add(timer, forMode: .common)
+        timerRunning()
     }
     
     func saveContext() {
@@ -66,6 +83,29 @@ class RunTestTableViewController: UIViewController, CellToTableDelegate {
                 print("An error occurred while saving: \(error)")
             }
         }
+    }
+    
+    @objc func timerRunning() {
+        timeRemaining -= 1
+//        countdownTimer.text = "\(timeRemaining) seconds"
+        if timeRemaining < 4  {
+            
+            if timeRemaining < 1 {
+                timer.invalidate()
+                countdownTimer.text = "Time's Up!"
+                self.countdownTimer.layer.removeAllAnimations()
+            } else {
+//                UIView.animate(withDuration: 4.0, animations: {
+//                    self.countdownTimer.layer.backgroundColor = UIColor.red.cgColor
+////                    self.runTestTable.layer.backgroundColor = UIColor.red.cgColor
+//                })
+                UIView.animate(withDuration: 0.5, delay: 0, options: [UIView.AnimationOptions.repeat, UIView.AnimationOptions.autoreverse], animations: {
+                    self.countdownTimer.layer.backgroundColor = UIColor.init(red: 1.0, green: 0, blue: 0, alpha: 0.5).cgColor
+                }, completion: nil)
+            }
+//            countdownTimer.textColor = .red
+        }
+        
     }
     
     @objc func submitTestResultPressed(_ sender: UIBarButtonItem) {

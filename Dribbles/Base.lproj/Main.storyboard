@@ -26,10 +26,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="730" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1Yz-jg-vEd">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1Yz-jg-vEd">
                                             <rect key="frame" x="20" y="0.0" width="710" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -42,7 +42,7 @@
                             <outlet property="delegate" destination="DUM-0c-Ryt" id="GKw-qq-vxo"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Select Student" id="Kn7-29-LRb">
+                    <navigationItem key="navigationItem" title="Select or Add a Student" id="Kn7-29-LRb">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ecz-Wm-Uoj">
                             <connections>
                                 <segue destination="3Zt-mS-TlC" kind="show" id="YJO-1m-Dwe"/>
@@ -231,8 +231,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkQ-US-0vN">
-                                <rect key="frame" x="0.0" y="40" width="768" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkQ-US-0vN">
+                                <rect key="frame" x="0.0" y="40" width="768" height="36"/>
                                 <viewLayoutGuide key="safeArea" id="fBv-Vc-eDf"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -248,7 +248,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pxr-7R-Dbe">
-                                <rect key="frame" x="0.0" y="65" width="768" height="879"/>
+                                <rect key="frame" x="0.0" y="101" width="768" height="843"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="OpF-mp-S14" customClass="RunTestTableViewCell" customModule="Dribbles" customModuleProvider="target">
@@ -381,6 +381,7 @@
                         <viewLayoutGuide key="safeArea" id="YSQ-er-yax"/>
                     </view>
                     <connections>
+                        <outlet property="countdownTimer" destination="qkQ-US-0vN" id="hBh-Hp-4VC"/>
                         <outlet property="runTestTable" destination="pxr-7R-Dbe" id="cRk-Cp-7eH"/>
                         <outlet property="totalTestScore" destination="SUy-QU-VYX" id="zPr-PC-lVv"/>
                     </connections>
