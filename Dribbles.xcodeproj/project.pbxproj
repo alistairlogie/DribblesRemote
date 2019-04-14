@@ -32,7 +32,6 @@
 		65FC4F8E21C2FB31002A7096 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65FC4F8C21C2FB31002A7096 /* Main.storyboard */; };
 		65FC4F9121C2FB31002A7096 /* Dribbles.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 65FC4F8F21C2FB31002A7096 /* Dribbles.xcdatamodeld */; };
 		65FC4F9321C2FB33002A7096 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65FC4F9221C2FB33002A7096 /* Assets.xcassets */; };
-		65FC4F9621C2FB33002A7096 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65FC4F9421C2FB33002A7096 /* LaunchScreen.storyboard */; };
 		65FC4F9E21C2FB60002A7096 /* blah.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65FC4F9D21C2FB60002A7096 /* blah.txt */; };
 		65FF6FD421C46EEA0013197F /* Student+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FF6FD221C46EEA0013197F /* Student+CoreDataClass.swift */; };
 		65FF6FD521C46EEA0013197F /* Student+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FF6FD321C46EEA0013197F /* Student+CoreDataProperties.swift */; };
@@ -66,7 +65,6 @@
 		65FC4F8D21C2FB31002A7096 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		65FC4F9021C2FB31002A7096 /* Dribbles.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Dribbles.xcdatamodel; sourceTree = "<group>"; };
 		65FC4F9221C2FB33002A7096 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		65FC4F9521C2FB33002A7096 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65FC4F9721C2FB33002A7096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65FC4F9D21C2FB60002A7096 /* blah.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = blah.txt; sourceTree = "<group>"; };
 		65FF6FD221C46EEA0013197F /* Student+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Student+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -119,7 +117,6 @@
 				657520A0225C19D30063021D /* TableCellData.swift */,
 				65627AF221CD9ACF0056C1B6 /* testElement.swift */,
 				65FC4F9221C2FB33002A7096 /* Assets.xcassets */,
-				65FC4F9421C2FB33002A7096 /* LaunchScreen.storyboard */,
 				65FC4F9721C2FB33002A7096 /* Info.plist */,
 				65FC4F8F21C2FB31002A7096 /* Dribbles.xcdatamodeld */,
 				65FC4F9D21C2FB60002A7096 /* blah.txt */,
@@ -200,7 +197,6 @@
 			files = (
 				65C787E52263DC5F00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 4.txt in Resources */,
 				65C787E22263DC5F00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 5.txt in Resources */,
-				65FC4F9621C2FB33002A7096 /* LaunchScreen.storyboard in Resources */,
 				65FC4F9E21C2FB60002A7096 /* blah.txt in Resources */,
 				65FC4F9321C2FB33002A7096 /* Assets.xcassets in Resources */,
 				65C787E32263DC5F00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 2.txt in Resources */,
@@ -250,14 +246,6 @@
 				65FC4F8D21C2FB31002A7096 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		65FC4F9421C2FB33002A7096 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				65FC4F9521C2FB33002A7096 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
