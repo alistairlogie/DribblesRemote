@@ -8,14 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		65253C0621E5125300F0EFB3 /* RunTestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65253C0521E5125300F0EFB3 /* RunTestTableViewCell.swift */; };
-		653D86EC21C432750077324E /* DBKidsList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 653D86EB21C432750077324E /* DBKidsList.txt */; };
 		653D86F021C44D450077324E /* StudentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653D86EF21C44D450077324E /* StudentDetailViewController.swift */; };
 		654C176821D03E7500982BD5 /* RunTestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654C176721D03E7500982BD5 /* RunTestTableViewController.swift */; };
-		65627AF321CD9ACF0056C1B6 /* testElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65627AF221CD9ACF0056C1B6 /* testElement.swift */; };
 		656FCE222262C207009783F8 /* Benchmark 2 - Phoneme Segmentation Fluency.txt in Resources */ = {isa = PBXBuildFile; fileRef = 656FCE212262C207009783F8 /* Benchmark 2 - Phoneme Segmentation Fluency.txt */; };
 		657520A1225C19D30063021D /* TableCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657520A0225C19D30063021D /* TableCellData.swift */; };
 		658954DD2264F59200C962E2 /* Benchmark 2 - Nonsense Word Fluency.txt in Resources */ = {isa = PBXBuildFile; fileRef = 658954DB2264F59200C962E2 /* Benchmark 2 - Nonsense Word Fluency.txt */; };
 		658954DE2264F59200C962E2 /* Benchmark 3 - Nonsense Word Fluency.txt in Resources */ = {isa = PBXBuildFile; fileRef = 658954DC2264F59200C962E2 /* Benchmark 3 - Nonsense Word Fluency.txt */; };
+		658954E5226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 658954DF226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 2.txt */; };
+		658954E6226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 4.txt in Resources */ = {isa = PBXBuildFile; fileRef = 658954E0226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 4.txt */; };
+		658954E7226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 6.txt in Resources */ = {isa = PBXBuildFile; fileRef = 658954E1226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 6.txt */; };
+		658954E8226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 3.txt in Resources */ = {isa = PBXBuildFile; fileRef = 658954E2226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 3.txt */; };
+		658954E9226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 5.txt in Resources */ = {isa = PBXBuildFile; fileRef = 658954E3226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 5.txt */; };
+		658954EA226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 658954E4226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 1.txt */; };
+		658954EE2265040D00C962E2 /* TestElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658954ED2265040D00C962E2 /* TestElement.swift */; };
 		65A65D5F21C5C4DF003AE9A5 /* DribblesTestList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65A65D5E21C5C4DF003AE9A5 /* DribblesTestList.txt */; };
 		65A65D6221C5CB1B003AE9A5 /* TestEvent+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A65D6021C5CB1B003AE9A5 /* TestEvent+CoreDataClass.swift */; };
 		65A65D6321C5CB1B003AE9A5 /* TestEvent+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A65D6121C5CB1B003AE9A5 /* TestEvent+CoreDataProperties.swift */; };
@@ -37,7 +42,6 @@
 		65FC4F8E21C2FB31002A7096 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65FC4F8C21C2FB31002A7096 /* Main.storyboard */; };
 		65FC4F9121C2FB31002A7096 /* Dribbles.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 65FC4F8F21C2FB31002A7096 /* Dribbles.xcdatamodeld */; };
 		65FC4F9321C2FB33002A7096 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65FC4F9221C2FB33002A7096 /* Assets.xcassets */; };
-		65FC4F9E21C2FB60002A7096 /* blah.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65FC4F9D21C2FB60002A7096 /* blah.txt */; };
 		65FF6FD421C46EEA0013197F /* Student+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FF6FD221C46EEA0013197F /* Student+CoreDataClass.swift */; };
 		65FF6FD521C46EEA0013197F /* Student+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FF6FD321C46EEA0013197F /* Student+CoreDataProperties.swift */; };
 		65FF6FD721C4721E0013197F /* AddStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FF6FD621C4721E0013197F /* AddStudentViewController.swift */; };
@@ -45,14 +49,19 @@
 
 /* Begin PBXFileReference section */
 		65253C0521E5125300F0EFB3 /* RunTestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunTestTableViewCell.swift; sourceTree = "<group>"; };
-		653D86EB21C432750077324E /* DBKidsList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DBKidsList.txt; sourceTree = "<group>"; };
 		653D86EF21C44D450077324E /* StudentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetailViewController.swift; sourceTree = "<group>"; };
 		654C176721D03E7500982BD5 /* RunTestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunTestTableViewController.swift; sourceTree = "<group>"; };
-		65627AF221CD9ACF0056C1B6 /* testElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testElement.swift; sourceTree = "<group>"; };
 		656FCE212262C207009783F8 /* Benchmark 2 - Phoneme Segmentation Fluency.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Benchmark 2 - Phoneme Segmentation Fluency.txt"; sourceTree = "<group>"; };
 		657520A0225C19D30063021D /* TableCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellData.swift; sourceTree = "<group>"; };
 		658954DB2264F59200C962E2 /* Benchmark 2 - Nonsense Word Fluency.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Benchmark 2 - Nonsense Word Fluency.txt"; sourceTree = "<group>"; };
 		658954DC2264F59200C962E2 /* Benchmark 3 - Nonsense Word Fluency.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Benchmark 3 - Nonsense Word Fluency.txt"; sourceTree = "<group>"; };
+		658954DF226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Nonsense Word Fluency 2.txt"; sourceTree = "<group>"; };
+		658954E0226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Nonsense Word Fluency 4.txt"; sourceTree = "<group>"; };
+		658954E1226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 6.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Nonsense Word Fluency 6.txt"; sourceTree = "<group>"; };
+		658954E2226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Nonsense Word Fluency 3.txt"; sourceTree = "<group>"; };
+		658954E3226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Nonsense Word Fluency 5.txt"; sourceTree = "<group>"; };
+		658954E4226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Nonsense Word Fluency 1.txt"; sourceTree = "<group>"; };
+		658954ED2265040D00C962E2 /* TestElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestElement.swift; sourceTree = "<group>"; };
 		65A65D5E21C5C4DF003AE9A5 /* DribblesTestList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DribblesTestList.txt; sourceTree = "<group>"; };
 		65A65D6021C5CB1B003AE9A5 /* TestEvent+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestEvent+CoreDataClass.swift"; sourceTree = "<group>"; };
 		65A65D6121C5CB1B003AE9A5 /* TestEvent+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestEvent+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -76,7 +85,6 @@
 		65FC4F9021C2FB31002A7096 /* Dribbles.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Dribbles.xcdatamodel; sourceTree = "<group>"; };
 		65FC4F9221C2FB33002A7096 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65FC4F9721C2FB33002A7096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		65FC4F9D21C2FB60002A7096 /* blah.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = blah.txt; sourceTree = "<group>"; };
 		65FF6FD221C46EEA0013197F /* Student+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Student+CoreDataClass.swift"; sourceTree = "<group>"; };
 		65FF6FD321C46EEA0013197F /* Student+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Student+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		65FF6FD621C4721E0013197F /* AddStudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStudentViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +117,12 @@
 				65C787EB2264073500C8D35B /* Benchmark 1 - Nonsense Word Fluency.txt */,
 				658954DB2264F59200C962E2 /* Benchmark 2 - Nonsense Word Fluency.txt */,
 				658954DC2264F59200C962E2 /* Benchmark 3 - Nonsense Word Fluency.txt */,
+				658954E4226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 1.txt */,
+				658954DF226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 2.txt */,
+				658954E2226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 3.txt */,
+				658954E0226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 4.txt */,
+				658954E3226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 5.txt */,
+				658954E1226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 6.txt */,
 			);
 			path = "Test Files";
 			sourceTree = "<group>";
@@ -132,6 +146,7 @@
 		65FC4F8721C2FB31002A7096 /* Dribbles */ = {
 			isa = PBXGroup;
 			children = (
+				658954ED2265040D00C962E2 /* TestElement.swift */,
 				65A65D6021C5CB1B003AE9A5 /* TestEvent+CoreDataClass.swift */,
 				65A65D6121C5CB1B003AE9A5 /* TestEvent+CoreDataProperties.swift */,
 				65FF6FD221C46EEA0013197F /* Student+CoreDataClass.swift */,
@@ -147,12 +162,9 @@
 				65253C0521E5125300F0EFB3 /* RunTestTableViewCell.swift */,
 				654C176721D03E7500982BD5 /* RunTestTableViewController.swift */,
 				657520A0225C19D30063021D /* TableCellData.swift */,
-				65627AF221CD9ACF0056C1B6 /* testElement.swift */,
 				65FC4F9221C2FB33002A7096 /* Assets.xcassets */,
 				65FC4F9721C2FB33002A7096 /* Info.plist */,
 				65FC4F8F21C2FB31002A7096 /* Dribbles.xcdatamodeld */,
-				65FC4F9D21C2FB60002A7096 /* blah.txt */,
-				653D86EB21C432750077324E /* DBKidsList.txt */,
 				65C787ED2264075300C8D35B /* Test Files */,
 				65B4FF0F224A7EE600968553 /* TestRow.swift */,
 			);
@@ -220,19 +232,23 @@
 			files = (
 				65C787E52263DC5F00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 4.txt in Resources */,
 				65C787E22263DC5F00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 5.txt in Resources */,
-				65FC4F9E21C2FB60002A7096 /* blah.txt in Resources */,
 				65FC4F9321C2FB33002A7096 /* Assets.xcassets in Resources */,
 				65C787E32263DC5F00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 2.txt in Resources */,
+				658954E6226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 4.txt in Resources */,
+				658954E5226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 2.txt in Resources */,
 				65A65D5F21C5C4DF003AE9A5 /* DribblesTestList.txt in Resources */,
-				653D86EC21C432750077324E /* DBKidsList.txt in Resources */,
 				65C787E42263DC5F00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 3.txt in Resources */,
 				65C787EC2264073500C8D35B /* Benchmark 1 - Nonsense Word Fluency.txt in Resources */,
+				658954EA226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 1.txt in Resources */,
 				65C787DC2263D80E00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 1.txt in Resources */,
 				658954DD2264F59200C962E2 /* Benchmark 2 - Nonsense Word Fluency.txt in Resources */,
+				658954E9226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 5.txt in Resources */,
 				65C787E62263DC5F00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 6.txt in Resources */,
+				658954E7226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 6.txt in Resources */,
 				65C787DA2263D61800C8D35B /* Benchmark 3 - Phoneme Segmentation Fluency.txt in Resources */,
 				656FCE222262C207009783F8 /* Benchmark 2 - Phoneme Segmentation Fluency.txt in Resources */,
 				65FC4F8E21C2FB31002A7096 /* Main.storyboard in Resources */,
+				658954E8226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 3.txt in Resources */,
 				658954DE2264F59200C962E2 /* Benchmark 3 - Nonsense Word Fluency.txt in Resources */,
 				65C787D92263D61800C8D35B /* Benchmark 1 - Phoneme Segmentation Fluency.txt in Resources */,
 			);
@@ -248,6 +264,7 @@
 				65C787E82263FA1400C8D35B /* NWFTestViewController.swift in Sources */,
 				65B4FF10224A7EE600968553 /* TestRow.swift in Sources */,
 				65FF6FD521C46EEA0013197F /* Student+CoreDataProperties.swift in Sources */,
+				658954EE2265040D00C962E2 /* TestElement.swift in Sources */,
 				657520A1225C19D30063021D /* TableCellData.swift in Sources */,
 				654C176821D03E7500982BD5 /* RunTestTableViewController.swift in Sources */,
 				65FF6FD721C4721E0013197F /* AddStudentViewController.swift in Sources */,
@@ -255,7 +272,6 @@
 				65D42F5821C9E73A008EC6E8 /* PersistenceService.swift in Sources */,
 				653D86F021C44D450077324E /* StudentDetailViewController.swift in Sources */,
 				65A65D6321C5CB1B003AE9A5 /* TestEvent+CoreDataProperties.swift in Sources */,
-				65627AF321CD9ACF0056C1B6 /* testElement.swift in Sources */,
 				65FC4F8B21C2FB31002A7096 /* ViewController.swift in Sources */,
 				65C787EA2263FF7100C8D35B /* NWFTestTableViewCell.swift in Sources */,
 				65FC4F8921C2FB31002A7096 /* AppDelegate.swift in Sources */,
