@@ -14,6 +14,8 @@
 		65627AF321CD9ACF0056C1B6 /* testElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65627AF221CD9ACF0056C1B6 /* testElement.swift */; };
 		656FCE222262C207009783F8 /* Benchmark 2 - Phoneme Segmentation Fluency.txt in Resources */ = {isa = PBXBuildFile; fileRef = 656FCE212262C207009783F8 /* Benchmark 2 - Phoneme Segmentation Fluency.txt */; };
 		657520A1225C19D30063021D /* TableCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657520A0225C19D30063021D /* TableCellData.swift */; };
+		658954DD2264F59200C962E2 /* Benchmark 2 - Nonsense Word Fluency.txt in Resources */ = {isa = PBXBuildFile; fileRef = 658954DB2264F59200C962E2 /* Benchmark 2 - Nonsense Word Fluency.txt */; };
+		658954DE2264F59200C962E2 /* Benchmark 3 - Nonsense Word Fluency.txt in Resources */ = {isa = PBXBuildFile; fileRef = 658954DC2264F59200C962E2 /* Benchmark 3 - Nonsense Word Fluency.txt */; };
 		65A65D5F21C5C4DF003AE9A5 /* DribblesTestList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65A65D5E21C5C4DF003AE9A5 /* DribblesTestList.txt */; };
 		65A65D6221C5CB1B003AE9A5 /* TestEvent+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A65D6021C5CB1B003AE9A5 /* TestEvent+CoreDataClass.swift */; };
 		65A65D6321C5CB1B003AE9A5 /* TestEvent+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A65D6121C5CB1B003AE9A5 /* TestEvent+CoreDataProperties.swift */; };
@@ -49,6 +51,8 @@
 		65627AF221CD9ACF0056C1B6 /* testElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testElement.swift; sourceTree = "<group>"; };
 		656FCE212262C207009783F8 /* Benchmark 2 - Phoneme Segmentation Fluency.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Benchmark 2 - Phoneme Segmentation Fluency.txt"; sourceTree = "<group>"; };
 		657520A0225C19D30063021D /* TableCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellData.swift; sourceTree = "<group>"; };
+		658954DB2264F59200C962E2 /* Benchmark 2 - Nonsense Word Fluency.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Benchmark 2 - Nonsense Word Fluency.txt"; sourceTree = "<group>"; };
+		658954DC2264F59200C962E2 /* Benchmark 3 - Nonsense Word Fluency.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Benchmark 3 - Nonsense Word Fluency.txt"; sourceTree = "<group>"; };
 		65A65D5E21C5C4DF003AE9A5 /* DribblesTestList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DribblesTestList.txt; sourceTree = "<group>"; };
 		65A65D6021C5CB1B003AE9A5 /* TestEvent+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestEvent+CoreDataClass.swift"; sourceTree = "<group>"; };
 		65A65D6121C5CB1B003AE9A5 /* TestEvent+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestEvent+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 				65C787DD2263DC5D00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 5.txt */,
 				65C787E12263DC5E00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 6.txt */,
 				65C787EB2264073500C8D35B /* Benchmark 1 - Nonsense Word Fluency.txt */,
+				658954DB2264F59200C962E2 /* Benchmark 2 - Nonsense Word Fluency.txt */,
+				658954DC2264F59200C962E2 /* Benchmark 3 - Nonsense Word Fluency.txt */,
 			);
 			path = "Test Files";
 			sourceTree = "<group>";
@@ -222,10 +228,12 @@
 				65C787E42263DC5F00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 3.txt in Resources */,
 				65C787EC2264073500C8D35B /* Benchmark 1 - Nonsense Word Fluency.txt in Resources */,
 				65C787DC2263D80E00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 1.txt in Resources */,
+				658954DD2264F59200C962E2 /* Benchmark 2 - Nonsense Word Fluency.txt in Resources */,
 				65C787E62263DC5F00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 6.txt in Resources */,
 				65C787DA2263D61800C8D35B /* Benchmark 3 - Phoneme Segmentation Fluency.txt in Resources */,
 				656FCE222262C207009783F8 /* Benchmark 2 - Phoneme Segmentation Fluency.txt in Resources */,
 				65FC4F8E21C2FB31002A7096 /* Main.storyboard in Resources */,
+				658954DE2264F59200C962E2 /* Benchmark 3 - Nonsense Word Fluency.txt in Resources */,
 				65C787D92263D61800C8D35B /* Benchmark 1 - Phoneme Segmentation Fluency.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
