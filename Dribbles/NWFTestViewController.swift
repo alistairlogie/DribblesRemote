@@ -202,7 +202,6 @@ class NWFTestViewController: UIViewController, NWFCellToTableDelegate {
     }
     
     func buttonInCellTapped(cell: NFWTestTableViewCell, tag: Int, row: Int) {
-        print("A button was tapped at tag \(tag) and row \(row)")
         switch tableCellStore[row].buttonStates[tag] {
         case .correct:
             tableCellStore[row].buttonStates[tag] = .incorrect
@@ -335,7 +334,6 @@ extension NWFTestViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NFWTestTableViewCell
         cell.delegate = self
         let row = Int(indexPath.row)
-//        print("Calling configureCell with \(tableCellStore[indexPath.row])")
         
         cell.configureCell(tableCellData: tableCellStore[indexPath.row], rowNumber: row)
         return cell

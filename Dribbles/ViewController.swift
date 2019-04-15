@@ -35,7 +35,6 @@ class ViewController: UITableViewController {
         
         do {
             students = try PersistenceService.context.fetch(request)
-            print("Got \(students.count) students")
             tableView.reloadData()
         } catch {
             let ac = UIAlertController(title: "Database error", message: "We were unable to retrieve student data from the database.", preferredStyle: .alert)
@@ -85,7 +84,6 @@ class ViewController: UITableViewController {
             let ac = UIAlertController(title: "Delete student?", message: "Are you sure? All of the student's test results will also be deleted.", preferredStyle: .alert)
             
             _ = ac.addAction(UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
-                    print("cancelled")
             })
                 
             _ = ac.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
@@ -107,12 +105,10 @@ class ViewController: UITableViewController {
                 // check to see if there are testEvents to delete
                 if let associatedResults = try? PersistenceService.context.fetch(request) {
                     //If there are go through the array and delete the associated entity instances
-                    print("Got \(associatedResults.count) results")
                     for associatedResult in associatedResults {
                         PersistenceService.context.delete(associatedResult)
                     }
                 } else {
-                    print("No associated results")
                 }
 //                    previousResultsTableView.reloadData()
                 //Now that all their testEvents are gone, we can delete the student
@@ -131,7 +127,6 @@ class ViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         loadSavedData()
-        print("Reloading table data!")
         tableView.reloadData()
     }
     
@@ -143,12 +138,7 @@ class ViewController: UITableViewController {
     
     @IBAction func done(segue:UIStoryboardSegue) {
         
-        print("really done")
         tableView.reloadData()
-//        let student = Student(context: PersistenceService.context)
-//        student.name = addStudentName
-//        // print(student)
-//        PersistenceService.saveContext()
-//        loadSavedData()
+//       
     }
 }

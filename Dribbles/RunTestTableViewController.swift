@@ -136,7 +136,6 @@ class RunTestTableViewController: UIViewController, CellToTableDelegate {
         testElement.testPhonemes.removeAll()
 
         if testChunks.count > 1 {
-            //            print("\(testChunks.count) is apparently greater than 1")
             for (index, chunk) in testChunks.enumerated() {
                 if chunk != "" {
                     //if it's the first chunk, set that as the test word
@@ -184,7 +183,6 @@ class RunTestTableViewController: UIViewController, CellToTableDelegate {
     }
     
     func buttonInCellTapped(cell: RunTestTableViewCell, tag: Int, row: Int) {
-        print("A button was tapped at tag \(tag) and row \(row)")
         switch tableCellStore[row].buttonStates[tag] {
         case .correct:
             tableCellStore[row].buttonStates[tag] = .incorrect
@@ -273,7 +271,6 @@ extension RunTestTableViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! RunTestTableViewCell
         cell.delegate = self
         let row = Int(indexPath.row)
-            print("Calling configureCell with \(tableCellStore[indexPath.row])")
         
         cell.configureCell(tableCellData: tableCellStore[indexPath.row], rowNumber: row)
         return cell

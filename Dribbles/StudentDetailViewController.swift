@@ -47,7 +47,7 @@ class StudentDetailViewController: UIViewController, UIPickerViewDataSource, UIP
         if let testTypesListPath = Bundle.main.path(forResource: "DribblesTestList", ofType: "txt") {
             if let testTypesListEntries = try? String(contentsOfFile: testTypesListPath) {
                 testTypes = testTypesListEntries.components(separatedBy: "\n")
-//                print(testTypes)
+
             }
         } else {
             testTypes = ["no tests found"]
@@ -56,30 +56,9 @@ class StudentDetailViewController: UIViewController, UIPickerViewDataSource, UIP
 //        loadSavedData()
         previousResultsTableView.delegate = self
         previousResultsTableView.dataSource = self
-        
-        
-        
-        
-        
-        
-        // Do any additional setup after loading the view.
+
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-// //       print(container)
-//        if segue.destination is RunTestViewController {
-//            let vc = segue.destination as? RunTestViewController
-//            if selectedTest == "" {
-//                vc?.selectedTest = testTypes[0]
-//            } else {
-//                vc?.selectedTest = selectedTest
-//            }
-//            
-//            vc?.currentStudent = studentName
-//            vc?.updatedResults = previousResults
-//  //          vc?.container = container
-//        }
-//    }
+
     
     
     
@@ -138,7 +117,6 @@ class StudentDetailViewController: UIViewController, UIPickerViewDataSource, UIP
         do {
             //try and load the results of the request into the previousResults array
             previousResults = try PersistenceService.context.fetch(request)
-            print("Got \(previousResults.count) results")
             previousResultsTableView.reloadData()
             
             
@@ -168,7 +146,6 @@ class StudentDetailViewController: UIViewController, UIPickerViewDataSource, UIP
             let ac = UIAlertController(title: "Delete test result?", message: "Are you sure? You won't be able to retrieve this data.", preferredStyle: .alert)
             
             _ = ac.addAction(UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
-                print("cancelled")
             })
             
             _ = ac.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in

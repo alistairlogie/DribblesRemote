@@ -39,7 +39,6 @@ class RunTestTableViewCell: UITableViewCell {
 
     func configureCell(tableCellData: TableCellData, rowNumber: Int) {
 
-        print("phoneme buttons count \(phonemeButtons.count)")
         cellRow = rowNumber
         tableTestWord.text = tableCellData.word
         maxScore = tableCellData.maxScore
@@ -78,7 +77,6 @@ class RunTestTableViewCell: UITableViewCell {
             if phonemeButtons.count == phonemeButtonCount {
             } else {
                 self.addSubview(phonemeButtons[i])
-                print("phoneme buttons count \(phonemeButtons.count)")
             }
         }
     }

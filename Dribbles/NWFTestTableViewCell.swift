@@ -40,7 +40,6 @@ class NFWTestTableViewCell: UITableViewCell {
     
     func configureCell(tableCellData: TableCellData, rowNumber: Int) {
         
-        print("phoneme buttons count \(phonemeButtons.count)")
         cellRow = rowNumber
         tableTestWord.text = tableCellData.word
         maxScore = tableCellData.maxScore
@@ -57,7 +56,6 @@ class NFWTestTableViewCell: UITableViewCell {
             phonemeButtons[i].setTitle(phonemeTitles[i], for: .normal)
             phonemeButtons[i].layer.cornerRadius = 10
             phonemeButtons[i].tag = i
-//            print("Button tag is \(phonemeButtons[i].tag)")
             phonemeButtons[i].backgroundColor = .white
             switch tableCellData.buttonStates[i] {
             case .blank:
@@ -80,14 +78,12 @@ class NFWTestTableViewCell: UITableViewCell {
             if phonemeButtons.count == phonemeButtonCount {
             } else {
                 self.addSubview(phonemeButtons[i])
-//                print("phoneme buttons count \(phonemeButtons.count)")
             }
         }
     }
     
     @IBAction func phonemeButtonTapped(_ sender: UIButton) {
         buttonIndex = (sender.tag)
-        print("In cell a button was tapped at tag \(buttonIndex) and row \(cellRow)")
         delegate?.buttonInCellTapped(cell: self, tag: buttonIndex, row: cellRow)
     
     }
