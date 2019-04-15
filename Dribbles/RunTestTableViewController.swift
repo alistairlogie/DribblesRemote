@@ -80,7 +80,11 @@ class RunTestTableViewController: UIViewController, CellToTableDelegate {
             do {
                 try container.viewContext.save()
             } catch {
-                print("An error occurred while saving: \(error)")
+                let ac = UIAlertController(title: "Database error", message: "We were unable to save the test data.", preferredStyle: .alert)
+                _ = ac.addAction(UIAlertAction(title: "OK", style: .default) { (action) -> Void in
+                    return
+                })
+                self.present(ac, animated: true)
             }
         }
     }

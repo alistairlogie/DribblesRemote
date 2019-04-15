@@ -52,6 +52,7 @@ class StudentDetailViewController: UIViewController, UIPickerViewDataSource, UIP
         } else {
             testTypes = ["no tests found"]
         }
+        selectedTest = testTypes[0]
 //        loadSavedData()
         previousResultsTableView.delegate = self
         previousResultsTableView.dataSource = self
@@ -143,7 +144,12 @@ class StudentDetailViewController: UIViewController, UIPickerViewDataSource, UIP
             
             
         } catch {
-            print("Fetch failed")
+            let ac = UIAlertController(title: "Database error", message: "We were unable to retrieve data from the database.", preferredStyle: .alert)
+            
+            _ = ac.addAction(UIAlertAction(title: "OK", style: .default) { (action) -> Void in
+                return
+            })
+            self.present(ac, animated: true)
         }
     }
     
@@ -183,17 +189,44 @@ class StudentDetailViewController: UIViewController, UIPickerViewDataSource, UIP
     
     @IBAction func startTestPressed(_ sender: UIButton) {
 //        vc.studentName = students[indexPath.row].name
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "RunTestTable") as? RunTestTableViewController {
-            navigationController?.pushViewController(vc, animated: true)
-            if selectedTest == "" {
-                vc.selectedTest = testTypes[0]
-            } else {
-                vc.selectedTest = selectedTest
+        if let testFileListPath = Bundle.main.path(forResource: selectedTest, ofType: "txt") {
+            if selectedTest.contains("Phoneme") {
+                if let vc = storyboard?.instantiateViewController(withIdentifier: "RunTestTable") as? RunTestTableViewController {
+                    navigationController?.pushViewController(vc, animated: true)
+                    if selectedTest == "" {
+                        vc.selectedTest = testTypes[0]
+                    } else {
+                        vc.selectedTest = selectedTest
+                    }
+                    
+                    vc.currentStudent = studentName
+                    vc.updatedResults = previousResults
+                }
             }
+            if selectedTest.contains("Nonsense") {
+                if let vc = storyboard?.instantiateViewController(withIdentifier: "NWFTestTable") as? NWFTestViewController {
+                    navigationController?.pushViewController(vc, animated: true)
+                    if selectedTest == "" {
+                        vc.selectedTest = testTypes[0]
+                    } else {
+                        vc.selectedTest = selectedTest
+                    }
+                    
+                    vc.currentStudent = studentName
+                    vc.updatedResults = previousResults
+                }
+            }
+        } else {
+            let ac = UIAlertController(title: "Test Unavailable", message: "This test is currently not available. Please try again later", preferredStyle: .alert)
             
-            vc.currentStudent = studentName
-            vc.updatedResults = previousResults
+            _ = ac.addAction(UIAlertAction(title: "OK", style: .default) { (action) -> Void in
+                return
+            })
+            self.present(ac, animated: true)
         }
+        
+        
+        
     }
     
 }

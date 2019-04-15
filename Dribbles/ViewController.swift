@@ -38,7 +38,13 @@ class ViewController: UITableViewController {
             print("Got \(students.count) students")
             tableView.reloadData()
         } catch {
-            print("Fetch failed")
+            let ac = UIAlertController(title: "Database error", message: "We were unable to retrieve student data from the database.", preferredStyle: .alert)
+            
+            _ = ac.addAction(UIAlertAction(title: "OK", style: .default) { (action) -> Void in
+                return
+            })
+            self.present(ac, animated: true)
+            
         }
     }
     

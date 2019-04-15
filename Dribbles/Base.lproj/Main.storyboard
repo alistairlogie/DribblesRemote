@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kjq-4D-G5t">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uqr-Wm-Qpc">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -393,7 +393,7 @@
         <!--Test View Controller-->
         <scene sceneID="Euj-FG-bcB">
             <objects>
-                <viewController id="kjq-4D-G5t" customClass="NWFTestViewController" customModule="Dribbles" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NWFTestTable" id="kjq-4D-G5t" customClass="NWFTestViewController" customModule="Dribbles" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q7g-uN-Zoz">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -405,24 +405,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iBv-gd-5dO">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iBv-gd-5dO">
                                 <rect key="frame" x="0.0" y="110" width="768" height="834"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="xKN-8D-Rra" customClass="NFWTestTableViewCell" customModule="Dribbles" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xKN-8D-Rra" id="erY-66-Vmu">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xKN-8D-Rra" id="erY-66-Vmu">
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pxy-El-LQw">
+                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pxy-El-LQw">
                                                     <rect key="frame" x="707" y="11.5" width="41" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="xgG-TI-d2P">
+                                                <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="xgG-TI-d2P">
                                                     <rect key="frame" x="20" y="-2.5" width="677" height="48.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="U9d-Az-TZZ">
@@ -432,16 +432,25 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="33" height="48.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                     <state key="normal" title="a"/>
+                                                                    <connections>
+                                                                        <action selector="phonemeButtonTapped:" destination="xKN-8D-Rra" eventType="touchUpInside" id="QDT-SA-SJ2"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3YZ-AT-GvO">
                                                                     <rect key="frame" x="41" y="0.0" width="33.5" height="48.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                     <state key="normal" title="a"/>
+                                                                    <connections>
+                                                                        <action selector="phonemeButtonTapped:" destination="xKN-8D-Rra" eventType="touchUpInside" id="YuK-3J-bsO"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pt-Yi-Suz">
                                                                     <rect key="frame" x="82.5" y="0.0" width="33" height="48.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                     <state key="normal" title="a"/>
+                                                                    <connections>
+                                                                        <action selector="phonemeButtonTapped:" destination="xKN-8D-Rra" eventType="touchUpInside" id="Fah-DE-c7h"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
@@ -452,16 +461,25 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="33" height="48.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                     <state key="normal" title="b"/>
+                                                                    <connections>
+                                                                        <action selector="phonemeButtonTapped:" destination="xKN-8D-Rra" eventType="touchUpInside" id="tfR-X5-HWL"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kw1-As-QQW">
                                                                     <rect key="frame" x="41" y="0.0" width="33" height="48.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                     <state key="normal" title="b"/>
+                                                                    <connections>
+                                                                        <action selector="phonemeButtonTapped:" destination="xKN-8D-Rra" eventType="touchUpInside" id="T6D-jK-HyI"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oa-wY-zjp">
                                                                     <rect key="frame" x="82" y="0.0" width="33.5" height="48.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                     <state key="normal" title="b"/>
+                                                                    <connections>
+                                                                        <action selector="phonemeButtonTapped:" destination="xKN-8D-Rra" eventType="touchUpInside" id="xvm-hD-dFw"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
@@ -472,16 +490,25 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="33" height="48.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                     <state key="normal" title="c"/>
+                                                                    <connections>
+                                                                        <action selector="phonemeButtonTapped:" destination="xKN-8D-Rra" eventType="touchUpInside" id="HrZ-1g-hAo"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GV-ub-NwW">
                                                                     <rect key="frame" x="41" y="0.0" width="33" height="48.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                     <state key="normal" title="c"/>
+                                                                    <connections>
+                                                                        <action selector="phonemeButtonTapped:" destination="xKN-8D-Rra" eventType="touchUpInside" id="1Zo-kB-F3l"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7z-iU-5Oi">
                                                                     <rect key="frame" x="82" y="0.0" width="33" height="48.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                     <state key="normal" title="c"/>
+                                                                    <connections>
+                                                                        <action selector="phonemeButtonTapped:" destination="xKN-8D-Rra" eventType="touchUpInside" id="20p-Y9-IXQ"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
@@ -492,16 +519,25 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="33.5" height="48.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                     <state key="normal" title="d"/>
+                                                                    <connections>
+                                                                        <action selector="phonemeButtonTapped:" destination="xKN-8D-Rra" eventType="touchUpInside" id="hmb-aV-2F2"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNR-u1-hDC">
                                                                     <rect key="frame" x="41.5" y="0.0" width="33" height="48.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                     <state key="normal" title="d"/>
+                                                                    <connections>
+                                                                        <action selector="phonemeButtonTapped:" destination="xKN-8D-Rra" eventType="touchUpInside" id="IPO-c3-OWe"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdQ-nH-WTK">
                                                                     <rect key="frame" x="82.5" y="0.0" width="33" height="48.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                     <state key="normal" title="d"/>
+                                                                    <connections>
+                                                                        <action selector="phonemeButtonTapped:" destination="xKN-8D-Rra" eventType="touchUpInside" id="22h-BP-ab5"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
@@ -512,16 +548,25 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="33" height="48.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                     <state key="normal" title="e"/>
+                                                                    <connections>
+                                                                        <action selector="phonemeButtonTapped:" destination="xKN-8D-Rra" eventType="touchUpInside" id="lbk-gh-nUF"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDW-1u-MS7">
                                                                     <rect key="frame" x="41" y="0.0" width="33.5" height="48.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                     <state key="normal" title="e"/>
+                                                                    <connections>
+                                                                        <action selector="phonemeButtonTapped:" destination="xKN-8D-Rra" eventType="touchUpInside" id="Fgy-Qz-D9D"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1e-tV-6fT">
                                                                     <rect key="frame" x="82.5" y="0.0" width="33" height="48.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                     <state key="normal" title="e"/>
+                                                                    <connections>
+                                                                        <action selector="phonemeButtonTapped:" destination="xKN-8D-Rra" eventType="touchUpInside" id="s0r-uO-BWF"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
@@ -536,14 +581,32 @@
                                                 <constraint firstItem="Pxy-El-LQw" firstAttribute="centerY" secondItem="erY-66-Vmu" secondAttribute="centerY" id="uYh-6K-Mwi"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="tableTestScore" destination="Pxy-El-LQw" id="Rfy-1v-YAz"/>
+                                            <outletCollection property="phonemeButtons" destination="1uG-Ao-TvY" collectionClass="NSMutableArray" id="vm3-Mb-tdy"/>
+                                            <outletCollection property="phonemeButtons" destination="3YZ-AT-GvO" collectionClass="NSMutableArray" id="Wbj-IC-iez"/>
+                                            <outletCollection property="phonemeButtons" destination="1pt-Yi-Suz" collectionClass="NSMutableArray" id="2uw-CC-xJn"/>
+                                            <outletCollection property="phonemeButtons" destination="7dK-rx-kch" collectionClass="NSMutableArray" id="cTa-lH-uMF"/>
+                                            <outletCollection property="phonemeButtons" destination="Kw1-As-QQW" collectionClass="NSMutableArray" id="CMw-bC-YZR"/>
+                                            <outletCollection property="phonemeButtons" destination="5oa-wY-zjp" collectionClass="NSMutableArray" id="0hH-6g-tSB"/>
+                                            <outletCollection property="phonemeButtons" destination="DPi-2p-e7x" collectionClass="NSMutableArray" id="M5s-RV-ZNL"/>
+                                            <outletCollection property="phonemeButtons" destination="3GV-ub-NwW" collectionClass="NSMutableArray" id="Mqo-G6-UM5"/>
+                                            <outletCollection property="phonemeButtons" destination="v7z-iU-5Oi" collectionClass="NSMutableArray" id="0Iv-eH-sy9"/>
+                                            <outletCollection property="phonemeButtons" destination="eaw-Fm-fad" collectionClass="NSMutableArray" id="5CO-wE-9Rh"/>
+                                            <outletCollection property="phonemeButtons" destination="CNR-u1-hDC" collectionClass="NSMutableArray" id="gdB-zc-Naf"/>
+                                            <outletCollection property="phonemeButtons" destination="hdQ-nH-WTK" collectionClass="NSMutableArray" id="pZR-mB-m82"/>
+                                            <outletCollection property="phonemeButtons" destination="2aa-yU-buz" collectionClass="NSMutableArray" id="psk-Xn-L4J"/>
+                                            <outletCollection property="phonemeButtons" destination="BDW-1u-MS7" collectionClass="NSMutableArray" id="1zz-u8-bhN"/>
+                                            <outletCollection property="phonemeButtons" destination="m1e-tV-6fT" collectionClass="NSMutableArray" id="RqO-MU-d4v"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="kjq-4D-G5t" id="1Qf-JI-8bZ"/>
-                                    <outlet property="delegate" destination="kjq-4D-G5t" id="LbF-a7-LkC"/>
+                                    <outlet property="dataSource" destination="kjq-4D-G5t" id="OKy-CI-z9T"/>
+                                    <outlet property="delegate" destination="kjq-4D-G5t" id="qJJ-Ce-XYs"/>
                                 </connections>
                             </tableView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f3W-9D-8Zi">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="800" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f3W-9D-8Zi">
                                 <rect key="frame" x="668" y="964" width="120" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="lqg-Py-hvg"/>

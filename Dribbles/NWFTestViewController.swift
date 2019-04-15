@@ -9,7 +9,10 @@
 import UIKit
 import CoreData
 
-class NWFTestViewController: UIViewController {
+class NWFTestViewController: UIViewController, NWFCellToTableDelegate {
+    
+    
+    
     
     var timer = Timer()
     var timeRemaining = 11 {
@@ -32,9 +35,10 @@ class NWFTestViewController: UIViewController {
     var batchElement = TestElement()
     var testElement = TestElement()
     var testElements = [TestElement]()
-    var phonemeButtonCount = 3
+    var phonemeButtonCount = 15
     var validChunkCount = 0
     var batchCount = 1
+    var batchScore = 0
     var tableCellStore = [TableCellData]()
     var cumulativeMaxScore = 0
     var cumulativeScore = 0 {
@@ -96,7 +100,11 @@ class NWFTestViewController: UIViewController {
             do {
                 try container.viewContext.save()
             } catch {
-                print("An error occurred while saving: \(error)")
+                let ac = UIAlertController(title: "Database error", message: "We were unable to save the test data.", preferredStyle: .alert)
+                _ = ac.addAction(UIAlertAction(title: "OK", style: .default) { (action) -> Void in
+                    return
+                })
+                self.present(ac, animated: true)
             }
         }
     }
@@ -156,6 +164,7 @@ class NWFTestViewController: UIViewController {
             for (index, chunk) in testChunks.enumerated() {
                 testElement.testPhonemes.append(chunk)
             }
+            batchScore += validChunkCount
             return testElement
         } else {
             return nil
@@ -166,12 +175,12 @@ class NWFTestViewController: UIViewController {
         let newTableCell = TableCellData()
         newTableCell.word = testElement.testWord
         newTableCell.testPhonemes = testElement.testPhonemes
-        newTableCell.maxScore = validChunkCount
-        newTableCell.score = validChunkCount
+        newTableCell.maxScore = batchScore
+        newTableCell.score = batchScore
         
         if newTableCell.testPhonemes.count > 0 {
             for i in  0 ..< phonemeButtonCount {
-                if i >= testElement.testPhonemes.count {
+                if newTableCell.testPhonemes[i] == "" {
                     if !newTableCell.buttonStates.indices.contains(i) {
                         newTableCell.buttonStates.append(.blank)
                         newTableCell.enabledStatuses.append(.disabled)
@@ -189,6 +198,117 @@ class NWFTestViewController: UIViewController {
         cumulativeMaxScore += newTableCell.maxScore
         cumulativeScore += newTableCell.score
         tableCellStore.append(newTableCell)
+        batchScore = 0
+    }
+    
+    func buttonInCellTapped(cell: NFWTestTableViewCell, tag: Int, row: Int) {
+        print("A button was tapped at tag \(tag) and row \(row)")
+        switch tableCellStore[row].buttonStates[tag] {
+        case .correct:
+            tableCellStore[row].buttonStates[tag] = .incorrect
+            tableCellStore[row].score -= 1
+            cumulativeScore -= 1
+        case .incorrect:
+            tableCellStore[row].buttonStates[tag] = .endOfTest
+            endOfTest(tag: tag , row: row)
+        //            cumulativeScore += 1
+        case .endOfTest:
+            tableCellStore[row].buttonStates[tag] = .correct
+            tableCellStore[row].score += 1
+            cumulativeScore += 1
+            reverseEndOfTest(tag: tag, row: row)
+        default:
+            return
+        }
+        runTestTable.reloadData()
+    }
+    
+    func endOfTest(tag: Int, row: Int) {
+        for phonemeIndex in tag + 1 ..< tableCellStore[row].testPhonemes.count {
+            if tableCellStore[row].buttonStates[phonemeIndex] == .correct {
+                tableCellStore[row].buttonStates[phonemeIndex] = .incorrect
+                tableCellStore[row].enabledStatuses[phonemeIndex] = .disabled
+                tableCellStore[row].score -= 1
+                cumulativeScore -= 1
+            } else {
+                tableCellStore[row].enabledStatuses[phonemeIndex] = .disabled
+            }
+        }
+        for rowIndex in row + 1 ..< tableCellStore.count {
+            for phonemeIndex in 0 ..< tableCellStore[rowIndex].testPhonemes.count {
+                switch tableCellStore[rowIndex].buttonStates[phonemeIndex] {
+                case .correct:
+                    tableCellStore[rowIndex].buttonStates[phonemeIndex] = .incorrect
+                    tableCellStore[rowIndex].enabledStatuses[phonemeIndex] = .disabled
+                    tableCellStore[rowIndex].score -= 1
+                    cumulativeScore -= 1
+                case .incorrect:
+                    tableCellStore[rowIndex].enabledStatuses[phonemeIndex] = .enabled
+                case .blank:
+                    tableCellStore[rowIndex].enabledStatuses[phonemeIndex] = .disabled
+                case .endOfTest:
+                    tableCellStore[rowIndex].enabledStatuses[phonemeIndex] = .enabled
+                }
+                
+//                if tableCellStore[rowIndex].buttonStates[phonemeIndex] == .correct {
+//
+//                } else {
+//
+//                    tableCellStore[rowIndex].enabledStatuses[phonemeIndex] = .enabled
+//                }
+            }
+        }
+    }
+    
+    func reverseEndOfTest(tag: Int, row: Int) {
+        for phonemeIndex in tag + 1 ..< tableCellStore[row].testPhonemes.count {
+            if tableCellStore[row].buttonStates[phonemeIndex] == .blank {
+                tableCellStore[row].buttonStates[phonemeIndex] = .blank
+                tableCellStore[row].enabledStatuses[phonemeIndex] = .disabled
+            } else {
+                tableCellStore[row].buttonStates[phonemeIndex] = .correct
+                tableCellStore[row].enabledStatuses[phonemeIndex] = .enabled
+                tableCellStore[row].score += 1
+                cumulativeScore += 1
+            }
+            
+        }
+        
+        for rowIndex in row + 1 ..< tableCellStore.count {
+            for phonemeIndex in 0 ..< tableCellStore[rowIndex].testPhonemes.count {
+                switch tableCellStore[rowIndex].buttonStates[phonemeIndex] {
+                case .correct:
+                    tableCellStore[rowIndex].buttonStates[phonemeIndex] = .incorrect
+                    tableCellStore[rowIndex].enabledStatuses[phonemeIndex] = .disabled
+                    tableCellStore[rowIndex].score -= 1
+                    cumulativeScore -= 1
+                case .incorrect:
+                    tableCellStore[rowIndex].buttonStates[phonemeIndex] = .correct
+                    tableCellStore[rowIndex].enabledStatuses[phonemeIndex] = .enabled
+                    tableCellStore[rowIndex].score += 1
+                    cumulativeScore += 1
+                case .blank:
+                    tableCellStore[rowIndex].buttonStates[phonemeIndex] = .blank
+                    tableCellStore[rowIndex].enabledStatuses[phonemeIndex] = .disabled
+                case .endOfTest:
+                    tableCellStore[rowIndex].buttonStates[phonemeIndex] = .correct
+                    tableCellStore[rowIndex].enabledStatuses[phonemeIndex] = .enabled
+                    tableCellStore[rowIndex].score += 1
+                    cumulativeScore += 1
+                }
+//                if tableCellStore[rowIndex].buttonStates[phonemeIndex] == .correct {
+//                    tableCellStore[rowIndex].buttonStates[phonemeIndex] = .incorrect
+//                    tableCellStore[rowIndex].enabledStatuses[phonemeIndex] = .disabled
+//                    tableCellStore[rowIndex].score -= 1
+//                    cumulativeScore -= 1
+//                } else {
+//                    tableCellStore[rowIndex].buttonStates[phonemeIndex] = .correct
+//                    tableCellStore[rowIndex].enabledStatuses[phonemeIndex] = .enabled
+//                    tableCellStore[rowIndex].score += 1
+//                    cumulativeScore += 1
+//                }
+            }
+        }
     }
     /*
     // MARK: - Navigation
@@ -213,6 +333,11 @@ extension NWFTestViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NFWTestTableViewCell
+        cell.delegate = self
+        let row = Int(indexPath.row)
+//        print("Calling configureCell with \(tableCellStore[indexPath.row])")
+        
+        cell.configureCell(tableCellData: tableCellStore[indexPath.row], rowNumber: row)
         return cell
     }
 }
