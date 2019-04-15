@@ -26,6 +26,9 @@
 		65C787E42263DC5F00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 3.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65C787DF2263DC5D00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 3.txt */; };
 		65C787E52263DC5F00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 4.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65C787E02263DC5E00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 4.txt */; };
 		65C787E62263DC5F00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 6.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65C787E12263DC5E00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 6.txt */; };
+		65C787E82263FA1400C8D35B /* NWFTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C787E72263FA1400C8D35B /* NWFTestViewController.swift */; };
+		65C787EA2263FF7100C8D35B /* NWFTestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C787E92263FF7100C8D35B /* NWFTestTableViewCell.swift */; };
+		65C787EC2264073500C8D35B /* Benchmark 1 - Nonsense Word Fluency.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65C787EB2264073500C8D35B /* Benchmark 1 - Nonsense Word Fluency.txt */; };
 		65D42F5821C9E73A008EC6E8 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D42F5721C9E73A008EC6E8 /* PersistenceService.swift */; };
 		65FC4F8921C2FB31002A7096 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FC4F8821C2FB31002A7096 /* AppDelegate.swift */; };
 		65FC4F8B21C2FB31002A7096 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FC4F8A21C2FB31002A7096 /* ViewController.swift */; };
@@ -58,6 +61,9 @@
 		65C787DF2263DC5D00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Phoneme Segmentation Fluency 3.txt"; sourceTree = "<group>"; };
 		65C787E02263DC5E00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Phoneme Segmentation Fluency 4.txt"; sourceTree = "<group>"; };
 		65C787E12263DC5E00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 6.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Phoneme Segmentation Fluency 6.txt"; sourceTree = "<group>"; };
+		65C787E72263FA1400C8D35B /* NWFTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NWFTestViewController.swift; sourceTree = "<group>"; };
+		65C787E92263FF7100C8D35B /* NWFTestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NWFTestTableViewCell.swift; sourceTree = "<group>"; };
+		65C787EB2264073500C8D35B /* Benchmark 1 - Nonsense Word Fluency.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Benchmark 1 - Nonsense Word Fluency.txt"; sourceTree = "<group>"; };
 		65D42F5721C9E73A008EC6E8 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		65FC4F8521C2FB31002A7096 /* Dribbles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dribbles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65FC4F8821C2FB31002A7096 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +89,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65C787ED2264075300C8D35B /* Test Files */ = {
+			isa = PBXGroup;
+			children = (
+				65A65D5E21C5C4DF003AE9A5 /* DribblesTestList.txt */,
+				65C787D72263D61800C8D35B /* Benchmark 1 - Phoneme Segmentation Fluency.txt */,
+				656FCE212262C207009783F8 /* Benchmark 2 - Phoneme Segmentation Fluency.txt */,
+				65C787D82263D61800C8D35B /* Benchmark 3 - Phoneme Segmentation Fluency.txt */,
+				65C787DB2263D80D00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 1.txt */,
+				65C787DE2263DC5D00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 2.txt */,
+				65C787DF2263DC5D00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 3.txt */,
+				65C787E02263DC5E00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 4.txt */,
+				65C787DD2263DC5D00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 5.txt */,
+				65C787E12263DC5E00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 6.txt */,
+				65C787EB2264073500C8D35B /* Benchmark 1 - Nonsense Word Fluency.txt */,
+			);
+			path = "Test Files";
+			sourceTree = "<group>";
+		};
 		65FC4F7C21C2FB31002A7096 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +136,8 @@
 				65D42F5721C9E73A008EC6E8 /* PersistenceService.swift */,
 				653D86EF21C44D450077324E /* StudentDetailViewController.swift */,
 				65FC4F8C21C2FB31002A7096 /* Main.storyboard */,
+				65C787E72263FA1400C8D35B /* NWFTestViewController.swift */,
+				65C787E92263FF7100C8D35B /* NWFTestTableViewCell.swift */,
 				65253C0521E5125300F0EFB3 /* RunTestTableViewCell.swift */,
 				654C176721D03E7500982BD5 /* RunTestTableViewController.swift */,
 				657520A0225C19D30063021D /* TableCellData.swift */,
@@ -121,16 +147,7 @@
 				65FC4F8F21C2FB31002A7096 /* Dribbles.xcdatamodeld */,
 				65FC4F9D21C2FB60002A7096 /* blah.txt */,
 				653D86EB21C432750077324E /* DBKidsList.txt */,
-				65A65D5E21C5C4DF003AE9A5 /* DribblesTestList.txt */,
-				65C787D72263D61800C8D35B /* Benchmark 1 - Phoneme Segmentation Fluency.txt */,
-				656FCE212262C207009783F8 /* Benchmark 2 - Phoneme Segmentation Fluency.txt */,
-				65C787D82263D61800C8D35B /* Benchmark 3 - Phoneme Segmentation Fluency.txt */,
-				65C787DB2263D80D00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 1.txt */,
-				65C787DE2263DC5D00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 2.txt */,
-				65C787DF2263DC5D00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 3.txt */,
-				65C787E02263DC5E00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 4.txt */,
-				65C787DD2263DC5D00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 5.txt */,
-				65C787E12263DC5E00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 6.txt */,
+				65C787ED2264075300C8D35B /* Test Files */,
 				65B4FF0F224A7EE600968553 /* TestRow.swift */,
 			);
 			path = Dribbles;
@@ -203,6 +220,7 @@
 				65A65D5F21C5C4DF003AE9A5 /* DribblesTestList.txt in Resources */,
 				653D86EC21C432750077324E /* DBKidsList.txt in Resources */,
 				65C787E42263DC5F00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 3.txt in Resources */,
+				65C787EC2264073500C8D35B /* Benchmark 1 - Nonsense Word Fluency.txt in Resources */,
 				65C787DC2263D80E00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 1.txt in Resources */,
 				65C787E62263DC5F00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 6.txt in Resources */,
 				65C787DA2263D61800C8D35B /* Benchmark 3 - Phoneme Segmentation Fluency.txt in Resources */,
@@ -219,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65C787E82263FA1400C8D35B /* NWFTestViewController.swift in Sources */,
 				65B4FF10224A7EE600968553 /* TestRow.swift in Sources */,
 				65FF6FD521C46EEA0013197F /* Student+CoreDataProperties.swift in Sources */,
 				657520A1225C19D30063021D /* TableCellData.swift in Sources */,
@@ -230,6 +249,7 @@
 				65A65D6321C5CB1B003AE9A5 /* TestEvent+CoreDataProperties.swift in Sources */,
 				65627AF321CD9ACF0056C1B6 /* testElement.swift in Sources */,
 				65FC4F8B21C2FB31002A7096 /* ViewController.swift in Sources */,
+				65C787EA2263FF7100C8D35B /* NWFTestTableViewCell.swift in Sources */,
 				65FC4F8921C2FB31002A7096 /* AppDelegate.swift in Sources */,
 				65FC4F9121C2FB31002A7096 /* Dribbles.xcdatamodeld in Sources */,
 				65A65D6221C5CB1B003AE9A5 /* TestEvent+CoreDataClass.swift in Sources */,
