@@ -15,7 +15,8 @@ class NWFTestViewController: UIViewController, NWFCellToTableDelegate {
     
     
     var timer = Timer()
-    var timeRemaining = 11 {
+    var testLength = 60
+    var timeRemaining = 60 {
         didSet {
             if timeRemaining == 1 {
                 countdownTimer.text = "\(timeRemaining) second"
@@ -25,8 +26,8 @@ class NWFTestViewController: UIViewController, NWFCellToTableDelegate {
         }
     }
     
-    var selectedTest = "Benchmark 1 - Nonsense Word Fluency"
-    var currentStudent = "Bob Jones"
+    var selectedTest = String()
+    var currentStudent = String()
     var container: NSPersistentContainer!
     var todaysDate = Date()
     var updatedResults = [TestEvent]()
@@ -49,19 +50,23 @@ class NWFTestViewController: UIViewController, NWFCellToTableDelegate {
     var endOfTestSet = false
     var currentTag = 0
     var currentRow = 0
-    
+    var isPaused = false
+    var pauseTime = 0
+    var alreadyStarted = false
     
     @IBOutlet weak var countdownTimer: UILabel!
     @IBOutlet weak var runTestTable: UITableView!
     @IBOutlet weak var totalTestScore: UITextField!
+    @IBOutlet var startPauseButton: UIButton!
     
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.runTestTable.rowHeight = 61
+        self.title = selectedTest
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Submit Results", style: .plain, target: self, action: #selector(submitTestResultPressed(_:)))
-        
+        startPauseButton.layer.cornerRadius = 10
         if let testFileListPath = Bundle.main.path(forResource: selectedTest, ofType: "txt") {
             if let testFileData = try? String(contentsOfFile: testFileListPath) {
                 testLines = testFileData.components(separatedBy: "\n")
@@ -86,13 +91,7 @@ class NWFTestViewController: UIViewController, NWFCellToTableDelegate {
         } else {
             testLines = ["no tests found"]
         }
-        
         runTestTable.reloadData()
-
-        // Do any additional setup after loading the view.
-        let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerRunning), userInfo: nil, repeats: true)
-        RunLoop.current.add(timer, forMode: .common)
-        timerRunning()
     }
     
     func saveContext() {
@@ -108,6 +107,8 @@ class NWFTestViewController: UIViewController, NWFCellToTableDelegate {
             }
         }
     }
+    
+    
     
     @objc func submitTestResultPressed(_ sender: UIBarButtonItem) {
         
@@ -137,10 +138,6 @@ class NWFTestViewController: UIViewController, NWFCellToTableDelegate {
                 countdownTimer.text = "Time's Up!"
                 self.countdownTimer.layer.removeAllAnimations()
             } else {
-                //                UIView.animate(withDuration: 4.0, animations: {
-                //                    self.countdownTimer.layer.backgroundColor = UIColor.red.cgColor
-                ////                    self.runTestTable.layer.backgroundColor = UIColor.red.cgColor
-                //                })
                 UIView.animate(withDuration: 0.5, delay: 0, options: [UIView.AnimationOptions.repeat, UIView.AnimationOptions.autoreverse], animations: {
                     self.countdownTimer.layer.backgroundColor = UIColor.init(red: 1.0, green: 0, blue: 0, alpha: 0.5).cgColor
                 }, completion: nil)
@@ -319,6 +316,41 @@ class NWFTestViewController: UIViewController, NWFCellToTableDelegate {
     }
     */
 
+    @IBAction func startTimerClicked(_ sender: UIButton) {
+        if alreadyStarted == true {
+            if isPaused == true {
+                startPauseButton.backgroundColor = .clear
+                startPauseButton.alpha = 0.1
+                startPauseButton.titleLabel?.text = ""
+                runTimer()
+                print("starting again because i think the button was pressed")
+                isPaused = false
+                
+            } else {
+                print("paused")
+                startPauseButton.backgroundColor = .cyan
+                startPauseButton.setTitleColor(.cyan, for: .normal)
+                timer.invalidate()
+                isPaused = true
+                startPauseButton.alpha = 0.5
+                
+            }
+        } else {
+            startPauseButton.titleLabel?.text = ""
+            startPauseButton.backgroundColor = .clear
+            startPauseButton.alpha = 0.1
+            timeRemaining = testLength
+            runTimer()
+            alreadyStarted = true
+            isPaused = false
+        }
+    }
+    
+    
+    func runTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerRunning), userInfo: nil, repeats: true)
+        RunLoop.current.add(timer, forMode: .common)
+    }
 }
 
 extension NWFTestViewController: UITableViewDataSource {

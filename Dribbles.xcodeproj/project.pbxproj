@@ -12,6 +12,12 @@
 		654C176821D03E7500982BD5 /* RunTestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654C176721D03E7500982BD5 /* RunTestTableViewController.swift */; };
 		656FCE222262C207009783F8 /* Benchmark 2 - Phoneme Segmentation Fluency.txt in Resources */ = {isa = PBXBuildFile; fileRef = 656FCE212262C207009783F8 /* Benchmark 2 - Phoneme Segmentation Fluency.txt */; };
 		657520A1225C19D30063021D /* TableCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657520A0225C19D30063021D /* TableCellData.swift */; };
+		6588461C22875B0200CBE3DD /* Progress Monitoring - Nonsense Word Fluency 9.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6588461622875B0000CBE3DD /* Progress Monitoring - Nonsense Word Fluency 9.txt */; };
+		6588461D22875B0200CBE3DD /* Progress Monitoring - Nonsense Word Fluency 10.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6588461722875B0100CBE3DD /* Progress Monitoring - Nonsense Word Fluency 10.txt */; };
+		6588461E22875B0200CBE3DD /* Progress Monitoring - Nonsense Word Fluency 8.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6588461822875B0100CBE3DD /* Progress Monitoring - Nonsense Word Fluency 8.txt */; };
+		6588461F22875B0200CBE3DD /* Progress Monitoring - Nonsense Word Fluency 11.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6588461922875B0100CBE3DD /* Progress Monitoring - Nonsense Word Fluency 11.txt */; };
+		6588462022875B0200CBE3DD /* Progress Monitoring - Nonsense Word Fluency 7.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6588461A22875B0100CBE3DD /* Progress Monitoring - Nonsense Word Fluency 7.txt */; };
+		6588462122875B0200CBE3DD /* Progress Monitoring - Nonsense Word Fluency 12.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6588461B22875B0200CBE3DD /* Progress Monitoring - Nonsense Word Fluency 12.txt */; };
 		658954DD2264F59200C962E2 /* Benchmark 2 - Nonsense Word Fluency.txt in Resources */ = {isa = PBXBuildFile; fileRef = 658954DB2264F59200C962E2 /* Benchmark 2 - Nonsense Word Fluency.txt */; };
 		658954DE2264F59200C962E2 /* Benchmark 3 - Nonsense Word Fluency.txt in Resources */ = {isa = PBXBuildFile; fileRef = 658954DC2264F59200C962E2 /* Benchmark 3 - Nonsense Word Fluency.txt */; };
 		658954E5226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 658954DF226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 2.txt */; };
@@ -21,7 +27,6 @@
 		658954E9226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 5.txt in Resources */ = {isa = PBXBuildFile; fileRef = 658954E3226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 5.txt */; };
 		658954EA226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 658954E4226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 1.txt */; };
 		658954EE2265040D00C962E2 /* TestElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658954ED2265040D00C962E2 /* TestElement.swift */; };
-		65A65D5F21C5C4DF003AE9A5 /* DribblesTestList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65A65D5E21C5C4DF003AE9A5 /* DribblesTestList.txt */; };
 		65A65D6221C5CB1B003AE9A5 /* TestEvent+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A65D6021C5CB1B003AE9A5 /* TestEvent+CoreDataClass.swift */; };
 		65A65D6321C5CB1B003AE9A5 /* TestEvent+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A65D6121C5CB1B003AE9A5 /* TestEvent+CoreDataProperties.swift */; };
 		65B4FF10224A7EE600968553 /* TestRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B4FF0F224A7EE600968553 /* TestRow.swift */; };
@@ -53,6 +58,12 @@
 		654C176721D03E7500982BD5 /* RunTestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunTestTableViewController.swift; sourceTree = "<group>"; };
 		656FCE212262C207009783F8 /* Benchmark 2 - Phoneme Segmentation Fluency.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Benchmark 2 - Phoneme Segmentation Fluency.txt"; sourceTree = "<group>"; };
 		657520A0225C19D30063021D /* TableCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellData.swift; sourceTree = "<group>"; };
+		6588461622875B0000CBE3DD /* Progress Monitoring - Nonsense Word Fluency 9.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Nonsense Word Fluency 9.txt"; sourceTree = "<group>"; };
+		6588461722875B0100CBE3DD /* Progress Monitoring - Nonsense Word Fluency 10.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Nonsense Word Fluency 10.txt"; sourceTree = "<group>"; };
+		6588461822875B0100CBE3DD /* Progress Monitoring - Nonsense Word Fluency 8.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Nonsense Word Fluency 8.txt"; sourceTree = "<group>"; };
+		6588461922875B0100CBE3DD /* Progress Monitoring - Nonsense Word Fluency 11.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Nonsense Word Fluency 11.txt"; sourceTree = "<group>"; };
+		6588461A22875B0100CBE3DD /* Progress Monitoring - Nonsense Word Fluency 7.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Nonsense Word Fluency 7.txt"; sourceTree = "<group>"; };
+		6588461B22875B0200CBE3DD /* Progress Monitoring - Nonsense Word Fluency 12.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Nonsense Word Fluency 12.txt"; sourceTree = "<group>"; };
 		658954DB2264F59200C962E2 /* Benchmark 2 - Nonsense Word Fluency.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Benchmark 2 - Nonsense Word Fluency.txt"; sourceTree = "<group>"; };
 		658954DC2264F59200C962E2 /* Benchmark 3 - Nonsense Word Fluency.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Benchmark 3 - Nonsense Word Fluency.txt"; sourceTree = "<group>"; };
 		658954DF226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Nonsense Word Fluency 2.txt"; sourceTree = "<group>"; };
@@ -62,7 +73,6 @@
 		658954E3226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Nonsense Word Fluency 5.txt"; sourceTree = "<group>"; };
 		658954E4226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Nonsense Word Fluency 1.txt"; sourceTree = "<group>"; };
 		658954ED2265040D00C962E2 /* TestElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestElement.swift; sourceTree = "<group>"; };
-		65A65D5E21C5C4DF003AE9A5 /* DribblesTestList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DribblesTestList.txt; sourceTree = "<group>"; };
 		65A65D6021C5CB1B003AE9A5 /* TestEvent+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestEvent+CoreDataClass.swift"; sourceTree = "<group>"; };
 		65A65D6121C5CB1B003AE9A5 /* TestEvent+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestEvent+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		65B4FF0F224A7EE600968553 /* TestRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRow.swift; sourceTree = "<group>"; };
@@ -104,7 +114,6 @@
 		65C787ED2264075300C8D35B /* Test Files */ = {
 			isa = PBXGroup;
 			children = (
-				65A65D5E21C5C4DF003AE9A5 /* DribblesTestList.txt */,
 				65C787D72263D61800C8D35B /* Benchmark 1 - Phoneme Segmentation Fluency.txt */,
 				656FCE212262C207009783F8 /* Benchmark 2 - Phoneme Segmentation Fluency.txt */,
 				65C787D82263D61800C8D35B /* Benchmark 3 - Phoneme Segmentation Fluency.txt */,
@@ -123,6 +132,12 @@
 				658954E0226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 4.txt */,
 				658954E3226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 5.txt */,
 				658954E1226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 6.txt */,
+				6588461A22875B0100CBE3DD /* Progress Monitoring - Nonsense Word Fluency 7.txt */,
+				6588461822875B0100CBE3DD /* Progress Monitoring - Nonsense Word Fluency 8.txt */,
+				6588461622875B0000CBE3DD /* Progress Monitoring - Nonsense Word Fluency 9.txt */,
+				6588461722875B0100CBE3DD /* Progress Monitoring - Nonsense Word Fluency 10.txt */,
+				6588461922875B0100CBE3DD /* Progress Monitoring - Nonsense Word Fluency 11.txt */,
+				6588461B22875B0200CBE3DD /* Progress Monitoring - Nonsense Word Fluency 12.txt */,
 			);
 			path = "Test Files";
 			sourceTree = "<group>";
@@ -231,12 +246,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				65C787E52263DC5F00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 4.txt in Resources */,
+				6588461C22875B0200CBE3DD /* Progress Monitoring - Nonsense Word Fluency 9.txt in Resources */,
 				65C787E22263DC5F00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 5.txt in Resources */,
 				65FC4F9321C2FB33002A7096 /* Assets.xcassets in Resources */,
 				65C787E32263DC5F00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 2.txt in Resources */,
+				6588461D22875B0200CBE3DD /* Progress Monitoring - Nonsense Word Fluency 10.txt in Resources */,
 				658954E6226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 4.txt in Resources */,
+				6588462022875B0200CBE3DD /* Progress Monitoring - Nonsense Word Fluency 7.txt in Resources */,
 				658954E5226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 2.txt in Resources */,
-				65A65D5F21C5C4DF003AE9A5 /* DribblesTestList.txt in Resources */,
+				6588462122875B0200CBE3DD /* Progress Monitoring - Nonsense Word Fluency 12.txt in Resources */,
 				65C787E42263DC5F00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 3.txt in Resources */,
 				65C787EC2264073500C8D35B /* Benchmark 1 - Nonsense Word Fluency.txt in Resources */,
 				658954EA226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 1.txt in Resources */,
@@ -246,6 +264,8 @@
 				65C787E62263DC5F00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 6.txt in Resources */,
 				658954E7226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 6.txt in Resources */,
 				65C787DA2263D61800C8D35B /* Benchmark 3 - Phoneme Segmentation Fluency.txt in Resources */,
+				6588461F22875B0200CBE3DD /* Progress Monitoring - Nonsense Word Fluency 11.txt in Resources */,
+				6588461E22875B0200CBE3DD /* Progress Monitoring - Nonsense Word Fluency 8.txt in Resources */,
 				656FCE222262C207009783F8 /* Benchmark 2 - Phoneme Segmentation Fluency.txt in Resources */,
 				65FC4F8E21C2FB31002A7096 /* Main.storyboard in Resources */,
 				658954E8226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 3.txt in Resources */,

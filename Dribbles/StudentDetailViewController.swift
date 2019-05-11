@@ -20,6 +20,7 @@ class StudentDetailViewController: UIViewController, UIPickerViewDataSource, UIP
 
     var studentName = ""
     var testTypes = [String]()
+    var testList = [String]()
     var selectedTest = String()
     var previousResults = [TestEvent]()
     
@@ -44,14 +45,25 @@ class StudentDetailViewController: UIViewController, UIPickerViewDataSource, UIP
         //Set the title of the screen to the selected student name
         self.title = studentName
         //Try and retrieve the list of test types and if found, add them to the testTypes array
-        if let testTypesListPath = Bundle.main.path(forResource: "DribblesTestList", ofType: "txt") {
-            if let testTypesListEntries = try? String(contentsOfFile: testTypesListPath) {
-                testTypes = testTypesListEntries.components(separatedBy: "\n")
-
+        let fm = FileManager.default
+        let path = Bundle.main.resourcePath!
+        let items = try! fm.contentsOfDirectory(atPath: path)
+        for item in items {
+            if item.hasSuffix(".txt"){
+                let testName = String(item.split(separator: ".").first!)
+                testList.append(testName)
             }
-        } else {
-            testTypes = ["no tests found"]
+            
         }
+        testTypes = testList.sorted()
+//        if let testTypesListPath = Bundle.main.path(forResource: "DribblesTestList", ofType: "txt") {
+//            if let testTypesListEntries = try? String(contentsOfFile: testTypesListPath) {
+//                testTypes = testTypesListEntries.components(separatedBy: "\n")
+//
+//            }
+//        } else {
+//            testTypes = ["no tests found"]
+//        }
         selectedTest = testTypes[0]
 //        loadSavedData()
         previousResultsTableView.delegate = self
