@@ -55,17 +55,10 @@ class StudentDetailViewController: UIViewController, UIPickerViewDataSource, UIP
             }
             
         }
+// sorting the test list before it's presented to the user
         testTypes = testList.sorted()
-//        if let testTypesListPath = Bundle.main.path(forResource: "DribblesTestList", ofType: "txt") {
-//            if let testTypesListEntries = try? String(contentsOfFile: testTypesListPath) {
-//                testTypes = testTypesListEntries.components(separatedBy: "\n")
-//
-//            }
-//        } else {
-//            testTypes = ["no tests found"]
-//        }
+
         selectedTest = testTypes[0]
-//        loadSavedData()
         previousResultsTableView.delegate = self
         previousResultsTableView.dataSource = self
 
@@ -178,7 +171,7 @@ class StudentDetailViewController: UIViewController, UIPickerViewDataSource, UIP
     
     @IBAction func startTestPressed(_ sender: UIButton) {
 //        vc.studentName = students[indexPath.row].name
-        if let testFileListPath = Bundle.main.path(forResource: selectedTest, ofType: "txt") {
+        if Bundle.main.path(forResource: selectedTest, ofType: "txt") != nil {
             if selectedTest.contains("Phoneme") {
                 if let vc = storyboard?.instantiateViewController(withIdentifier: "RunTestTable") as? RunTestTableViewController {
                     navigationController?.pushViewController(vc, animated: true)

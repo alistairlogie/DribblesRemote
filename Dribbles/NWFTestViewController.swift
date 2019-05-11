@@ -158,7 +158,7 @@ class NWFTestViewController: UIViewController, NWFCellToTableDelegate {
         
         if testChunks.count > 1 {
 
-            for (index, chunk) in testChunks.enumerated() {
+            for (_, chunk) in testChunks.enumerated() {
                 testElement.testPhonemes.append(chunk)
             }
             batchScore += validChunkCount
