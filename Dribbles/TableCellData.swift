@@ -9,7 +9,7 @@
 import UIKit
 
 class TableCellData {
-    
+// This defines the contents of the table cell
     enum ButtonStatus {
         case correct, incorrect, blank, endOfTest
     }

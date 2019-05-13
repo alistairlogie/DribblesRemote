@@ -49,7 +49,7 @@ class RunTestTableViewCell: UITableViewCell {
         while phonemeTitles.count < phonemeButtonCount {
             phonemeTitles.append(blankPhoneme)
         }
-        
+        // this is where the settings for all the buttons etc for each cell are already set
         for i in 0 ..< phonemeButtonCount {
 
             phonemeButtons[i].setTitle(phonemeTitles[i], for: .normal)

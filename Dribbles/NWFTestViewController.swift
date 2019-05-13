@@ -58,6 +58,7 @@ class NWFTestViewController: UIViewController, NWFCellToTableDelegate {
     @IBOutlet weak var runTestTable: UITableView!
     @IBOutlet weak var totalTestScore: UITextField!
     @IBOutlet var startPauseButton: UIButton!
+   
     
     
 
@@ -92,6 +93,9 @@ class NWFTestViewController: UIViewController, NWFCellToTableDelegate {
             testLines = ["no tests found"]
         }
         runTestTable.reloadData()
+        runTestTable.alpha = 0.3
+        runTestTable.isUserInteractionEnabled = false
+        
     }
     
     func saveContext() {
@@ -246,12 +250,6 @@ class NWFTestViewController: UIViewController, NWFCellToTableDelegate {
                     tableCellStore[rowIndex].enabledStatuses[phonemeIndex] = .enabled
                 }
                 
-//                if tableCellStore[rowIndex].buttonStates[phonemeIndex] == .correct {
-//
-//                } else {
-//
-//                    tableCellStore[rowIndex].enabledStatuses[phonemeIndex] = .enabled
-//                }
             }
         }
     }
@@ -322,6 +320,8 @@ class NWFTestViewController: UIViewController, NWFCellToTableDelegate {
                 startPauseButton.backgroundColor = .clear
                 startPauseButton.alpha = 0.1
                 startPauseButton.titleLabel?.text = ""
+                runTestTable.isUserInteractionEnabled = true
+                runTestTable.alpha = 1
                 runTimer()
                 print("starting again because i think the button was pressed")
                 isPaused = false
@@ -333,6 +333,8 @@ class NWFTestViewController: UIViewController, NWFCellToTableDelegate {
                 timer.invalidate()
                 isPaused = true
                 startPauseButton.alpha = 0.5
+                runTestTable.isUserInteractionEnabled = false
+                runTestTable.alpha = 0.3
                 
             }
         } else {
@@ -340,6 +342,8 @@ class NWFTestViewController: UIViewController, NWFCellToTableDelegate {
             startPauseButton.backgroundColor = .clear
             startPauseButton.alpha = 0.1
             timeRemaining = testLength
+            runTestTable.isUserInteractionEnabled = true
+            runTestTable.alpha = 1
             runTimer()
             alreadyStarted = true
             isPaused = false
