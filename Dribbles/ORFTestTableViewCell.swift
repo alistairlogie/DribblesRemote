@@ -52,7 +52,7 @@ class ORFTestTableViewCell: UITableViewCell {
         for i in 0 ..< wordButtonCount {
             
             wordButtons[i].setTitle(wordTitles[i], for: .normal)
-            wordButtons[i].layer.cornerRadius = 10
+            wordButtons[i].layer.cornerRadius = 5
             wordButtons[i].tag = i
             wordButtons[i].backgroundColor = .white
             switch tableCellData.buttonStates[i] {

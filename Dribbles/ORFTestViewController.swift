@@ -142,7 +142,7 @@ class ORFTestViewController: UIViewController, ORFCellToTableDelegate {
     
     func decomposeTestLines(wholeTestLine: String) -> ORFTestElement? {
         // break the line into chunks delimited by commas
-        let testChunks = wholeTestLine.components(separatedBy: ",")
+        let testChunks = wholeTestLine.components(separatedBy: "|")
         // clear out any existing test words
         testElement.testWords.removeAll()
         

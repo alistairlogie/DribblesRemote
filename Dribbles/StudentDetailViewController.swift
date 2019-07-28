@@ -101,7 +101,7 @@ class StudentDetailViewController: UIViewController, UIPickerViewDataSource, UIP
         
         cell.dateLabel.text = dateString
         cell.testTypeLabel.text = previousResults[indexPath.row].testType
-        cell.scoreLabel.text = String(previousResults[indexPath.row].score)
+        cell.scoreLabel.text = String(Int(previousResults[indexPath.row].score))
         return cell
     }
     

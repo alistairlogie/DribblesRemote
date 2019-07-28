@@ -749,139 +749,139 @@
                                             <rect key="frame" x="0.0" y="0.0" width="1024" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" horizontalCompressionResistancePriority="250" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="FCR-at-0tw">
-                                                    <rect key="frame" x="20" y="9.5" width="930" height="41"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="750" horizontalCompressionResistancePriority="250" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="FCR-at-0tw">
+                                                    <rect key="frame" x="20" y="10.5" width="930" height="39"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ckq-xh-04n">
-                                                            <rect key="frame" x="0.0" y="0.0" width="42.5" height="41"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="42.5" height="39"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                             <state key="normal" title="1"/>
                                                             <connections>
                                                                 <action selector="wordButtonPressed:" destination="I3q-dE-K9q" eventType="touchUpInside" id="519-Pa-BDy"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0m-IJ-V3l">
-                                                            <rect key="frame" x="57.5" y="0.0" width="42" height="41"/>
+                                                            <rect key="frame" x="57.5" y="0.0" width="42" height="39"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                             <state key="normal" title="2"/>
                                                             <connections>
                                                                 <action selector="wordButtonPressed:" destination="I3q-dE-K9q" eventType="touchUpInside" id="QRT-yj-4q9"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8SY-IF-DE5">
-                                                            <rect key="frame" x="114.5" y="0.0" width="42.5" height="41"/>
+                                                            <rect key="frame" x="114.5" y="0.0" width="42.5" height="39"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                             <state key="normal" title="3"/>
                                                             <connections>
                                                                 <action selector="wordButtonPressed:" destination="I3q-dE-K9q" eventType="touchUpInside" id="xGc-sw-Eag"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQF-OG-t1j">
-                                                            <rect key="frame" x="172" y="0.0" width="42" height="41"/>
+                                                            <rect key="frame" x="172" y="0.0" width="42" height="39"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                             <state key="normal" title="4"/>
                                                             <connections>
                                                                 <action selector="wordButtonPressed:" destination="I3q-dE-K9q" eventType="touchUpInside" id="6Ho-Ab-Dh9"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BV1-he-UlU">
-                                                            <rect key="frame" x="229" y="0.0" width="42.5" height="41"/>
+                                                            <rect key="frame" x="229" y="0.0" width="42.5" height="39"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                             <state key="normal" title="5"/>
                                                             <connections>
                                                                 <action selector="wordButtonPressed:" destination="I3q-dE-K9q" eventType="touchUpInside" id="qOs-Hj-FPO"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" tag="5" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTc-QQ-pJ3">
-                                                            <rect key="frame" x="286.5" y="0.0" width="42" height="41"/>
+                                                            <rect key="frame" x="286.5" y="0.0" width="42" height="39"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                             <state key="normal" title="6"/>
                                                             <connections>
                                                                 <action selector="wordButtonPressed:" destination="I3q-dE-K9q" eventType="touchUpInside" id="lRn-6e-wvB"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" tag="6" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFp-pv-KWR">
-                                                            <rect key="frame" x="343.5" y="0.0" width="42.5" height="41"/>
+                                                            <rect key="frame" x="343.5" y="0.0" width="42.5" height="39"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                             <state key="normal" title="7"/>
                                                             <connections>
                                                                 <action selector="wordButtonPressed:" destination="I3q-dE-K9q" eventType="touchUpInside" id="s48-7Q-65h"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" tag="7" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbX-ce-Pmn">
-                                                            <rect key="frame" x="401" y="0.0" width="42" height="41"/>
+                                                            <rect key="frame" x="401" y="0.0" width="42" height="39"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                             <state key="normal" title="8"/>
                                                             <connections>
                                                                 <action selector="wordButtonPressed:" destination="I3q-dE-K9q" eventType="touchUpInside" id="ccw-p1-P3w"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" tag="8" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7DP-oe-QrX">
-                                                            <rect key="frame" x="458" y="0.0" width="42.5" height="41"/>
+                                                            <rect key="frame" x="458" y="0.0" width="42.5" height="39"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                             <state key="normal" title="9"/>
                                                             <connections>
                                                                 <action selector="wordButtonPressed:" destination="I3q-dE-K9q" eventType="touchUpInside" id="wjg-jy-v2G"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" tag="9" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcW-5D-WIb">
-                                                            <rect key="frame" x="515.5" y="0.0" width="42" height="41"/>
+                                                            <rect key="frame" x="515.5" y="0.0" width="42" height="39"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                             <state key="normal" title="10"/>
                                                             <connections>
                                                                 <action selector="wordButtonPressed:" destination="I3q-dE-K9q" eventType="touchUpInside" id="voO-Ky-BDt"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSX-Nz-xj5">
-                                                            <rect key="frame" x="572.5" y="0.0" width="42.5" height="41"/>
+                                                            <rect key="frame" x="572.5" y="0.0" width="42.5" height="39"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                             <state key="normal" title="11"/>
                                                             <connections>
                                                                 <action selector="wordButtonPressed:" destination="I3q-dE-K9q" eventType="touchUpInside" id="6RX-BH-AZO"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsJ-iZ-49u">
-                                                            <rect key="frame" x="630" y="0.0" width="42.5" height="41"/>
+                                                            <rect key="frame" x="630" y="0.0" width="42.5" height="39"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                             <state key="normal" title="12"/>
                                                             <connections>
                                                                 <action selector="wordButtonPressed:" destination="I3q-dE-K9q" eventType="touchUpInside" id="hwL-FE-ue9"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbV-jc-vdC">
-                                                            <rect key="frame" x="687.5" y="0.0" width="42" height="41"/>
+                                                            <rect key="frame" x="687.5" y="0.0" width="42" height="39"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                             <state key="normal" title="13"/>
                                                             <connections>
                                                                 <action selector="wordButtonPressed:" destination="I3q-dE-K9q" eventType="touchUpInside" id="sMI-hs-OBI"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" tag="13" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zS-V4-o1R">
-                                                            <rect key="frame" x="744.5" y="0.0" width="42.5" height="41"/>
+                                                            <rect key="frame" x="744.5" y="0.0" width="42.5" height="39"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                             <state key="normal" title="14"/>
                                                             <connections>
                                                                 <action selector="wordButtonPressed:" destination="I3q-dE-K9q" eventType="touchUpInside" id="UWe-tn-FsF"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" tag="14" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKX-bc-HkR">
-                                                            <rect key="frame" x="802" y="0.0" width="128" height="41"/>
+                                                            <rect key="frame" x="802" y="0.0" width="128" height="39"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                             <state key="normal" title="15"/>
                                                             <connections>
                                                                 <action selector="wordButtonPressed:" destination="I3q-dE-K9q" eventType="touchUpInside" id="6Kw-j0-Gdv"/>
