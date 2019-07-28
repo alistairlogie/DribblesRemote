@@ -198,6 +198,19 @@ class StudentDetailViewController: UIViewController, UIPickerViewDataSource, UIP
                     vc.updatedResults = previousResults
                 }
             }
+            if selectedTest.contains("Oral") {
+                if let vc = storyboard?.instantiateViewController(withIdentifier: "ORFTestTable") as? ORFTestViewController {
+                    navigationController?.pushViewController(vc, animated: true)
+                    if selectedTest == "" {
+                        vc.selectedTest = testTypes[0]
+                    } else {
+                        vc.selectedTest = selectedTest
+                    }
+                    
+                    vc.currentStudent = studentName
+                    vc.updatedResults = previousResults
+                }
+            }
         } else {
             let ac = UIAlertController(title: "Test Unavailable", message: "This test is currently not available. Please try again later", preferredStyle: .alert)
             
