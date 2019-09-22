@@ -39,6 +39,26 @@
 		658954EE2265040D00C962E2 /* TestElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658954ED2265040D00C962E2 /* TestElement.swift */; };
 		65A65D6221C5CB1B003AE9A5 /* TestEvent+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A65D6021C5CB1B003AE9A5 /* TestEvent+CoreDataClass.swift */; };
 		65A65D6321C5CB1B003AE9A5 /* TestEvent+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A65D6121C5CB1B003AE9A5 /* TestEvent+CoreDataProperties.swift */; };
+		65A9728923189888004B1619 /* Progress Monitoring - Oral Reading Fluency 04.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65A9727523189881004B1619 /* Progress Monitoring - Oral Reading Fluency 04.txt */; };
+		65A9728A23189888004B1619 /* Progress Monitoring - Oral Reading Fluency 18.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65A9727623189882004B1619 /* Progress Monitoring - Oral Reading Fluency 18.txt */; };
+		65A9728B23189888004B1619 /* Progress Monitoring - Oral Reading Fluency 16.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65A9727723189882004B1619 /* Progress Monitoring - Oral Reading Fluency 16.txt */; };
+		65A9728C23189888004B1619 /* Progress Monitoring - Oral Reading Fluency 20.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65A9727823189882004B1619 /* Progress Monitoring - Oral Reading Fluency 20.txt */; };
+		65A9728D23189888004B1619 /* Progress Monitoring - Oral Reading Fluency 15.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65A9727923189882004B1619 /* Progress Monitoring - Oral Reading Fluency 15.txt */; };
+		65A9728E23189888004B1619 /* Progress Monitoring - Oral Reading Fluency 01.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65A9727A23189883004B1619 /* Progress Monitoring - Oral Reading Fluency 01.txt */; };
+		65A9728F23189888004B1619 /* Progress Monitoring - Oral Reading Fluency 09.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65A9727B23189883004B1619 /* Progress Monitoring - Oral Reading Fluency 09.txt */; };
+		65A9729023189888004B1619 /* Progress Monitoring - Oral Reading Fluency 12.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65A9727C23189883004B1619 /* Progress Monitoring - Oral Reading Fluency 12.txt */; };
+		65A9729123189888004B1619 /* Progress Monitoring - Oral Reading Fluency 07.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65A9727D23189884004B1619 /* Progress Monitoring - Oral Reading Fluency 07.txt */; };
+		65A9729223189888004B1619 /* Progress Monitoring - Oral Reading Fluency 03.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65A9727E23189884004B1619 /* Progress Monitoring - Oral Reading Fluency 03.txt */; };
+		65A9729323189888004B1619 /* Progress Monitoring - Oral Reading Fluency 13.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65A9727F23189884004B1619 /* Progress Monitoring - Oral Reading Fluency 13.txt */; };
+		65A9729423189888004B1619 /* Progress Monitoring - Oral Reading Fluency 05.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65A9728023189884004B1619 /* Progress Monitoring - Oral Reading Fluency 05.txt */; };
+		65A9729523189888004B1619 /* Progress Monitoring - Oral Reading Fluency 11.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65A9728123189885004B1619 /* Progress Monitoring - Oral Reading Fluency 11.txt */; };
+		65A9729623189888004B1619 /* Progress Monitoring - Oral Reading Fluency 02.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65A9728223189885004B1619 /* Progress Monitoring - Oral Reading Fluency 02.txt */; };
+		65A9729723189888004B1619 /* Progress Monitoring - Oral Reading Fluency 14.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65A9728323189885004B1619 /* Progress Monitoring - Oral Reading Fluency 14.txt */; };
+		65A9729823189888004B1619 /* Progress Monitoring - Oral Reading Fluency 17.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65A9728423189886004B1619 /* Progress Monitoring - Oral Reading Fluency 17.txt */; };
+		65A9729923189888004B1619 /* Progress Monitoring - Oral Reading Fluency 06.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65A9728523189886004B1619 /* Progress Monitoring - Oral Reading Fluency 06.txt */; };
+		65A9729A23189888004B1619 /* Progress Monitoring - Oral Reading Fluency 19.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65A9728623189887004B1619 /* Progress Monitoring - Oral Reading Fluency 19.txt */; };
+		65A9729B23189888004B1619 /* Progress Monitoring - Oral Reading Fluency 08.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65A9728723189887004B1619 /* Progress Monitoring - Oral Reading Fluency 08.txt */; };
+		65A9729C23189888004B1619 /* Progress Monitoring - Oral Reading Fluency 10.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65A9728823189887004B1619 /* Progress Monitoring - Oral Reading Fluency 10.txt */; };
 		65B4FF10224A7EE600968553 /* TestRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B4FF0F224A7EE600968553 /* TestRow.swift */; };
 		65C787D92263D61800C8D35B /* Benchmark 1 - Phoneme Segmentation Fluency.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65C787D72263D61800C8D35B /* Benchmark 1 - Phoneme Segmentation Fluency.txt */; };
 		65C787DA2263D61800C8D35B /* Benchmark 3 - Phoneme Segmentation Fluency.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65C787D82263D61800C8D35B /* Benchmark 3 - Phoneme Segmentation Fluency.txt */; };
@@ -95,6 +115,26 @@
 		658954ED2265040D00C962E2 /* TestElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestElement.swift; sourceTree = "<group>"; };
 		65A65D6021C5CB1B003AE9A5 /* TestEvent+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestEvent+CoreDataClass.swift"; sourceTree = "<group>"; };
 		65A65D6121C5CB1B003AE9A5 /* TestEvent+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestEvent+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		65A9727523189881004B1619 /* Progress Monitoring - Oral Reading Fluency 04.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Oral Reading Fluency 04.txt"; sourceTree = "<group>"; };
+		65A9727623189882004B1619 /* Progress Monitoring - Oral Reading Fluency 18.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Oral Reading Fluency 18.txt"; sourceTree = "<group>"; };
+		65A9727723189882004B1619 /* Progress Monitoring - Oral Reading Fluency 16.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Oral Reading Fluency 16.txt"; sourceTree = "<group>"; };
+		65A9727823189882004B1619 /* Progress Monitoring - Oral Reading Fluency 20.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Oral Reading Fluency 20.txt"; sourceTree = "<group>"; };
+		65A9727923189882004B1619 /* Progress Monitoring - Oral Reading Fluency 15.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Oral Reading Fluency 15.txt"; sourceTree = "<group>"; };
+		65A9727A23189883004B1619 /* Progress Monitoring - Oral Reading Fluency 01.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Oral Reading Fluency 01.txt"; sourceTree = "<group>"; };
+		65A9727B23189883004B1619 /* Progress Monitoring - Oral Reading Fluency 09.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Oral Reading Fluency 09.txt"; sourceTree = "<group>"; };
+		65A9727C23189883004B1619 /* Progress Monitoring - Oral Reading Fluency 12.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Oral Reading Fluency 12.txt"; sourceTree = "<group>"; };
+		65A9727D23189884004B1619 /* Progress Monitoring - Oral Reading Fluency 07.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Oral Reading Fluency 07.txt"; sourceTree = "<group>"; };
+		65A9727E23189884004B1619 /* Progress Monitoring - Oral Reading Fluency 03.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Oral Reading Fluency 03.txt"; sourceTree = "<group>"; };
+		65A9727F23189884004B1619 /* Progress Monitoring - Oral Reading Fluency 13.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Oral Reading Fluency 13.txt"; sourceTree = "<group>"; };
+		65A9728023189884004B1619 /* Progress Monitoring - Oral Reading Fluency 05.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Oral Reading Fluency 05.txt"; sourceTree = "<group>"; };
+		65A9728123189885004B1619 /* Progress Monitoring - Oral Reading Fluency 11.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Oral Reading Fluency 11.txt"; sourceTree = "<group>"; };
+		65A9728223189885004B1619 /* Progress Monitoring - Oral Reading Fluency 02.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Oral Reading Fluency 02.txt"; sourceTree = "<group>"; };
+		65A9728323189885004B1619 /* Progress Monitoring - Oral Reading Fluency 14.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Oral Reading Fluency 14.txt"; sourceTree = "<group>"; };
+		65A9728423189886004B1619 /* Progress Monitoring - Oral Reading Fluency 17.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Oral Reading Fluency 17.txt"; sourceTree = "<group>"; };
+		65A9728523189886004B1619 /* Progress Monitoring - Oral Reading Fluency 06.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Oral Reading Fluency 06.txt"; sourceTree = "<group>"; };
+		65A9728623189887004B1619 /* Progress Monitoring - Oral Reading Fluency 19.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Oral Reading Fluency 19.txt"; sourceTree = "<group>"; };
+		65A9728723189887004B1619 /* Progress Monitoring - Oral Reading Fluency 08.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Oral Reading Fluency 08.txt"; sourceTree = "<group>"; };
+		65A9728823189887004B1619 /* Progress Monitoring - Oral Reading Fluency 10.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Progress Monitoring - Oral Reading Fluency 10.txt"; sourceTree = "<group>"; };
 		65B4FF0F224A7EE600968553 /* TestRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRow.swift; sourceTree = "<group>"; };
 		65C787D72263D61800C8D35B /* Benchmark 1 - Phoneme Segmentation Fluency.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Benchmark 1 - Phoneme Segmentation Fluency.txt"; sourceTree = "<group>"; };
 		65C787D82263D61800C8D35B /* Benchmark 3 - Phoneme Segmentation Fluency.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Benchmark 3 - Phoneme Segmentation Fluency.txt"; sourceTree = "<group>"; };
@@ -134,6 +174,26 @@
 		65C787ED2264075300C8D35B /* Test Files */ = {
 			isa = PBXGroup;
 			children = (
+				65A9727A23189883004B1619 /* Progress Monitoring - Oral Reading Fluency 01.txt */,
+				65A9728223189885004B1619 /* Progress Monitoring - Oral Reading Fluency 02.txt */,
+				65A9727E23189884004B1619 /* Progress Monitoring - Oral Reading Fluency 03.txt */,
+				65A9727523189881004B1619 /* Progress Monitoring - Oral Reading Fluency 04.txt */,
+				65A9728023189884004B1619 /* Progress Monitoring - Oral Reading Fluency 05.txt */,
+				65A9728523189886004B1619 /* Progress Monitoring - Oral Reading Fluency 06.txt */,
+				65A9727D23189884004B1619 /* Progress Monitoring - Oral Reading Fluency 07.txt */,
+				65A9728723189887004B1619 /* Progress Monitoring - Oral Reading Fluency 08.txt */,
+				65A9727B23189883004B1619 /* Progress Monitoring - Oral Reading Fluency 09.txt */,
+				65A9728823189887004B1619 /* Progress Monitoring - Oral Reading Fluency 10.txt */,
+				65A9728123189885004B1619 /* Progress Monitoring - Oral Reading Fluency 11.txt */,
+				65A9727C23189883004B1619 /* Progress Monitoring - Oral Reading Fluency 12.txt */,
+				65A9727F23189884004B1619 /* Progress Monitoring - Oral Reading Fluency 13.txt */,
+				65A9728323189885004B1619 /* Progress Monitoring - Oral Reading Fluency 14.txt */,
+				65A9727923189882004B1619 /* Progress Monitoring - Oral Reading Fluency 15.txt */,
+				65A9727723189882004B1619 /* Progress Monitoring - Oral Reading Fluency 16.txt */,
+				65A9728423189886004B1619 /* Progress Monitoring - Oral Reading Fluency 17.txt */,
+				65A9727623189882004B1619 /* Progress Monitoring - Oral Reading Fluency 18.txt */,
+				65A9728623189887004B1619 /* Progress Monitoring - Oral Reading Fluency 19.txt */,
+				65A9727823189882004B1619 /* Progress Monitoring - Oral Reading Fluency 20.txt */,
 				65C787D72263D61800C8D35B /* Benchmark 1 - Phoneme Segmentation Fluency.txt */,
 				656FCE212262C207009783F8 /* Benchmark 2 - Phoneme Segmentation Fluency.txt */,
 				65C787D82263D61800C8D35B /* Benchmark 3 - Phoneme Segmentation Fluency.txt */,
@@ -275,38 +335,58 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65A9728E23189888004B1619 /* Progress Monitoring - Oral Reading Fluency 01.txt in Resources */,
+				65A9729123189888004B1619 /* Progress Monitoring - Oral Reading Fluency 07.txt in Resources */,
+				65A9728D23189888004B1619 /* Progress Monitoring - Oral Reading Fluency 15.txt in Resources */,
 				65C787E52263DC5F00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 4.txt in Resources */,
 				6588461C22875B0200CBE3DD /* Progress Monitoring - Nonsense Word Fluency 09.txt in Resources */,
+				65A9729523189888004B1619 /* Progress Monitoring - Oral Reading Fluency 11.txt in Resources */,
+				65A9728A23189888004B1619 /* Progress Monitoring - Oral Reading Fluency 18.txt in Resources */,
 				65C787E22263DC5F00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 5.txt in Resources */,
 				65FC4F9321C2FB33002A7096 /* Assets.xcassets in Resources */,
 				65C787E32263DC5F00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 2.txt in Resources */,
+				65A9729023189888004B1619 /* Progress Monitoring - Oral Reading Fluency 12.txt in Resources */,
 				651FE5AE22EE4ABD00E8F213 /* Benchmark 2-2 - Oral Reading Fluency.txt in Resources */,
 				6588461D22875B0200CBE3DD /* Progress Monitoring - Nonsense Word Fluency 10.txt in Resources */,
 				658954E6226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 04.txt in Resources */,
+				65A9729B23189888004B1619 /* Progress Monitoring - Oral Reading Fluency 08.txt in Resources */,
 				6588462022875B0200CBE3DD /* Progress Monitoring - Nonsense Word Fluency 07.txt in Resources */,
 				651FE5B922EE537C00E8F213 /* Benchmark 3-3 - Oral Reading Fluency.txt in Resources */,
 				658954E5226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 02.txt in Resources */,
+				65A9729C23189888004B1619 /* Progress Monitoring - Oral Reading Fluency 10.txt in Resources */,
 				6588462122875B0200CBE3DD /* Progress Monitoring - Nonsense Word Fluency 12.txt in Resources */,
+				65A9729723189888004B1619 /* Progress Monitoring - Oral Reading Fluency 14.txt in Resources */,
 				65C787E42263DC5F00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 3.txt in Resources */,
 				65C787EC2264073500C8D35B /* Benchmark 1 - Nonsense Word Fluency.txt in Resources */,
+				65A9729923189888004B1619 /* Progress Monitoring - Oral Reading Fluency 06.txt in Resources */,
+				65A9728923189888004B1619 /* Progress Monitoring - Oral Reading Fluency 04.txt in Resources */,
 				658954EA226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 01.txt in Resources */,
 				65C787DC2263D80E00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 1.txt in Resources */,
 				658954DD2264F59200C962E2 /* Benchmark 2 - Nonsense Word Fluency.txt in Resources */,
 				658954E9226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 05.txt in Resources */,
+				65A9728B23189888004B1619 /* Progress Monitoring - Oral Reading Fluency 16.txt in Resources */,
 				65C787E62263DC5F00C8D35B /* Progress Monitoring - Phoneme Segmentation Fluency 6.txt in Resources */,
+				65A9729A23189888004B1619 /* Progress Monitoring - Oral Reading Fluency 19.txt in Resources */,
+				65A9729223189888004B1619 /* Progress Monitoring - Oral Reading Fluency 03.txt in Resources */,
+				65A9729823189888004B1619 /* Progress Monitoring - Oral Reading Fluency 17.txt in Resources */,
 				658954E7226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 06.txt in Resources */,
 				65C787DA2263D61800C8D35B /* Benchmark 3 - Phoneme Segmentation Fluency.txt in Resources */,
 				6588461F22875B0200CBE3DD /* Progress Monitoring - Nonsense Word Fluency 11.txt in Resources */,
 				6588461E22875B0200CBE3DD /* Progress Monitoring - Nonsense Word Fluency 08.txt in Resources */,
 				656FCE222262C207009783F8 /* Benchmark 2 - Phoneme Segmentation Fluency.txt in Resources */,
+				65A9729623189888004B1619 /* Progress Monitoring - Oral Reading Fluency 02.txt in Resources */,
+				65A9728F23189888004B1619 /* Progress Monitoring - Oral Reading Fluency 09.txt in Resources */,
 				651FE5BA22EE537C00E8F213 /* Benchmark 3-1 - Oral Reading Fluency.txt in Resources */,
 				65FC4F8E21C2FB31002A7096 /* Main.storyboard in Resources */,
+				65A9729323189888004B1619 /* Progress Monitoring - Oral Reading Fluency 13.txt in Resources */,
 				658954E8226502D000C962E2 /* Progress Monitoring - Nonsense Word Fluency 03.txt in Resources */,
 				651FE5AF22EE4ABD00E8F213 /* Benchmark 2-3 - Oral Reading Fluency.txt in Resources */,
+				65A9729423189888004B1619 /* Progress Monitoring - Oral Reading Fluency 05.txt in Resources */,
 				651FE5B522EE505D00E8F213 /* Benchmark 2-1 - Oral Reading Fluency.txt in Resources */,
 				658954DE2264F59200C962E2 /* Benchmark 3 - Nonsense Word Fluency.txt in Resources */,
 				651FE5BB22EE537C00E8F213 /* Benchmark 3-2 - Oral Reading Fluency.txt in Resources */,
 				65C787D92263D61800C8D35B /* Benchmark 1 - Phoneme Segmentation Fluency.txt in Resources */,
+				65A9728C23189888004B1619 /* Progress Monitoring - Oral Reading Fluency 20.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
