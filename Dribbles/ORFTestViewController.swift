@@ -39,7 +39,7 @@ class ORFTestViewController: UIViewController, ORFCellToTableDelegate {
     var tableCellStore = [ORFTableCellData]()
     var validChunkCount = 0
     
-    var wordButtonCount = 15
+    var wordButtonCount = 16
     
     var endOfTestSet = false
     
@@ -152,7 +152,7 @@ class ORFTestViewController: UIViewController, ORFCellToTableDelegate {
         
         if testChunks.count > 0 {
             
-            for (index, chunk) in testChunks.enumerated() {
+            for (_, chunk) in testChunks.enumerated() {
                 if chunk != "" {
                     testElement.testWords.append(chunk)
                 }

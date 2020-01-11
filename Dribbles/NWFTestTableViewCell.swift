@@ -46,7 +46,7 @@ class NFWTestTableViewCell: UITableViewCell {
         score = tableCellData.score
         tableTestScore.text = "\(score)/\(maxScore)"
         
-        var phonemeTitles = tableCellData.testPhonemes
+        let phonemeTitles = tableCellData.testPhonemes
 //        while phonemeTitles.count < phonemeButtonCount {
 //            phonemeTitles.append(blankPhoneme)
 //        }

@@ -20,7 +20,7 @@ class ORFTestTableViewCell: UITableViewCell {
     
     weak var delegate: ORFCellToTableDelegate?
     
-    var wordButtonCount = 15
+    var wordButtonCount = 16
     let blankWord = ""
     var buttonIndex = 0
     var cellRow = 0
