@@ -109,9 +109,15 @@ class ORFTestViewController: UIViewController, ORFCellToTableDelegate {
         let todaysDate = Date()
         let testScore = totalTestScore.text
         let testScoreFloat = NSString(string: testScore!).floatValue
+        let cumulativeScoreFloat = Float(cumulativeScore)
+        let cumulativeMaxScoreFloat = Float(cumulativeMaxScore)
+        let testPercentageCorrectFloat = (cumulativeScoreFloat / cumulativeMaxScoreFloat) * 100
+//        let testPercentageCorrect = String((cumulativeScore / cumulativeMaxScore) * 100)
+//        let testPercentageCorrectFloat = NSString(string: testPercentageCorrect).floatValue
         let testEvent = TestEvent(context: PersistenceService.context)
         testEvent.testType = selectedTest
         testEvent.student = currentStudent
+        testEvent.percentageCorrect = testPercentageCorrectFloat
         testEvent.date = todaysDate as NSDate
         testEvent.score = testScoreFloat
         

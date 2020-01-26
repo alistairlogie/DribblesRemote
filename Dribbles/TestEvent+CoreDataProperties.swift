@@ -18,6 +18,7 @@ extension TestEvent {
     }
 
     @NSManaged public var date: NSDate
+    @NSManaged public var percentageCorrect: Float
     @NSManaged public var score: Float
     @NSManaged public var student: String?
     @NSManaged public var testType: String?

@@ -135,9 +135,13 @@ class RunTestTableViewController: UIViewController, CellToTableDelegate {
         let todaysDate = Date()
         let testScore = totalTestScore.text
         let testScoreFloat = NSString(string: testScore!).floatValue
+        let cumulativeScoreFloat = Float(cumulativeScore)
+        let cumulativeMaxScoreFloat = Float(cumulativeMaxScore)
+        let testPercentageCorrectFloat = (cumulativeScoreFloat / cumulativeMaxScoreFloat) * 100
         let testEvent = TestEvent(context: PersistenceService.context)
         testEvent.testType = selectedTest
         testEvent.student = currentStudent
+        testEvent.percentageCorrect = testPercentageCorrectFloat
         testEvent.date = todaysDate as NSDate
         testEvent.score = testScoreFloat
 

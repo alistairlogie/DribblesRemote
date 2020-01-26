@@ -12,6 +12,7 @@ import CoreData
 class previousResultsTableViewCell: UITableViewCell {
     
     @IBOutlet var dateLabel: UILabel!
+    @IBOutlet weak var pcCorrectLabel: UILabel!
     @IBOutlet var scoreLabel: UILabel!
     @IBOutlet var testTypeLabel: UILabel!
 }
@@ -102,6 +103,11 @@ class StudentDetailViewController: UIViewController, UIPickerViewDataSource, UIP
         cell.dateLabel.text = dateString
         cell.testTypeLabel.text = previousResults[indexPath.row].testType
         cell.scoreLabel.text = String(Int(previousResults[indexPath.row].score))
+        if previousResults[indexPath.row].testType!.contains("Oral") {
+            cell.pcCorrectLabel.text = String(format: "%.1f", Float(previousResults[indexPath.row].percentageCorrect)) + "%"
+        } else {
+            cell.pcCorrectLabel.text = ""
+        }
         return cell
     }
     

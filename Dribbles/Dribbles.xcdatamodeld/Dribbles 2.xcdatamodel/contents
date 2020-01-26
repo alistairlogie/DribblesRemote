@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Student" representedClassName="Student" syncable="YES">
+        <attribute name="name" attributeType="String"/>
+        <relationship name="testEvents" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="TestEvent" inverseName="students" inverseEntity="TestEvent"/>
+        <fetchIndex name="byNameIndex">
+            <fetchIndexElement property="name" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="TestEvent" representedClassName="TestEvent" syncable="YES">
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="percentageCorrect" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="score" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="student" attributeType="String"/>
+        <attribute name="testType" attributeType="String"/>
+        <relationship name="students" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Student" inverseName="testEvents" inverseEntity="Student"/>
+    </entity>
+    <elements>
+        <element name="Student" positionX="-54" positionY="-9" width="128" height="75"/>
+        <element name="TestEvent" positionX="-54" positionY="0" width="128" height="133"/>
+    </elements>
+</model>
