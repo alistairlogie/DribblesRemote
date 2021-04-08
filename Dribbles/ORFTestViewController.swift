@@ -39,7 +39,7 @@ class ORFTestViewController: UIViewController, ORFCellToTableDelegate {
     var tableCellStore = [ORFTableCellData]()
     var validChunkCount = 0
     
-    var wordButtonCount = 16
+    var wordButtonCount = 18
     
     var endOfTestSet = false
     
@@ -49,6 +49,7 @@ class ORFTestViewController: UIViewController, ORFCellToTableDelegate {
     var pauseTime = 0
     var alreadyStarted = false
     
+    var itemsCompleted = 0
     var cumulativeMaxScore = 0
     // Current total score with property observer to update the total score label
     var cumulativeScore = 0 {
@@ -94,7 +95,7 @@ class ORFTestViewController: UIViewController, ORFCellToTableDelegate {
                 try container.viewContext.save()
             } catch {
                 let ac = UIAlertController(title: "Database error", message: "We were unable to save the test data.", preferredStyle: .alert)
-                _ = ac.addAction(UIAlertAction(title: "OK", style: .default) { (action) -> Void in
+                ac.addAction(UIAlertAction(title: "OK", style: .default) { (action) -> Void in
                     return
                 })
                 self.present(ac, animated: true)
@@ -110,10 +111,8 @@ class ORFTestViewController: UIViewController, ORFCellToTableDelegate {
         let testScore = totalTestScore.text
         let testScoreFloat = NSString(string: testScore!).floatValue
         let cumulativeScoreFloat = Float(cumulativeScore)
-        let cumulativeMaxScoreFloat = Float(cumulativeMaxScore)
-        let testPercentageCorrectFloat = (cumulativeScoreFloat / cumulativeMaxScoreFloat) * 100
-//        let testPercentageCorrect = String((cumulativeScore / cumulativeMaxScore) * 100)
-//        let testPercentageCorrectFloat = NSString(string: testPercentageCorrect).floatValue
+        let itemsCompletedFloat = Float(itemsCompleted)
+        let testPercentageCorrectFloat = (cumulativeScoreFloat / itemsCompletedFloat) * 100
         let testEvent = TestEvent(context: PersistenceService.context)
         testEvent.testType = selectedTest
         testEvent.student = currentStudent
@@ -196,6 +195,7 @@ class ORFTestViewController: UIViewController, ORFCellToTableDelegate {
             cumulativeMaxScore += newTableCell.maxScore
             cumulativeScore += newTableCell.score
             tableCellStore.append(newTableCell)
+            itemsCompleted = cumulativeMaxScore
         }
 //        cumulativeMaxScore += newTableCell.maxScore
 //        cumulativeScore += newTableCell.score
@@ -225,7 +225,7 @@ class ORFTestViewController: UIViewController, ORFCellToTableDelegate {
     }
     
     func endOfTest(tag: Int, row: Int) {
-        
+        itemsCompleted -= 1
         for wordIndex in tag + 1 ..< tableCellStore[row].testWords.count {
             //disables all the buttons after the end cell
             if tableCellStore[row].buttonStates[wordIndex] == .correct {
@@ -233,6 +233,7 @@ class ORFTestViewController: UIViewController, ORFCellToTableDelegate {
                 tableCellStore[row].enabledStatuses[wordIndex] = .disabled
                 tableCellStore[row].score -= 1
                 cumulativeScore -= 1
+                itemsCompleted -= 1
             } else {
                 tableCellStore[row].enabledStatuses[wordIndex] = .disabled
             }
@@ -245,6 +246,7 @@ class ORFTestViewController: UIViewController, ORFCellToTableDelegate {
                     tableCellStore[rowIndex].enabledStatuses[wordIndex] = .disabled
                     tableCellStore[rowIndex].score -= 1
                     cumulativeScore -= 1
+                    itemsCompleted -= 1
                 case .incorrect:
                     tableCellStore[rowIndex].enabledStatuses[wordIndex] = .enabled
                 case .blank:
@@ -258,6 +260,7 @@ class ORFTestViewController: UIViewController, ORFCellToTableDelegate {
     }
     
     func reverseEndOfTest(tag: Int, row: Int) {
+        itemsCompleted += 1
         for wordIndex in tag + 1 ..< tableCellStore[row].testWords.count {
             if tableCellStore[row].buttonStates[wordIndex] == .blank {
                 tableCellStore[row].buttonStates[wordIndex] = .blank
@@ -267,6 +270,7 @@ class ORFTestViewController: UIViewController, ORFCellToTableDelegate {
                 tableCellStore[row].enabledStatuses[wordIndex] = .enabled
                 tableCellStore[row].score += 1
                 cumulativeScore += 1
+                itemsCompleted += 1
             }
             
         }
@@ -279,11 +283,13 @@ class ORFTestViewController: UIViewController, ORFCellToTableDelegate {
                     tableCellStore[rowIndex].enabledStatuses[wordIndex] = .disabled
                     tableCellStore[rowIndex].score -= 1
                     cumulativeScore -= 1
+                    itemsCompleted += 1
                 case .incorrect:
                     tableCellStore[rowIndex].buttonStates[wordIndex] = .correct
                     tableCellStore[rowIndex].enabledStatuses[wordIndex] = .enabled
                     tableCellStore[rowIndex].score += 1
                     cumulativeScore += 1
+                    itemsCompleted += 1
                 case .blank:
                     tableCellStore[rowIndex].buttonStates[wordIndex] = .blank
                     tableCellStore[rowIndex].enabledStatuses[wordIndex] = .disabled
@@ -292,6 +298,7 @@ class ORFTestViewController: UIViewController, ORFCellToTableDelegate {
                     tableCellStore[rowIndex].enabledStatuses[wordIndex] = .enabled
                     tableCellStore[rowIndex].score += 1
                     cumulativeScore += 1
+                    itemsCompleted += 1
                 }
                
             }

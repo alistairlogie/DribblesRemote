@@ -20,7 +20,8 @@ class ORFTestTableViewCell: UITableViewCell {
     
     weak var delegate: ORFCellToTableDelegate?
     
-    var wordButtonCount = 16
+    var tableTestWord: UILabel = UILabel()
+    var wordButtonCount = 18
     let blankWord = ""
     var buttonIndex = 0
     var cellRow = 0
@@ -39,7 +40,7 @@ class ORFTestTableViewCell: UITableViewCell {
     func configureCell(tableCellData: ORFTableCellData, rowNumber: Int) {
     
         cellRow = rowNumber
-        
+        tableTestWord.text = tableCellData.word
         maxScore = tableCellData.maxScore
         score = tableCellData.score
         tableTestScore.text = "\(score)/\(maxScore)"
@@ -74,7 +75,9 @@ class ORFTestTableViewCell: UITableViewCell {
             }
             
             if wordButtons.count == wordButtonCount {
+                print(wordButtons.count)
             } else {
+//                print("Adding a button")
                 self.addSubview(wordButtons[i])
             }
         }

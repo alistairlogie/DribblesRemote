@@ -41,6 +41,7 @@ class NWFTestViewController: UIViewController, NWFCellToTableDelegate {
     var batchCount = 1
     var batchScore = 0
     var tableCellStore = [TableCellData]()
+    var itemsCompleted = 0
     var cumulativeMaxScore = 0
     var cumulativeScore = 0 {
         didSet {
@@ -104,7 +105,7 @@ class NWFTestViewController: UIViewController, NWFCellToTableDelegate {
                 try container.viewContext.save()
             } catch {
                 let ac = UIAlertController(title: "Database error", message: "We were unable to save the test data.", preferredStyle: .alert)
-                _ = ac.addAction(UIAlertAction(title: "OK", style: .default) { (action) -> Void in
+                ac.addAction(UIAlertAction(title: "OK", style: .default) { (action) -> Void in
                     return
                 })
                 self.present(ac, animated: true)
@@ -122,8 +123,8 @@ class NWFTestViewController: UIViewController, NWFCellToTableDelegate {
         let testScore = totalTestScore.text
         let testScoreFloat = NSString(string: testScore!).floatValue
         let cumulativeScoreFloat = Float(cumulativeScore)
-        let cumulativeMaxScoreFloat = Float(cumulativeMaxScore)
-        let testPercentageCorrectFloat = (cumulativeScoreFloat / cumulativeMaxScoreFloat) * 100
+        let itemsCompletedFloat = Float(itemsCompleted)
+        let testPercentageCorrectFloat = (cumulativeScoreFloat / itemsCompletedFloat) * 100
         let testEvent = TestEvent(context: PersistenceService.context)
         testEvent.testType = selectedTest
         testEvent.student = currentStudent
@@ -204,6 +205,7 @@ class NWFTestViewController: UIViewController, NWFCellToTableDelegate {
         cumulativeMaxScore += newTableCell.maxScore
         cumulativeScore += newTableCell.score
         tableCellStore.append(newTableCell)
+        itemsCompleted = cumulativeMaxScore
         batchScore = 0
     }
     
@@ -229,12 +231,14 @@ class NWFTestViewController: UIViewController, NWFCellToTableDelegate {
     }
     
     func endOfTest(tag: Int, row: Int) {
+        itemsCompleted -= 1
         for phonemeIndex in tag + 1 ..< tableCellStore[row].testPhonemes.count {
             if tableCellStore[row].buttonStates[phonemeIndex] == .correct {
                 tableCellStore[row].buttonStates[phonemeIndex] = .incorrect
                 tableCellStore[row].enabledStatuses[phonemeIndex] = .disabled
                 tableCellStore[row].score -= 1
                 cumulativeScore -= 1
+                itemsCompleted -= 1
             } else {
                 tableCellStore[row].enabledStatuses[phonemeIndex] = .disabled
             }
@@ -247,6 +251,7 @@ class NWFTestViewController: UIViewController, NWFCellToTableDelegate {
                     tableCellStore[rowIndex].enabledStatuses[phonemeIndex] = .disabled
                     tableCellStore[rowIndex].score -= 1
                     cumulativeScore -= 1
+                    itemsCompleted -= 1
                 case .incorrect:
                     tableCellStore[rowIndex].enabledStatuses[phonemeIndex] = .enabled
                 case .blank:
@@ -260,6 +265,7 @@ class NWFTestViewController: UIViewController, NWFCellToTableDelegate {
     }
     
     func reverseEndOfTest(tag: Int, row: Int) {
+        itemsCompleted += 1
         for phonemeIndex in tag + 1 ..< tableCellStore[row].testPhonemes.count {
             if tableCellStore[row].buttonStates[phonemeIndex] == .blank {
                 tableCellStore[row].buttonStates[phonemeIndex] = .blank
@@ -269,6 +275,7 @@ class NWFTestViewController: UIViewController, NWFCellToTableDelegate {
                 tableCellStore[row].enabledStatuses[phonemeIndex] = .enabled
                 tableCellStore[row].score += 1
                 cumulativeScore += 1
+                itemsCompleted += 1
             }
             
         }
@@ -293,7 +300,6 @@ class NWFTestViewController: UIViewController, NWFCellToTableDelegate {
                     tableCellStore[rowIndex].buttonStates[phonemeIndex] = .correct
                     tableCellStore[rowIndex].enabledStatuses[phonemeIndex] = .enabled
                     tableCellStore[rowIndex].score += 1
-                    cumulativeScore += 1
                 }
 
             }

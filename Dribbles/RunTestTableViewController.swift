@@ -39,6 +39,7 @@ class RunTestTableViewController: UIViewController, CellToTableDelegate {
     // Max number of phonemes that can be in a test word
     var phonemeButtonCount = 6
     var tableCellStore = [TableCellData]()
+    var itemsCompleted = 0
     // This value will be set depending on the total number of phonemes in the test
     var cumulativeMaxScore = 0
     // Current total score with property observer to update the total score label
@@ -100,7 +101,7 @@ class RunTestTableViewController: UIViewController, CellToTableDelegate {
                 try container.viewContext.save()
             } catch {
                 let ac = UIAlertController(title: "Database error", message: "We were unable to save the test data.", preferredStyle: .alert)
-                _ = ac.addAction(UIAlertAction(title: "OK", style: .default) { (action) -> Void in
+                ac.addAction(UIAlertAction(title: "OK", style: .default) { (action) -> Void in
                     return
                 })
                 self.present(ac, animated: true)
@@ -136,8 +137,8 @@ class RunTestTableViewController: UIViewController, CellToTableDelegate {
         let testScore = totalTestScore.text
         let testScoreFloat = NSString(string: testScore!).floatValue
         let cumulativeScoreFloat = Float(cumulativeScore)
-        let cumulativeMaxScoreFloat = Float(cumulativeMaxScore)
-        let testPercentageCorrectFloat = (cumulativeScoreFloat / cumulativeMaxScoreFloat) * 100
+        let itemsCompletedFloat = Float(itemsCompleted)
+        let testPercentageCorrectFloat = (cumulativeScoreFloat / itemsCompletedFloat) * 100
         let testEvent = TestEvent(context: PersistenceService.context)
         testEvent.testType = selectedTest
         testEvent.student = currentStudent
@@ -212,6 +213,7 @@ class RunTestTableViewController: UIViewController, CellToTableDelegate {
         cumulativeScore += newTableCell.score
         // add the completed cell data to the cell data array (this is the data that will drive the UI)
         tableCellStore.append(newTableCell)
+        itemsCompleted = cumulativeMaxScore
     }
     
     func buttonInCellTapped(cell: RunTestTableViewCell, tag: Int, row: Int) {
@@ -237,7 +239,7 @@ class RunTestTableViewController: UIViewController, CellToTableDelegate {
     }
     
     func endOfTest(tag: Int, row: Int) {
-        
+        itemsCompleted -= 1
         for phonemeIndex in tag + 1 ..< tableCellStore[row].testPhonemes.count {
             // disable all buttons after the end cell
             if tableCellStore[row].buttonStates[phonemeIndex] == .correct {
@@ -245,6 +247,7 @@ class RunTestTableViewController: UIViewController, CellToTableDelegate {
                 tableCellStore[row].enabledStatuses[phonemeIndex] = .disabled
                 tableCellStore[row].score -= 1
                 cumulativeScore -= 1
+                itemsCompleted -= 1
             } else {
                 tableCellStore[row].enabledStatuses[phonemeIndex] = .disabled
             }
@@ -257,6 +260,7 @@ class RunTestTableViewController: UIViewController, CellToTableDelegate {
                     tableCellStore[rowIndex].enabledStatuses[phonemeIndex] = .disabled
                     tableCellStore[rowIndex].score -= 1
                     cumulativeScore -= 1
+                    itemsCompleted -= 1
                 } else {
                     
                     tableCellStore[rowIndex].enabledStatuses[phonemeIndex] = .enabled
@@ -267,11 +271,13 @@ class RunTestTableViewController: UIViewController, CellToTableDelegate {
     
     func reverseEndOfTest(tag: Int, row: Int) {
         // back out the end of test function
+        itemsCompleted += 1
         for phonemeIndex in tag + 1 ..< tableCellStore[row].testPhonemes.count {
                 tableCellStore[row].buttonStates[phonemeIndex] = .correct
                 tableCellStore[row].enabledStatuses[phonemeIndex] = .enabled
                 tableCellStore[row].score += 1
                 cumulativeScore += 1
+                itemsCompleted += 1
         }
     
         for rowIndex in row + 1 ..< tableCellStore.count {

@@ -17,6 +17,7 @@ class ORFTableCellData {
         case enabled, disabled
     }
     
+    var word = ""
     var enabledStatuses: [ButtonEnabled] = []
     var buttonStates: [ButtonStatus] = []
     var testWords: [String] = []

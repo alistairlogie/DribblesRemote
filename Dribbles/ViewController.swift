@@ -39,7 +39,7 @@ class ViewController: UITableViewController {
         } catch {
             let ac = UIAlertController(title: "Database error", message: "We were unable to retrieve student data from the database.", preferredStyle: .alert)
             
-            _ = ac.addAction(UIAlertAction(title: "OK", style: .default) { (action) -> Void in
+            ac.addAction(UIAlertAction(title: "OK", style: .default) { (action) -> Void in
                 return
             })
             self.present(ac, animated: true)
@@ -83,10 +83,10 @@ class ViewController: UITableViewController {
         if editingStyle == .delete {
             let ac = UIAlertController(title: "Delete student?", message: "Are you sure? All of the student's test results will also be deleted.", preferredStyle: .alert)
             
-            _ = ac.addAction(UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
+            ac.addAction(UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
             })
                 
-            _ = ac.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+            ac.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
                 let student = self.students[indexPath.row]
         
 //                PersistenceService.context.delete(student)

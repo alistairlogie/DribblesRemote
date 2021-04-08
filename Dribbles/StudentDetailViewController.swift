@@ -135,7 +135,7 @@ class StudentDetailViewController: UIViewController, UIPickerViewDataSource, UIP
         } catch {
             let ac = UIAlertController(title: "Database error", message: "We were unable to retrieve data from the database.", preferredStyle: .alert)
             
-            _ = ac.addAction(UIAlertAction(title: "OK", style: .default) { (action) -> Void in
+            ac.addAction(UIAlertAction(title: "OK", style: .default) { (action) -> Void in
                 return
             })
             self.present(ac, animated: true)
@@ -156,10 +156,10 @@ class StudentDetailViewController: UIViewController, UIPickerViewDataSource, UIP
         if editingStyle == .delete {
             let ac = UIAlertController(title: "Delete test result?", message: "Are you sure? You won't be able to retrieve this data.", preferredStyle: .alert)
             
-            _ = ac.addAction(UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
+            ac.addAction(UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
             })
             
-            _ = ac.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+            ac.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
                 let testEvent = self.previousResults[indexPath.row]
                 PersistenceService.context.delete(testEvent)
                 self.previousResults.remove(at: indexPath.row)
@@ -220,7 +220,7 @@ class StudentDetailViewController: UIViewController, UIPickerViewDataSource, UIP
         } else {
             let ac = UIAlertController(title: "Test Unavailable", message: "This test is currently not available. Please try again later", preferredStyle: .alert)
             
-            _ = ac.addAction(UIAlertAction(title: "OK", style: .default) { (action) -> Void in
+            ac.addAction(UIAlertAction(title: "OK", style: .default) { (action) -> Void in
                 return
             })
             self.present(ac, animated: true)
