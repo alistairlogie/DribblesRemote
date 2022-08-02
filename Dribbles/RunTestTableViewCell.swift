@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 //
-protocol CellToTableDelegate: class {
+protocol CellToTableDelegate: AnyObject {
     func buttonInCellTapped(cell: RunTestTableViewCell, tag: Int, row: Int)
 }
 //
