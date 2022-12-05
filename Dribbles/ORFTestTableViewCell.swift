@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 //
-protocol ORFCellToTableDelegate: class {
+protocol ORFCellToTableDelegate: AnyObject {
     func buttonInCellTapped(cell: ORFTestTableViewCell, tag: Int, row: Int)
 }
 

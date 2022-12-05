@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol NWFCellToTableDelegate: class {
+protocol NWFCellToTableDelegate: AnyObject {
     func buttonInCellTapped(cell: NFWTestTableViewCell, tag: Int, row: Int)
 }
 
